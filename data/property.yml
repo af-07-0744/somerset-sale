@@ -1,0 +1,30 @@
+address:
+  unit: "209"
+  street: "3000 Somervale Court SW"
+  city: "Calgary"
+  province: "AB"
+  postal_code: "T2Y 4J2"
+  country: "Canada"
+
+property:
+  type: ""
+  bedrooms: null
+  bathrooms: null
+  size_sqft: null
+  year_built: null
+  parking: ""
+  storage: ""
+  condo_fees_monthly: null
+  fee_includes: []
+
+positioning:
+  proposed_ask_price: null
+  defensible_low: null
+  defensible_high: null
+  possession_target: ""
+
+highlights:
+  upgrades: []
+  view: ""
+  exposure: ""
+  notes: ""

@@ -1,0 +1,28 @@
+[project]
+name = "codex-sale-docs"
+version = "0.1.0"
+description = "Sphinx/rST documentation workflow for a defensible condo pricing memo."
+readme = "README.md"
+requires-python = ">=3.12,<3.15"
+authors = [{ name = "Joseph Surmava", email = "joseph@surmava.com" }]
+dependencies = [
+    "sphinx>=8.2.3,<9.0.0",
+    "sphinx-book-theme>=1.1.4,<2.0.0",
+    "sphinx-autobuild>=2025.8.25,<2026.0.0",
+    "sphinx-design>=0.6.1,<0.7.0",
+    "rst2pdf>=0.103.1,<0.104.0",
+    "pyyaml>=6.0.2,<7.0.0",
+]
+
+[project.scripts]
+build = "codex_sale_docs.build:build"
+auto = "codex_sale_docs.build:auto"
+clean = "codex_sale_docs.build:clean"
+check-provenance = "codex_sale_docs.provenance:main"
+
+[tool.poetry]
+packages = [{ include = "codex_sale_docs" }]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
