@@ -24,6 +24,8 @@ esbonio = "codex_sale_docs.build:esbonio"
 auto = "codex_sale_docs.build:auto"
 clean = "codex_sale_docs.build:clean"
 check-provenance = "codex_sale_docs.provenance:main"
+fetch-open-calgary = "codex_sale_docs.open_calgary:main"
+prepare-renter-comps = "codex_sale_docs.renter_comps:main"
 
 [build-system]
 requires = ["poetry-core"]

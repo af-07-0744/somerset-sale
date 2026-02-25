@@ -27,6 +27,14 @@ This project now uses a Sphinx-first workflow with reStructuredText (`.rst`) as 
 - `poetry run clean` - removes `build/` and `dist/` directories.
 - `poetry run clean -- build/esbonio` - removes a specific build path.
 
+## Open Calgary Comparables
+- `poetry run fetch-open-calgary --subject-address "3000 Somervale Court SW # 209, Calgary AB T2Y 4J2"` - pulls assessment-based comparables into `data/open_calgary_assessment_comps.csv` and writes evidence artifacts.
+- Optional app token: `SOCRATA_APP_TOKEN=... poetry run fetch-open-calgary --subject-address "..."`
+- Add rows to `data/comps_raw.csv`: `poetry run fetch-open-calgary --subject-address "..." --append-comps-raw`
+- Dry run query preview: `poetry run fetch-open-calgary --subject-address "..." --dry-run`
+- Generate renter-facing table page and CSV: `poetry run prepare-renter-comps`
+- Important: this command produces assessment proxies from open data, not MLS closed-sale comparables.
+
 ## Evidence Rules
 - Every price, DOM, or feature claim in `source/` must cite one or more `source_id` values from `data/source_registry.csv`.
 - Every row in `data/comps_clean.csv` must include `source_ids` (semicolon-delimited).

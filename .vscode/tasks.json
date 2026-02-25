@@ -79,6 +79,28 @@
             "problemMatcher": []
         },
         {
+            "label": "poetry run fetch-open-calgary",
+            "type": "shell",
+            "command": "poetry run fetch-open-calgary --subject-address \"3000 Somervale Court SW # 209, Calgary AB T2Y 4J2\"",
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "poetry run prepare-renter-comps",
+            "type": "shell",
+            "command": "poetry run prepare-renter-comps",
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
             "label": "poetry install, settings, clean, auto",
             "type": "shell",
             "command": "poetry install && poetry run settings && poetry run clean && poetry run auto",

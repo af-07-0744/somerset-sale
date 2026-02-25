@@ -33,3 +33,4 @@ Validation Rule
 ---------------
 
 Run ``poetry run check-provenance`` before issuing the memo.
+Use ``poetry run fetch-open-calgary --subject-address "<address>"`` to capture open-data source rows.
