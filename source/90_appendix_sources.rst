@@ -32,4 +32,4 @@ Required Source Fields
 Validation Rule
 ---------------
 
-Run ``poetry run python -m codex_sale_docs.provenance`` before issuing the memo.
+Run ``poetry run check-provenance`` before issuing the memo.

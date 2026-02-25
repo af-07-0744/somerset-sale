@@ -35,9 +35,20 @@
             "problemMatcher": []
         },
         {
+            "label": "poetry run esbonio",
+            "type": "shell",
+            "command": "poetry run esbonio",
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
             "label": "poetry run auto",
             "type": "shell",
-            "command": "poetry run auto",
+            "command": "SPHINX_AUTOBUILD_HOST=0.0.0.0 poetry run auto",
             "group": "build",
             "presentation": {
                 "reveal": "always",
@@ -59,7 +70,7 @@
         {
             "label": "poetry run provenance check",
             "type": "shell",
-            "command": "poetry run python -m codex_sale_docs.provenance",
+            "command": "poetry run check-provenance",
             "group": "build",
             "presentation": {
                 "reveal": "always",

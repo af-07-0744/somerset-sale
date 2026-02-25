@@ -14,15 +14,16 @@ dependencies = [
     "pyyaml>=6.0.2,<7.0.0",
 ]
 
-[project.scripts]
+[tool.poetry]
+packages = [{ include = "codex_sale_docs" }]
+
+[tool.poetry.scripts]
+settings = "codex_sale_docs.build:settings"
 build = "codex_sale_docs.build:build"
+esbonio = "codex_sale_docs.build:esbonio"
 auto = "codex_sale_docs.build:auto"
 clean = "codex_sale_docs.build:clean"
 check-provenance = "codex_sale_docs.provenance:main"
-settings = "codex_sale_docs.build:settings"
-
-[tool.poetry]
-packages = [{ include = "codex_sale_docs" }]
 
 [build-system]
 requires = ["poetry-core"]

@@ -35,6 +35,11 @@ REQUIRED_SOURCE_COLUMNS = {
 }
 
 
+def _is_template_id(value: str) -> bool:
+    normalized = value.strip().upper()
+    return normalized.startswith("C-TEMPLATE") or normalized.startswith("S-TEMPLATE")
+
+
 def _read_csv(path: Path) -> tuple[list[dict[str, str]], list[str]]:
     if not path.exists():
         raise FileNotFoundError(f"Missing file: {path}")
@@ -83,6 +88,11 @@ def validate() -> tuple[list[str], list[str]]:
 
         source_ids_by_row[source_id] = row
 
+        if _is_template_id(source_id):
+            warnings.append(
+                f"{SOURCES_FILE}:{row_index}: template source row is still present; replace before final memo"
+            )
+
         if not comp_id:
             errors.append(f"{SOURCES_FILE}:{row_index}: comp_id is required")
 
@@ -102,6 +112,10 @@ def validate() -> tuple[list[str], list[str]]:
 
         if not comp_id:
             errors.append(f"{COMPS_FILE}:{row_index}: comp_id is required")
+        elif _is_template_id(comp_id):
+            warnings.append(
+                f"{COMPS_FILE}:{row_index}: template comp row is still present; replace before final memo"
+            )
 
         if not source_ids:
             errors.append(f"{COMPS_FILE}:{row_index}: source_ids is required")

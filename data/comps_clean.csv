@@ -1,1 +1,2 @@
 comp_id,address,unit,status,list_price,sold_price,sale_date,sqft,bedrooms,bathrooms,parking,dom,condition,source_ids,notes
+C-TEMPLATE,Template comp row,,sold,0,0,1970-01-01,0,0,0,,0,,S-TEMPLATE,Replace with real comparable data before issuing memo
