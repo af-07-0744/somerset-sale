@@ -19,6 +19,7 @@ build = "codex_sale_docs.build:build"
 auto = "codex_sale_docs.build:auto"
 clean = "codex_sale_docs.build:clean"
 check-provenance = "codex_sale_docs.provenance:main"
+settings = "codex_sale_docs.build:settings"
 
 [tool.poetry]
 packages = [{ include = "codex_sale_docs" }]

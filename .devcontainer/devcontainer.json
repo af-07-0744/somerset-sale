@@ -1,0 +1,57 @@
+{
+  "name": "codex-sale-docs (poetry + esbonio)",
+  "build": { "dockerfile": "Dockerfile", "context": "." },
+  "forwardPorts": [8000],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "chrisjsewell.myst-tml-syntax",
+        "ms-python.vscode-pylance",
+        "lextudio.restructuredtext",
+        "trond-snekvik.simple-rst",
+        "njpwerner.autodocstring",
+        "zeshuaro.vscode-python-poetry",
+        "visualstudioexptteam.vscodeintellicode",
+        "kevinrose.vsc-python-indent",
+        "openai.chatgpt",
+        "visualstudioexptteam.intellicode-api-usage-examples",
+        "ms-python.debugpy",
+        "ms-python.vscode-python-envs",
+        "tamasfe.even-better-toml",
+        "jebbs.plantuml",
+        "swyddfa.esbonio"
+      ],
+      "settings": {
+        "editor.rulers": [
+          80
+        ],
+        "python.defaultInterpreterPath":
+          "${containerWorkspaceFolder}/.venv/bin/python",
+        "python.terminal.activateEnvironment": true,
+        "extensions.ignoreRecommendations": true,
+        "extensions.ignoreWorkspaceRecommendations": true,
+        "esbonio.server.pythonPath":
+          "${containerWorkspaceFolder}/.venv/bin/python",
+        "esbonio.sphinx.pythonCommand": [
+          "${containerWorkspaceFolder}/.venv/bin/python"
+        ],
+        "esbonio.sphinx.buildCommand": [
+          "sphinx-build",
+          "-M",
+          "html",
+          "source",
+          "build/esbonio"
+        ],
+        "esbonio.preview.bind": "0.0.0.0",
+        "esbonio.preview.httpPort": 0,
+        "esbonio.preview.wsPort": 0,
+        "editor.minimap.enabled": false
+      }
+    }
+  },
+  "onCreateCommand": "poetry config virtualenvs.in-project true",
+  "updateContentCommand": "poetry install --no-interaction --no-ansi",
+  "postAttachCommand": "code --install-extension swyddfa.esbonio@0.96.6",
+  "features": {}
+}

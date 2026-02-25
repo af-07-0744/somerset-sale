@@ -1,0 +1,24 @@
+{
+    "editor.rulers": [
+        80
+    ],
+    "python.defaultInterpreterPath": "/Users/joseph/Documents/Real Estate/Calgary/Codex Sale/.venv/bin/python",
+    "python.terminal.activateEnvironment": true,
+    "extensions.ignoreRecommendations": true,
+    "extensions.ignoreWorkspaceRecommendations": true,
+    "esbonio.server.pythonPath": "/Users/joseph/Documents/Real Estate/Calgary/Codex Sale/.venv/bin/python",
+    "esbonio.sphinx.pythonCommand": [
+        "/Users/joseph/Documents/Real Estate/Calgary/Codex Sale/.venv/bin/python"
+    ],
+    "esbonio.sphinx.buildCommand": [
+        "sphinx-build",
+        "-M",
+        "html",
+        "source",
+        "build/esbonio"
+    ],
+    "esbonio.preview.bind": "0.0.0.0",
+    "esbonio.preview.httpPort": 0,
+    "esbonio.preview.wsPort": 0,
+    "editor.minimap.enabled": false
+}

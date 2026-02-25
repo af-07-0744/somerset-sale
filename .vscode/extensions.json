@@ -1,0 +1,8 @@
+{
+    "recommendations": [
+        "donjayamanne.python-extension-pack",
+        "zeshuaro.vscode-python-poetry",
+        "swyddfa.esbonio",
+        "lextudio.restructuredtext-pack"
+    ]
+}
