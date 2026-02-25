@@ -21,8 +21,9 @@ This project now uses a Sphinx-first workflow with reStructuredText (`.rst`) as 
 - `poetry run check-provenance` - validates `data/comps_clean.csv` and `data/source_registry.csv`.
 - `poetry run build` - builds Sphinx HTML into `build/html`.
 - `poetry run esbonio` - builds Sphinx HTML into `build/esbonio/html` for language server previews.
-- `poetry run auto` - starts `sphinx-autobuild` with live reload on `127.0.0.1:8000`.
+- `poetry run auto` - starts `sphinx-autobuild` with live reload on `127.0.0.1` and an auto-selected port.
 - `SPHINX_AUTOBUILD_HOST=0.0.0.0 poetry run auto` - enables container/network binding when needed.
+- `SPHINX_AUTOBUILD_REQUIRE_SERVER=1 poetry run auto` - fail instead of fallback if live server bind is unavailable.
 - `poetry run clean` - removes `build/` and `dist/` directories.
 - `poetry run clean -- build/esbonio` - removes a specific build path.
 

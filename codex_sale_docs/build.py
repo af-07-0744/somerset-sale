@@ -130,16 +130,25 @@ def auto() -> int:
 
     host = os.environ.get("SPHINX_AUTOBUILD_HOST", "127.0.0.1")
     try:
-        port = int(os.environ.get("SPHINX_AUTOBUILD_PORT", "8000"))
+        port = int(os.environ.get("SPHINX_AUTOBUILD_PORT", "0"))
     except ValueError:
         print("ERROR: SPHINX_AUTOBUILD_PORT must be an integer.")
         return 1
+    require_server = os.environ.get("SPHINX_AUTOBUILD_REQUIRE_SERVER", "").lower() in {
+        "1",
+        "true",
+        "yes",
+    }
 
     can_bind, bind_error = _can_bind(host, port)
     if not can_bind:
-        print(f"ERROR: Cannot bind sphinx-autobuild server to {host}:{port} ({bind_error})")
-        print("Set SPHINX_AUTOBUILD_HOST/SPHINX_AUTOBUILD_PORT to an allowed interface and port.")
-        return 1
+        if require_server:
+            print(f"ERROR: Cannot bind sphinx-autobuild server to {host}:{port} ({bind_error})")
+            print("Set SPHINX_AUTOBUILD_HOST/SPHINX_AUTOBUILD_PORT to an allowed interface and port.")
+            return 1
+        print(f"WARNING: Cannot bind sphinx-autobuild server to {host}:{port} ({bind_error})")
+        print("Falling back to one-shot HTML build. Set SPHINX_AUTOBUILD_REQUIRE_SERVER=1 to force failure.")
+        return build()
 
     argv = [
         "sphinx-autobuild",
