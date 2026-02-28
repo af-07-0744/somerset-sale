@@ -1,0 +1,47 @@
+field,field_meaning,present_count,present_pct,distinct_count,value,value_count,value_pct_of_rows,value_pct_of_present,value_meaning,meaning_source
+comm_code,Community code from the assessment record.,838,100.00,1,SOM,838,100.00,100.00,SOMERSET,companion:comm_name
+land_size_ac,Land size in acres from the assessment record.,838,100.00,11,1.12,1,0.12,0.12,Land parcel size value: 1.12 acres.,derived
+land_size_ac,Land size in acres from the assessment record.,838,100.00,11,1.49,163,19.45,19.45,Land parcel size value: 1.49 acres.,derived
+land_size_ac,Land size in acres from the assessment record.,838,100.00,11,1.5,86,10.26,10.26,Land parcel size value: 1.5 acres.,derived
+land_size_ac,Land size in acres from the assessment record.,838,100.00,11,1.87,75,8.95,8.95,Land parcel size value: 1.87 acres.,derived
+land_size_ac,Land size in acres from the assessment record.,838,100.00,11,1.92,75,8.95,8.95,Land parcel size value: 1.92 acres.,derived
+land_size_ac,Land size in acres from the assessment record.,838,100.00,11,2.22,142,16.95,16.95,Land parcel size value: 2.22 acres.,derived
+land_size_ac,Land size in acres from the assessment record.,838,100.00,11,2.37,1,0.12,0.12,Land parcel size value: 2.37 acres.,derived
+land_size_ac,Land size in acres from the assessment record.,838,100.00,11,2.48,1,0.12,0.12,Land parcel size value: 2.48 acres.,derived
+land_size_ac,Land size in acres from the assessment record.,838,100.00,11,2.5100000000000002,1,0.12,0.12,Land parcel size value: 2.5100000000000002 acres.,derived
+land_size_ac,Land size in acres from the assessment record.,838,100.00,11,2.73,75,8.95,8.95,Land parcel size value: 2.73 acres.,derived
+land_size_ac,Land size in acres from the assessment record.,838,100.00,11,3.73,218,26.01,26.01,Land parcel size value: 3.73 acres.,derived
+land_size_sf,Land size in square feet from the assessment record.,838,100.00,11,48762.0,1,0.12,0.12,Land parcel size value: 48762.0 square feet.,derived
+land_size_sf,Land size in square feet from the assessment record.,838,100.00,11,64691.0,163,19.45,19.45,Land parcel size value: 64691.0 square feet.,derived
+land_size_sf,Land size in square feet from the assessment record.,838,100.00,11,65554.0,86,10.26,10.26,Land parcel size value: 65554.0 square feet.,derived
+land_size_sf,Land size in square feet from the assessment record.,838,100.00,11,81375.0,75,8.95,8.95,Land parcel size value: 81375.0 square feet.,derived
+land_size_sf,Land size in square feet from the assessment record.,838,100.00,11,83636.0,75,8.95,8.95,Land parcel size value: 83636.0 square feet.,derived
+land_size_sf,Land size in square feet from the assessment record.,838,100.00,11,96660.0,142,16.95,16.95,Land parcel size value: 96660.0 square feet.,derived
+land_size_sf,Land size in square feet from the assessment record.,838,100.00,11,103337.0,1,0.12,0.12,Land parcel size value: 103337.0 square feet.,derived
+land_size_sf,Land size in square feet from the assessment record.,838,100.00,11,107966.0,1,0.12,0.12,Land parcel size value: 107966.0 square feet.,derived
+land_size_sf,Land size in square feet from the assessment record.,838,100.00,11,109257.0,1,0.12,0.12,Land parcel size value: 109257.0 square feet.,derived
+land_size_sf,Land size in square feet from the assessment record.,838,100.00,11,118941.0,75,8.95,8.95,Land parcel size value: 118941.0 square feet.,derived
+land_size_sf,Land size in square feet from the assessment record.,838,100.00,11,162540.0,218,26.01,26.01,Land parcel size value: 162540.0 square feet.,derived
+land_size_sm,Land size in square metres from the assessment record.,838,100.00,11,4530.0,1,0.12,0.12,Land parcel size value: 4530.0 square metres.,derived
+land_size_sm,Land size in square metres from the assessment record.,838,100.00,11,6010.0,163,19.45,19.45,Land parcel size value: 6010.0 square metres.,derived
+land_size_sm,Land size in square metres from the assessment record.,838,100.00,11,6090.0,86,10.26,10.26,Land parcel size value: 6090.0 square metres.,derived
+land_size_sm,Land size in square metres from the assessment record.,838,100.00,11,7560.0,75,8.95,8.95,Land parcel size value: 7560.0 square metres.,derived
+land_size_sm,Land size in square metres from the assessment record.,838,100.00,11,7770.0,75,8.95,8.95,Land parcel size value: 7770.0 square metres.,derived
+land_size_sm,Land size in square metres from the assessment record.,838,100.00,11,8980.0,142,16.95,16.95,Land parcel size value: 8980.0 square metres.,derived
+land_size_sm,Land size in square metres from the assessment record.,838,100.00,11,9600.0,1,0.12,0.12,Land parcel size value: 9600.0 square metres.,derived
+land_size_sm,Land size in square metres from the assessment record.,838,100.00,11,10030.0,1,0.12,0.12,Land parcel size value: 10030.0 square metres.,derived
+land_size_sm,Land size in square metres from the assessment record.,838,100.00,11,10150.0,1,0.12,0.12,Land parcel size value: 10150.0 square metres.,derived
+land_size_sm,Land size in square metres from the assessment record.,838,100.00,11,11050.0,75,8.95,8.95,Land parcel size value: 11050.0 square metres.,derived
+land_size_sm,Land size in square metres from the assessment record.,838,100.00,11,15100.0,218,26.01,26.01,Land parcel size value: 15100.0 square metres.,derived
+land_use_designation,Land-use designation code from the assessment record.,838,100.00,3,M-C2,836,99.76,99.76,Multi-Residential Contextual Medium Profile District.,known_map
+land_use_designation,Land-use designation code from the assessment record.,838,100.00,3,S-SPR,1,0.12,0.12,"Special Purpose - School, Park and Community Reserve District.",known_map
+land_use_designation,Land-use designation code from the assessment record.,838,100.00,3,S-UN,1,0.12,0.12,Special Purpose - Urban Nature District.,known_map
+sub_property_use,Sub-property-use code from the assessment record.,838,100.00,5,A004,242,28.88,28.88,Ancillary V-suffix record; typically parking-related (inference).,known_map
+sub_property_use,Sub-property-use code from the assessment record.,838,100.00,5,A005,36,4.30,4.30,Ancillary S-suffix record; typically storage-related (inference).,known_map
+sub_property_use,Sub-property-use code from the assessment record.,838,100.00,5,A006,3,0.36,0.36,Auxiliary parcel/common-property record (inference).,known_map
+sub_property_use,Sub-property-use code from the assessment record.,838,100.00,5,R201,556,66.35,66.35,Primary residential condo-unit record.,known_map
+sub_property_use,Sub-property-use code from the assessment record.,838,100.00,5,X057,1,0.12,0.12,Exceptional/special record code (inference).,known_map
+year_of_construction,Year of construction from the assessment record.,835,99.64,3,2001.0,530,63.25,63.47,Year built: 2001.,derived
+year_of_construction,Year of construction from the assessment record.,835,99.64,3,2002.0,1,0.12,0.12,Year built: 2002.,derived
+year_of_construction,Year of construction from the assessment record.,835,99.64,3,2003.0,304,36.28,36.41,Year built: 2003.,derived
+year_of_construction,Year of construction from the assessment record.,835,99.64,3,,3,0.36,,Missing in source row.,missing

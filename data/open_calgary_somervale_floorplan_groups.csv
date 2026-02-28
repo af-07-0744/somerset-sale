@@ -1,0 +1,480 @@
+group_rank,plan_signature,row_count,same_floor_plan_count,similar_floor_plan_count,other_count,buildings,units,assessed_value_min,assessed_value_max,value_delta_pct_min,value_delta_pct_max
+1,stack:09|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,3,3,0,0,3000 Somervale Court SW; 5000 Somervale Court SW; 6000 Somervale Court SW,109V; 209V,10000,10000,-0.9620,-0.9620
+2,stack:09|sub_property_use:R201|land_use:M-C2|assessed_bucket:257500,3,3,0,0,1000 Somervale Court SW; 2000 Somervale Court SW; 3000 Somervale Court SW,109,258500,258500,-0.0171,-0.0171
+3,stack:09|sub_property_use:R201|land_use:M-C2|assessed_bucket:267500,3,3,0,0,1000 Somervale Court SW; 2000 Somervale Court SW; 3000 Somervale Court SW,309,267500,267500,0.0171,0.0171
+4,stack:09|sub_property_use:R201|land_use:M-C2|assessed_bucket:272500,3,3,0,0,1000 Somervale Court SW; 2000 Somervale Court SW; 3000 Somervale Court SW,409,272000,272000,0.0342,0.0342
+5,stack:09|sub_property_use:R201|land_use:M-C2|assessed_bucket:177500,2,2,0,0,5000 Somervale Court SW,209; 309,176500,178500,-0.3289,-0.3213
+6,stack:09|sub_property_use:R201|land_use:M-C2|assessed_bucket:260000,2,2,0,0,4000 Somervale Court SW; 6000 Somervale Court SW,109,261000,261000,-0.0076,-0.0076
+7,stack:09|sub_property_use:R201|land_use:M-C2|assessed_bucket:262500,2,2,0,0,1000 Somervale Court SW; 2000 Somervale Court SW,209,263000,263000,0.0000,0.0000
+8,stack:09|sub_property_use:R201|land_use:M-C2|assessed_bucket:265000,2,2,0,0,4000 Somervale Court SW; 6000 Somervale Court SW,209,265500,265500,0.0095,0.0095
+9,stack:09|sub_property_use:R201|land_use:M-C2|assessed_bucket:270000,2,2,0,0,4000 Somervale Court SW; 6000 Somervale Court SW,309,270000,270000,0.0266,0.0266
+10,stack:09|sub_property_use:R201|land_use:M-C2|assessed_bucket:180000,1,1,0,0,5000 Somervale Court SW,409,181000,181000,-0.3118,-0.3118
+11,stack:09|sub_property_use:R201|land_use:M-C2|assessed_bucket:275000,1,1,0,0,4000 Somervale Court SW,409,274000,274000,0.0418,0.0418
+12,stack:09|sub_property_use:R201|land_use:M-C2|assessed_bucket:287500,1,1,0,0,6000 Somervale Court SW,409,288500,288500,0.0970,0.0970
+13,stack:09|sub_property_use:R201|land_use:M-C2|assessed_bucket:290000,1,1,0,0,5500 Somervale Court SW,109,290000,290000,0.1027,0.1027
+14,stack:09|sub_property_use:R201|land_use:M-C2|assessed_bucket:295000,1,1,0,0,5500 Somervale Court SW,209,295000,295000,0.1217,0.1217
+15,stack:09|sub_property_use:R201|land_use:M-C2|assessed_bucket:300000,1,1,0,0,5500 Somervale Court SW,309,300000,300000,0.1407,0.1407
+16,stack:09|sub_property_use:R201|land_use:M-C2|assessed_bucket:307500,1,1,0,0,5500 Somervale Court SW,409,307500,307500,0.1692,0.1692
+17,stack:01|sub_property_use:R201|land_use:M-C2|assessed_bucket:290000,5,0,5,0,2000 Somervale Court SW; 3000 Somervale Court SW; 4000 Somervale Court SW; 5500 Somervale Court SW; 6000 Somervale Court SW,101; 401,290000,291000,0.1027,0.1065
+18,stack:03|sub_property_use:R201|land_use:M-C2|assessed_bucket:272500,5,0,5,0,1000 Somervale Court SW; 2000 Somervale Court SW; 3000 Somervale Court SW,103; 303,271500,273000,0.0323,0.0380
+19,stack:04|sub_property_use:R201|land_use:M-C2|assessed_bucket:260000,5,0,5,0,1000 Somervale Court SW; 2000 Somervale Court SW; 4000 Somervale Court SW; 5500 Somervale Court SW; 6000 Somervale Court SW,104,261000,261000,-0.0076,-0.0076
+20,stack:05|sub_property_use:R201|land_use:M-C2|assessed_bucket:275000,5,0,5,0,1000 Somervale Court SW; 2000 Somervale Court SW; 3000 Somervale Court SW; 4000 Somervale Court SW; 6000 Somervale Court SW,305; 405,274000,274000,0.0418,0.0418
+21,stack:10|sub_property_use:R201|land_use:M-C2|assessed_bucket:237500,5,0,5,0,1000 Somervale Court SW; 2000 Somervale Court SW; 3000 Somervale Court SW; 4000 Somervale Court SW; 6000 Somervale Court SW,110; 410,236500,238500,-0.1008,-0.0932
+22,stack:18|sub_property_use:R201|land_use:M-C2|assessed_bucket:285000,5,0,5,0,1000 Somervale Court SW; 2000 Somervale Court SW; 3000 Somervale Court SW; 5000 Somervale Court SW; 6000 Somervale Court SW,318,284000,286000,0.0798,0.0875
+23,stack:19|sub_property_use:R201|land_use:M-C2|assessed_bucket:290000,5,0,5,0,1000 Somervale Court SW; 3000 Somervale Court SW; 4000 Somervale Court SW; 6000 Somervale Court SW,119; 219; 419,289000,291000,0.0989,0.1065
+24,stack:01|sub_property_use:R201|land_use:M-C2|assessed_bucket:300000,4,0,4,0,4000 Somervale Court SW; 5000 Somervale Court SW; 5500 Somervale Court SW; 6000 Somervale Court SW,301,299500,300000,0.1388,0.1407
+25,stack:03|sub_property_use:R201|land_use:M-C2|assessed_bucket:267500,4,0,4,0,1000 Somervale Court SW; 2000 Somervale Court SW; 3000 Somervale Court SW; 6000 Somervale Court SW,203; 403,267000,267500,0.0152,0.0171
+26,stack:03|sub_property_use:R201|land_use:M-C2|assessed_bucket:277500,4,0,4,0,1000 Somervale Court SW; 2000 Somervale Court SW; 3000 Somervale Court SW; 6000 Somervale Court SW,303; 403,276500,276500,0.0513,0.0513
+27,stack:05|sub_property_use:R201|land_use:M-C2|assessed_bucket:260000,4,0,4,0,1000 Somervale Court SW; 2000 Somervale Court SW; 4000 Somervale Court SW; 6000 Somervale Court SW,105,261000,261000,-0.0076,-0.0076
+28,stack:05|sub_property_use:R201|land_use:M-C2|assessed_bucket:265000,4,0,4,0,1000 Somervale Court SW; 2000 Somervale Court SW; 4000 Somervale Court SW; 6000 Somervale Court SW,205,265500,265500,0.0095,0.0095
+29,stack:05|sub_property_use:R201|land_use:M-C2|assessed_bucket:270000,4,0,4,0,1000 Somervale Court SW; 2000 Somervale Court SW; 4000 Somervale Court SW; 6000 Somervale Court SW,305,270000,270000,0.0266,0.0266
+30,stack:11|sub_property_use:R201|land_use:M-C2|assessed_bucket:275000,4,0,4,0,1000 Somervale Court SW; 2000 Somervale Court SW; 6000 Somervale Court SW,111; 411,274000,275500,0.0418,0.0475
+31,stack:15|sub_property_use:R201|land_use:M-C2|assessed_bucket:260000,4,0,4,0,1000 Somervale Court SW; 2000 Somervale Court SW; 4000 Somervale Court SW; 6000 Somervale Court SW,115,261000,261000,-0.0076,-0.0076
+32,stack:15|sub_property_use:R201|land_use:M-C2|assessed_bucket:265000,4,0,4,0,1000 Somervale Court SW; 2000 Somervale Court SW; 4000 Somervale Court SW; 6000 Somervale Court SW,215,265500,265500,0.0095,0.0095
+33,stack:15|sub_property_use:R201|land_use:M-C2|assessed_bucket:270000,4,0,4,0,1000 Somervale Court SW; 2000 Somervale Court SW; 4000 Somervale Court SW; 6000 Somervale Court SW,315,270000,270000,0.0266,0.0266
+34,stack:15|sub_property_use:R201|land_use:M-C2|assessed_bucket:275000,4,0,4,0,1000 Somervale Court SW; 2000 Somervale Court SW; 4000 Somervale Court SW; 6000 Somervale Court SW,415,274000,274000,0.0418,0.0418
+35,stack:16|sub_property_use:R201|land_use:M-C2|assessed_bucket:260000,4,0,4,0,1000 Somervale Court SW; 2000 Somervale Court SW; 4000 Somervale Court SW; 6000 Somervale Court SW,116,261000,261000,-0.0076,-0.0076
+36,stack:16|sub_property_use:R201|land_use:M-C2|assessed_bucket:272500,4,0,4,0,1000 Somervale Court SW; 2000 Somervale Court SW; 3000 Somervale Court SW,116; 316,272000,273000,0.0342,0.0380
+37,stack:17|sub_property_use:R201|land_use:M-C2|assessed_bucket:257500,4,0,4,0,3000 Somervale Court SW; 4000 Somervale Court SW; 6000 Somervale Court SW,117; 217; 317,258500,258500,-0.0171,-0.0171
+38,stack:17|sub_property_use:R201|land_use:M-C2|assessed_bucket:267500,4,0,4,0,1000 Somervale Court SW; 2000 Somervale Court SW; 3000 Somervale Court SW; 4000 Somervale Court SW,217; 417,267000,267500,0.0152,0.0171
+39,stack:00|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,3,0,3,0,3000 Somervale Court SW; 5000 Somervale Court SW; 6000 Somervale Court SW,100V; 200V,10000,10000,-0.9620,-0.9620
+40,stack:01|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,3,0,3,0,3000 Somervale Court SW; 5000 Somervale Court SW; 6000 Somervale Court SW,101V; 201V,10000,10000,-0.9620,-0.9620
+41,stack:01|sub_property_use:R201|land_use:M-C2|assessed_bucket:267500,3,0,3,0,1000 Somervale Court SW; 2000 Somervale Court SW; 3000 Somervale Court SW,101,267500,267500,0.0171,0.0171
+42,stack:01|sub_property_use:R201|land_use:M-C2|assessed_bucket:282500,3,0,3,0,1000 Somervale Court SW; 2000 Somervale Court SW; 3000 Somervale Court SW,201,281500,281500,0.0703,0.0703
+43,stack:01|sub_property_use:R201|land_use:M-C2|assessed_bucket:295000,3,0,3,0,4000 Somervale Court SW; 5500 Somervale Court SW; 6000 Somervale Court SW,201,295000,295000,0.1217,0.1217
+44,stack:02|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,3,0,3,0,3000 Somervale Court SW; 5000 Somervale Court SW; 6000 Somervale Court SW,102V; 202V,10000,10000,-0.9620,-0.9620
+45,stack:02|sub_property_use:R201|land_use:M-C2|assessed_bucket:282500,3,0,3,0,1000 Somervale Court SW; 2000 Somervale Court SW; 3000 Somervale Court SW,202,281500,281500,0.0703,0.0703
+46,stack:02|sub_property_use:R201|land_use:M-C2|assessed_bucket:285000,3,0,3,0,1000 Somervale Court SW; 2000 Somervale Court SW; 3000 Somervale Court SW,302,284000,286000,0.0798,0.0875
+47,stack:02|sub_property_use:R201|land_use:M-C2|assessed_bucket:290000,3,0,3,0,1000 Somervale Court SW; 2000 Somervale Court SW; 5500 Somervale Court SW,102; 402,290000,291000,0.1027,0.1065
+48,stack:03|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,3,0,3,0,3000 Somervale Court SW; 5000 Somervale Court SW; 6000 Somervale Court SW,103V; 203V,10000,10000,-0.9620,-0.9620
+49,stack:04|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,3,0,3,0,3000 Somervale Court SW; 5000 Somervale Court SW; 6000 Somervale Court SW,104V; 204V,10000,10000,-0.9620,-0.9620
+50,stack:04|sub_property_use:R201|land_use:M-C2|assessed_bucket:265000,3,0,3,0,4000 Somervale Court SW; 5500 Somervale Court SW; 6000 Somervale Court SW,204,265500,265500,0.0095,0.0095
+51,stack:04|sub_property_use:R201|land_use:M-C2|assessed_bucket:267500,3,0,3,0,1000 Somervale Court SW; 2000 Somervale Court SW; 3000 Somervale Court SW,204,267500,267500,0.0171,0.0171
+52,stack:04|sub_property_use:R201|land_use:M-C2|assessed_bucket:270000,3,0,3,0,4000 Somervale Court SW; 5500 Somervale Court SW; 6000 Somervale Court SW,304,270000,270000,0.0266,0.0266
+53,stack:04|sub_property_use:R201|land_use:M-C2|assessed_bucket:272500,3,0,3,0,1000 Somervale Court SW; 2000 Somervale Court SW; 3000 Somervale Court SW,304,272000,272000,0.0342,0.0342
+54,stack:04|sub_property_use:R201|land_use:M-C2|assessed_bucket:275000,3,0,3,0,4000 Somervale Court SW; 5500 Somervale Court SW; 6000 Somervale Court SW,404,274000,274000,0.0418,0.0418
+55,stack:04|sub_property_use:R201|land_use:M-C2|assessed_bucket:277500,3,0,3,0,1000 Somervale Court SW; 2000 Somervale Court SW; 3000 Somervale Court SW,404,276500,276500,0.0513,0.0513
+56,stack:05|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,3,0,3,0,3000 Somervale Court SW; 5000 Somervale Court SW; 6000 Somervale Court SW,105V; 205V,10000,10000,-0.9620,-0.9620
+57,stack:06|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,3,0,3,0,3000 Somervale Court SW; 5000 Somervale Court SW; 6000 Somervale Court SW,106V; 206V,10000,10000,-0.9620,-0.9620
+58,stack:06|sub_property_use:R201|land_use:M-C2|assessed_bucket:267500,3,0,3,0,1000 Somervale Court SW; 3000 Somervale Court SW,206; 306,267500,267500,0.0171,0.0171
+59,stack:06|sub_property_use:R201|land_use:M-C2|assessed_bucket:272500,3,0,3,0,1000 Somervale Court SW; 3000 Somervale Court SW,106; 406,272000,273000,0.0342,0.0380
+60,stack:06|sub_property_use:R201|land_use:M-C2|assessed_bucket:300000,3,0,3,0,4000 Somervale Court SW; 5500 Somervale Court SW; 6000 Somervale Court SW,206; 306,299500,300000,0.1388,0.1407
+61,stack:06|sub_property_use:R201|land_use:M-C2|assessed_bucket:305000,3,0,3,0,4000 Somervale Court SW; 5500 Somervale Court SW; 6000 Somervale Court SW,306; 406,305000,305500,0.1597,0.1616
+62,stack:07|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,3,0,3,0,3000 Somervale Court SW; 5000 Somervale Court SW; 6000 Somervale Court SW,107V; 207V,10000,10000,-0.9620,-0.9620
+63,stack:07|sub_property_use:R201|land_use:M-C2|assessed_bucket:260000,3,0,3,0,1000 Somervale Court SW; 2000 Somervale Court SW; 5500 Somervale Court SW,107,261000,261000,-0.0076,-0.0076
+64,stack:07|sub_property_use:R201|land_use:M-C2|assessed_bucket:305000,3,0,3,0,4000 Somervale Court SW; 5500 Somervale Court SW; 6000 Somervale Court SW,307; 407,304500,305500,0.1578,0.1616
+65,stack:08|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,3,0,3,0,3000 Somervale Court SW; 5000 Somervale Court SW; 6000 Somervale Court SW,108V; 208V,10000,10000,-0.9620,-0.9620
+66,stack:10|sub_property_use:R201|land_use:M-C2|assessed_bucket:240000,3,0,3,0,1000 Somervale Court SW; 2000 Somervale Court SW; 3000 Somervale Court SW,210,240000,240000,-0.0875,-0.0875
+67,stack:10|sub_property_use:R201|land_use:M-C2|assessed_bucket:245000,3,0,3,0,1000 Somervale Court SW; 2000 Somervale Court SW; 3000 Somervale Court SW,310,244000,244000,-0.0722,-0.0722
+68,stack:11|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,3,0,3,0,3000 Somervale Court SW; 5000 Somervale Court SW; 6000 Somervale Court SW,111V; 211V,10000,10000,-0.9620,-0.9620
+69,stack:11|sub_property_use:R201|land_use:M-C2|assessed_bucket:260000,3,0,3,0,1000 Somervale Court SW; 2000 Somervale Court SW; 4000 Somervale Court SW,111,261000,261000,-0.0076,-0.0076
+70,stack:11|sub_property_use:R201|land_use:M-C2|assessed_bucket:265000,3,0,3,0,1000 Somervale Court SW; 2000 Somervale Court SW; 4000 Somervale Court SW,211,265500,265500,0.0095,0.0095
+71,stack:11|sub_property_use:R201|land_use:M-C2|assessed_bucket:270000,3,0,3,0,1000 Somervale Court SW; 2000 Somervale Court SW; 4000 Somervale Court SW,311,270000,270000,0.0266,0.0266
+72,stack:12|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,3,0,3,0,3000 Somervale Court SW; 5000 Somervale Court SW; 6000 Somervale Court SW,112V; 212V,10000,10000,-0.9620,-0.9620
+73,stack:13|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,3,0,3,0,3000 Somervale Court SW; 5000 Somervale Court SW; 6000 Somervale Court SW,113V; 213V,10000,10000,-0.9620,-0.9620
+74,stack:14|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,3,0,3,0,3000 Somervale Court SW; 5000 Somervale Court SW; 6000 Somervale Court SW,114V; 214V,10000,10000,-0.9620,-0.9620
+75,stack:14|sub_property_use:R201|land_use:M-C2|assessed_bucket:272500,3,0,3,0,1000 Somervale Court SW; 3000 Somervale Court SW,114; 414,272000,273000,0.0342,0.0380
+76,stack:15|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,3,0,3,0,3000 Somervale Court SW; 5000 Somervale Court SW; 6000 Somervale Court SW,115V; 215V,10000,10000,-0.9620,-0.9620
+77,stack:16|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,3,0,3,0,3000 Somervale Court SW; 5000 Somervale Court SW; 6000 Somervale Court SW,116V; 216V,10000,10000,-0.9620,-0.9620
+78,stack:16|sub_property_use:R201|land_use:M-C2|assessed_bucket:277500,3,0,3,0,1000 Somervale Court SW; 2000 Somervale Court SW; 3000 Somervale Court SW,416,276500,276500,0.0513,0.0513
+79,stack:17|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,3,0,3,0,3000 Somervale Court SW; 5000 Somervale Court SW; 6000 Somervale Court SW,117V; 217V,10000,10000,-0.9620,-0.9620
+80,stack:17|sub_property_use:R201|land_use:M-C2|assessed_bucket:272500,3,0,3,0,1000 Somervale Court SW; 2000 Somervale Court SW; 3000 Somervale Court SW,317,272000,272000,0.0342,0.0342
+81,stack:17|sub_property_use:R201|land_use:M-C2|assessed_bucket:277500,3,0,3,0,1000 Somervale Court SW; 2000 Somervale Court SW; 3000 Somervale Court SW,417,276500,276500,0.0513,0.0513
+82,stack:18|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,3,0,3,0,3000 Somervale Court SW; 5000 Somervale Court SW; 6000 Somervale Court SW,118V; 218V,10000,10000,-0.9620,-0.9620
+83,stack:18|sub_property_use:R201|land_use:M-C2|assessed_bucket:282500,3,0,3,0,1000 Somervale Court SW; 2000 Somervale Court SW,118; 218,281500,282500,0.0703,0.0741
+84,stack:18|sub_property_use:R201|land_use:M-C2|assessed_bucket:290000,3,0,3,0,1000 Somervale Court SW; 2000 Somervale Court SW; 3000 Somervale Court SW,418,291000,291000,0.1065,0.1065
+85,stack:19|sub_property_use:R201|land_use:M-C2|assessed_bucket:285000,3,0,3,0,1000 Somervale Court SW; 2000 Somervale Court SW; 3000 Somervale Court SW,319,286000,286000,0.0875,0.0875
+86,stack:40|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,3,0,3,0,3000 Somervale Court SW; 5500 Somervale Court SW; 6000 Somervale Court SW,140V; 40V,10000,10000,-0.9620,-0.9620
+87,stack:41|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,3,0,3,0,3000 Somervale Court SW; 5500 Somervale Court SW; 6000 Somervale Court SW,141V; 41V,10000,10000,-0.9620,-0.9620
+88,stack:76|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,3,0,2,1,3000 Somervale Court SW; 5000 Somervale Court SW; 6000 Somervale Court SW,176V; 76V,10000,10000,-0.9620,-0.9620
+89,stack:77|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,3,0,2,1,3000 Somervale Court SW; 5000 Somervale Court SW; 6000 Somervale Court SW,177V; 77V,10000,10000,-0.9620,-0.9620
+90,stack:78|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,3,0,2,1,3000 Somervale Court SW; 5000 Somervale Court SW; 6000 Somervale Court SW,178V; 78V,10000,10000,-0.9620,-0.9620
+91,stack:79|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,3,0,2,1,3000 Somervale Court SW; 5000 Somervale Court SW; 6000 Somervale Court SW,179V; 79V,10000,10000,-0.9620,-0.9620
+92,stack:80|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,3,0,2,1,3000 Somervale Court SW; 5000 Somervale Court SW; 6000 Somervale Court SW,180V; 80V,10000,10000,-0.9620,-0.9620
+93,stack:81|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,3,0,2,1,3000 Somervale Court SW; 5000 Somervale Court SW; 6000 Somervale Court SW,181V; 81V,10000,10000,-0.9620,-0.9620
+94,stack:82|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,3,0,2,1,3000 Somervale Court SW; 5000 Somervale Court SW; 6000 Somervale Court SW,182V; 82V,10000,10000,-0.9620,-0.9620
+95,stack:83|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,3,0,2,1,3000 Somervale Court SW; 5000 Somervale Court SW; 6000 Somervale Court SW,183V; 83V,10000,10000,-0.9620,-0.9620
+96,stack:84|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,3,0,2,1,3000 Somervale Court SW; 5000 Somervale Court SW; 6000 Somervale Court SW,184V; 84V,10000,10000,-0.9620,-0.9620
+97,stack:85|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,3,0,2,1,3000 Somervale Court SW; 5000 Somervale Court SW; 6000 Somervale Court SW,185V; 85V,10000,10000,-0.9620,-0.9620
+98,stack:86|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,3,0,2,1,3000 Somervale Court SW; 5000 Somervale Court SW; 6000 Somervale Court SW,186V; 86V,10000,10000,-0.9620,-0.9620
+99,stack:87|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,3,0,2,1,3000 Somervale Court SW; 5000 Somervale Court SW; 6000 Somervale Court SW,187V; 87V,10000,10000,-0.9620,-0.9620
+100,stack:88|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,3,0,2,1,3000 Somervale Court SW; 5000 Somervale Court SW; 6000 Somervale Court SW,188V; 88V,10000,10000,-0.9620,-0.9620
+101,stack:89|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,3,0,2,1,3000 Somervale Court SW; 5000 Somervale Court SW; 6000 Somervale Court SW,189V; 89V,10000,10000,-0.9620,-0.9620
+102,stack:90|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,3,0,2,1,3000 Somervale Court SW; 5000 Somervale Court SW; 6000 Somervale Court SW,190V; 90V,10000,10000,-0.9620,-0.9620
+103,stack:91|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,3,0,2,1,3000 Somervale Court SW; 5000 Somervale Court SW; 6000 Somervale Court SW,191V; 91V,10000,10000,-0.9620,-0.9620
+104,stack:92|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,3,0,2,1,3000 Somervale Court SW; 5000 Somervale Court SW; 6000 Somervale Court SW,192V; 92V,10000,10000,-0.9620,-0.9620
+105,stack:93|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,3,0,2,1,3000 Somervale Court SW; 5000 Somervale Court SW; 6000 Somervale Court SW,193V; 93V,10000,10000,-0.9620,-0.9620
+106,stack:94|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,3,0,2,1,3000 Somervale Court SW; 5000 Somervale Court SW; 6000 Somervale Court SW,194V; 94V,10000,10000,-0.9620,-0.9620
+107,stack:95|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,3,0,2,1,3000 Somervale Court SW; 5000 Somervale Court SW; 6000 Somervale Court SW,195V; 95V,10000,10000,-0.9620,-0.9620
+108,stack:96|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,3,0,2,1,3000 Somervale Court SW; 5000 Somervale Court SW; 6000 Somervale Court SW,196V; 96V,10000,10000,-0.9620,-0.9620
+109,stack:97|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,3,0,2,1,3000 Somervale Court SW; 5000 Somervale Court SW; 6000 Somervale Court SW,197V; 97V,10000,10000,-0.9620,-0.9620
+110,stack:98|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,3,0,2,1,3000 Somervale Court SW; 5000 Somervale Court SW; 6000 Somervale Court SW,198V; 98V,10000,10000,-0.9620,-0.9620
+111,stack:99|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,3,0,2,1,3000 Somervale Court SW; 5000 Somervale Court SW; 6000 Somervale Court SW,199V; 99V,10000,10000,-0.9620,-0.9620
+112,stack:01|sub_property_use:R201|land_use:M-C2|assessed_bucket:285000,2,0,2,0,2000 Somervale Court SW; 3000 Somervale Court SW,301,286000,286000,0.0875,0.0875
+113,stack:01|sub_property_use:R201|land_use:M-C2|assessed_bucket:305000,2,0,2,0,4000 Somervale Court SW; 6000 Somervale Court SW,401,305500,305500,0.1616,0.1616
+114,stack:01|sub_property_use:R201|land_use:M-C2|assessed_bucket:307500,2,0,2,0,1000 Somervale Court SW; 5500 Somervale Court SW,401,306500,307500,0.1654,0.1692
+115,stack:02|sub_property_use:R201|land_use:M-C2|assessed_bucket:260000,2,0,2,0,4000 Somervale Court SW; 6000 Somervale Court SW,102,261000,261000,-0.0076,-0.0076
+116,stack:02|sub_property_use:R201|land_use:M-C2|assessed_bucket:265000,2,0,2,0,4000 Somervale Court SW; 6000 Somervale Court SW,202,265500,265500,0.0095,0.0095
+117,stack:02|sub_property_use:R201|land_use:M-C2|assessed_bucket:267500,2,0,2,0,2000 Somervale Court SW; 3000 Somervale Court SW,102,267500,267500,0.0171,0.0171
+118,stack:02|sub_property_use:R201|land_use:M-C2|assessed_bucket:270000,2,0,2,0,4000 Somervale Court SW; 6000 Somervale Court SW,302,270000,270000,0.0266,0.0266
+119,stack:02|sub_property_use:R201|land_use:M-C2|assessed_bucket:275000,2,0,2,0,4000 Somervale Court SW; 6000 Somervale Court SW,402,274000,274000,0.0418,0.0418
+120,stack:03|sub_property_use:R201|land_use:M-C2|assessed_bucket:255000,2,0,2,0,4000 Somervale Court SW; 6000 Somervale Court SW,103,254000,254000,-0.0342,-0.0342
+121,stack:03|sub_property_use:R201|land_use:M-C2|assessed_bucket:257500,2,0,2,0,4000 Somervale Court SW; 6000 Somervale Court SW,203,258500,258500,-0.0171,-0.0171
+122,stack:03|sub_property_use:R201|land_use:M-C2|assessed_bucket:262500,2,0,2,0,4000 Somervale Court SW; 5500 Somervale Court SW,103; 303,263000,263000,0.0000,0.0000
+123,stack:06|sub_property_use:R201|land_use:M-C2|assessed_bucket:275000,2,0,2,0,2000 Somervale Court SW,106; 406,274000,275500,0.0418,0.0475
+124,stack:06|sub_property_use:R201|land_use:M-C2|assessed_bucket:290000,2,0,2,0,4000 Somervale Court SW; 6000 Somervale Court SW,106,290000,290000,0.1027,0.1027
+125,stack:06|sub_property_use:R201|land_use:M-C2|assessed_bucket:295000,2,0,2,0,4000 Somervale Court SW; 5500 Somervale Court SW,106; 206,294500,295000,0.1198,0.1217
+126,stack:07|sub_property_use:R201|land_use:M-C2|assessed_bucket:172500,2,0,2,0,5000 Somervale Court SW,307; 407,171500,173500,-0.3479,-0.3403
+127,stack:07|sub_property_use:R201|land_use:M-C2|assessed_bucket:265000,2,0,2,0,1000 Somervale Court SW; 2000 Somervale Court SW,207,265500,265500,0.0095,0.0095
+128,stack:07|sub_property_use:R201|land_use:M-C2|assessed_bucket:270000,2,0,2,0,1000 Somervale Court SW; 2000 Somervale Court SW,307,270000,270000,0.0266,0.0266
+129,stack:07|sub_property_use:R201|land_use:M-C2|assessed_bucket:275000,2,0,2,0,1000 Somervale Court SW; 2000 Somervale Court SW,407,274000,274000,0.0418,0.0418
+130,stack:07|sub_property_use:R201|land_use:M-C2|assessed_bucket:282500,2,0,2,0,3000 Somervale Court SW; 5500 Somervale Court SW,207; 307,281500,283500,0.0703,0.0779
+131,stack:07|sub_property_use:R201|land_use:M-C2|assessed_bucket:290000,2,0,2,0,4000 Somervale Court SW; 6000 Somervale Court SW,107,290000,290000,0.1027,0.1027
+132,stack:07|sub_property_use:R201|land_use:M-C2|assessed_bucket:295000,2,0,2,0,4000 Somervale Court SW; 6000 Somervale Court SW,207,295000,295000,0.1217,0.1217
+133,stack:07|sub_property_use:R201|land_use:M-C2|assessed_bucket:300000,2,0,2,0,4000 Somervale Court SW; 6000 Somervale Court SW,307,300000,300000,0.1407,0.1407
+134,stack:08|sub_property_use:R201|land_use:M-C2|assessed_bucket:265000,2,0,2,0,5000 Somervale Court SW; 5500 Somervale Court SW,108; 208,265500,265500,0.0095,0.0095
+135,stack:08|sub_property_use:R201|land_use:M-C2|assessed_bucket:305000,2,0,2,0,4000 Somervale Court SW; 6000 Somervale Court SW,108,305500,305500,0.1616,0.1616
+136,stack:08|sub_property_use:R201|land_use:M-C2|assessed_bucket:310000,2,0,2,0,4000 Somervale Court SW; 6000 Somervale Court SW,208,311000,311000,0.1825,0.1825
+137,stack:08|sub_property_use:R201|land_use:M-C2|assessed_bucket:317500,2,0,2,0,4000 Somervale Court SW; 6000 Somervale Court SW,308,316500,316500,0.2034,0.2034
+138,stack:08|sub_property_use:R201|land_use:M-C2|assessed_bucket:322500,2,0,2,0,4000 Somervale Court SW; 6000 Somervale Court SW,408,322000,322000,0.2243,0.2243
+139,stack:08|sub_property_use:R201|land_use:M-C2|assessed_bucket:347500,2,0,2,0,1000 Somervale Court SW; 2000 Somervale Court SW,308,347000,347000,0.3194,0.3194
+140,stack:08|sub_property_use:R201|land_use:M-C2|assessed_bucket:352500,2,0,2,0,1000 Somervale Court SW; 2000 Somervale Court SW,408,353500,353500,0.3441,0.3441
+141,stack:10|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,2,0,2,0,3000 Somervale Court SW; 6000 Somervale Court SW,110V,10000,10000,-0.9620,-0.9620
+142,stack:10|sub_property_use:R201|land_use:M-C2|assessed_bucket:235000,2,0,2,0,4000 Somervale Court SW; 6000 Somervale Court SW,310,234500,234500,-0.1084,-0.1084
+143,stack:10|sub_property_use:R201|land_use:M-C2|assessed_bucket:247500,2,0,2,0,1000 Somervale Court SW; 3000 Somervale Court SW,410,248000,248000,-0.0570,-0.0570
+144,stack:10|sub_property_use:R201|land_use:M-C2|assessed_bucket:260000,2,0,2,0,2000 Somervale Court SW; 5000 Somervale Court SW,210; 410,260500,261000,-0.0095,-0.0076
+145,stack:11|sub_property_use:R201|land_use:M-C2|assessed_bucket:177500,2,0,2,0,5000 Somervale Court SW,211; 311,176500,178500,-0.3289,-0.3213
+146,stack:11|sub_property_use:R201|land_use:M-C2|assessed_bucket:280000,2,0,2,0,6000 Somervale Court SW,211; 311,280000,280500,0.0646,0.0665
+147,stack:12|sub_property_use:R201|land_use:M-C2|assessed_bucket:257500,2,0,2,0,1000 Somervale Court SW; 3000 Somervale Court SW,112,258500,258500,-0.0171,-0.0171
+148,stack:12|sub_property_use:R201|land_use:M-C2|assessed_bucket:262500,2,0,2,0,1000 Somervale Court SW; 3000 Somervale Court SW,212,263000,263000,0.0000,0.0000
+149,stack:12|sub_property_use:R201|land_use:M-C2|assessed_bucket:267500,2,0,2,0,1000 Somervale Court SW; 3000 Somervale Court SW,312,267500,267500,0.0171,0.0171
+150,stack:12|sub_property_use:R201|land_use:M-C2|assessed_bucket:272500,2,0,2,0,1000 Somervale Court SW; 3000 Somervale Court SW,412,272000,272000,0.0342,0.0342
+151,stack:12|sub_property_use:R201|land_use:M-C2|assessed_bucket:275000,2,0,2,0,2000 Somervale Court SW; 4000 Somervale Court SW,412,274000,274000,0.0418,0.0418
+152,stack:12|sub_property_use:R201|land_use:M-C2|assessed_bucket:305000,2,0,2,0,4000 Somervale Court SW; 6000 Somervale Court SW,112,305500,305500,0.1616,0.1616
+153,stack:12|sub_property_use:R201|land_use:M-C2|assessed_bucket:310000,2,0,2,0,4000 Somervale Court SW; 6000 Somervale Court SW,212,311000,311000,0.1825,0.1825
+154,stack:12|sub_property_use:R201|land_use:M-C2|assessed_bucket:317500,2,0,2,0,4000 Somervale Court SW; 6000 Somervale Court SW,312,316500,316500,0.2034,0.2034
+155,stack:13|sub_property_use:R201|land_use:M-C2|assessed_bucket:260000,2,0,2,0,1000 Somervale Court SW; 2000 Somervale Court SW,113,261000,261000,-0.0076,-0.0076
+156,stack:13|sub_property_use:R201|land_use:M-C2|assessed_bucket:265000,2,0,2,0,1000 Somervale Court SW; 2000 Somervale Court SW,213,265500,265500,0.0095,0.0095
+157,stack:13|sub_property_use:R201|land_use:M-C2|assessed_bucket:270000,2,0,2,0,1000 Somervale Court SW; 2000 Somervale Court SW,313,270000,270000,0.0266,0.0266
+158,stack:13|sub_property_use:R201|land_use:M-C2|assessed_bucket:275000,2,0,2,0,1000 Somervale Court SW; 2000 Somervale Court SW,413,274000,274000,0.0418,0.0418
+159,stack:13|sub_property_use:R201|land_use:M-C2|assessed_bucket:290000,2,0,2,0,4000 Somervale Court SW; 6000 Somervale Court SW,113,290000,290000,0.1027,0.1027
+160,stack:13|sub_property_use:R201|land_use:M-C2|assessed_bucket:295000,2,0,2,0,4000 Somervale Court SW; 6000 Somervale Court SW,213,295000,295000,0.1217,0.1217
+161,stack:13|sub_property_use:R201|land_use:M-C2|assessed_bucket:300000,2,0,2,0,4000 Somervale Court SW; 6000 Somervale Court SW,313,300000,300000,0.1407,0.1407
+162,stack:13|sub_property_use:R201|land_use:M-C2|assessed_bucket:305000,2,0,2,0,4000 Somervale Court SW; 6000 Somervale Court SW,413,305500,305500,0.1616,0.1616
+163,stack:14|sub_property_use:R201|land_use:M-C2|assessed_bucket:262500,2,0,2,0,1000 Somervale Court SW; 3000 Somervale Court SW,214,263000,263000,0.0000,0.0000
+164,stack:14|sub_property_use:R201|land_use:M-C2|assessed_bucket:267500,2,0,2,0,1000 Somervale Court SW; 3000 Somervale Court SW,314,267500,267500,0.0171,0.0171
+165,stack:14|sub_property_use:R201|land_use:M-C2|assessed_bucket:290000,2,0,2,0,4000 Somervale Court SW; 6000 Somervale Court SW,114,290000,290000,0.1027,0.1027
+166,stack:14|sub_property_use:R201|land_use:M-C2|assessed_bucket:295000,2,0,2,0,4000 Somervale Court SW; 6000 Somervale Court SW,214,295000,295000,0.1217,0.1217
+167,stack:14|sub_property_use:R201|land_use:M-C2|assessed_bucket:300000,2,0,2,0,4000 Somervale Court SW; 6000 Somervale Court SW,314,300000,300000,0.1407,0.1407
+168,stack:14|sub_property_use:R201|land_use:M-C2|assessed_bucket:305000,2,0,2,0,4000 Somervale Court SW; 6000 Somervale Court SW,414,305500,305500,0.1616,0.1616
+169,stack:15|sub_property_use:R201|land_use:M-C2|assessed_bucket:247500,2,0,2,0,5000 Somervale Court SW,215; 315,247000,248500,-0.0608,-0.0551
+170,stack:16|sub_property_use:R201|land_use:M-C2|assessed_bucket:267500,2,0,2,0,2000 Somervale Court SW; 3000 Somervale Court SW,216,267500,267500,0.0171,0.0171
+171,stack:16|sub_property_use:R201|land_use:M-C2|assessed_bucket:275000,2,0,2,0,4000 Somervale Court SW; 6000 Somervale Court SW,416,274000,274000,0.0418,0.0418
+172,stack:17|sub_property_use:R201|land_use:M-C2|assessed_bucket:255000,2,0,2,0,4000 Somervale Court SW; 6000 Somervale Court SW,117,254000,254000,-0.0342,-0.0342
+173,stack:17|sub_property_use:R201|land_use:M-C2|assessed_bucket:260000,2,0,2,0,1000 Somervale Court SW; 2000 Somervale Court SW,117,261000,261000,-0.0076,-0.0076
+174,stack:18|sub_property_use:R201|land_use:M-C2|assessed_bucket:260000,2,0,2,0,4000 Somervale Court SW; 6000 Somervale Court SW,118,261000,261000,-0.0076,-0.0076
+175,stack:18|sub_property_use:R201|land_use:M-C2|assessed_bucket:265000,2,0,2,0,4000 Somervale Court SW; 6000 Somervale Court SW,218,265500,265500,0.0095,0.0095
+176,stack:18|sub_property_use:R201|land_use:M-C2|assessed_bucket:267500,2,0,2,0,2000 Somervale Court SW; 3000 Somervale Court SW,118,267500,267500,0.0171,0.0171
+177,stack:18|sub_property_use:R201|land_use:M-C2|assessed_bucket:275000,2,0,2,0,4000 Somervale Court SW; 6000 Somervale Court SW,418,274000,274000,0.0418,0.0418
+178,stack:18|sub_property_use:R201|land_use:M-C2|assessed_bucket:280000,2,0,2,0,3000 Somervale Court SW; 5000 Somervale Court SW,218,279000,279000,0.0608,0.0608
+179,stack:19|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,2,0,2,0,3000 Somervale Court SW; 6000 Somervale Court SW,119V,10000,10000,-0.9620,-0.9620
+180,stack:19|sub_property_use:R201|land_use:M-C2|assessed_bucket:267500,2,0,2,0,1000 Somervale Court SW; 2000 Somervale Court SW,119,267500,267500,0.0171,0.0171
+181,stack:19|sub_property_use:R201|land_use:M-C2|assessed_bucket:282500,2,0,2,0,2000 Somervale Court SW; 3000 Somervale Court SW,119; 219,281500,282500,0.0703,0.0741
+182,stack:19|sub_property_use:R201|land_use:M-C2|assessed_bucket:295000,2,0,2,0,4000 Somervale Court SW; 6000 Somervale Court SW,219,295000,295000,0.1217,0.1217
+183,stack:19|sub_property_use:R201|land_use:M-C2|assessed_bucket:300000,2,0,2,0,4000 Somervale Court SW; 6000 Somervale Court SW,319,300000,300000,0.1407,0.1407
+184,stack:19|sub_property_use:R201|land_use:M-C2|assessed_bucket:305000,2,0,2,0,4000 Somervale Court SW; 6000 Somervale Court SW,419,305500,305500,0.1616,0.1616
+185,stack:20|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,2,0,2,0,3000 Somervale Court SW; 6000 Somervale Court SW,120V,10000,10000,-0.9620,-0.9620
+186,stack:21|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,2,0,2,0,3000 Somervale Court SW; 6000 Somervale Court SW,121V,10000,10000,-0.9620,-0.9620
+187,stack:22|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,2,0,2,0,3000 Somervale Court SW; 6000 Somervale Court SW,122V,10000,10000,-0.9620,-0.9620
+188,stack:23|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,2,0,2,0,3000 Somervale Court SW; 6000 Somervale Court SW,123V,10000,10000,-0.9620,-0.9620
+189,stack:23|sub_property_use:R201|land_use:M-C2|assessed_bucket:247500,2,0,2,0,5000 Somervale Court SW,223; 323,247000,248500,-0.0608,-0.0551
+190,stack:24|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,2,0,2,0,3000 Somervale Court SW; 6000 Somervale Court SW,124V,10000,10000,-0.9620,-0.9620
+191,stack:25|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,2,0,2,0,3000 Somervale Court SW; 6000 Somervale Court SW,125V,10000,10000,-0.9620,-0.9620
+192,stack:26|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,2,0,2,0,3000 Somervale Court SW; 6000 Somervale Court SW,126V,10000,10000,-0.9620,-0.9620
+193,stack:27|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,2,0,2,0,3000 Somervale Court SW; 6000 Somervale Court SW,127V,10000,10000,-0.9620,-0.9620
+194,stack:28|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,2,0,2,0,3000 Somervale Court SW; 6000 Somervale Court SW,128V,10000,10000,-0.9620,-0.9620
+195,stack:29|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,2,0,2,0,3000 Somervale Court SW; 6000 Somervale Court SW,129V,10000,10000,-0.9620,-0.9620
+196,stack:30|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,2,0,2,0,3000 Somervale Court SW; 6000 Somervale Court SW,130V,10000,10000,-0.9620,-0.9620
+197,stack:31|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,2,0,2,0,3000 Somervale Court SW; 6000 Somervale Court SW,131V,10000,10000,-0.9620,-0.9620
+198,stack:31|sub_property_use:R201|land_use:M-C2|assessed_bucket:237500,2,0,2,0,5000 Somervale Court SW,131; 431,237000,238500,-0.0989,-0.0932
+199,stack:32|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,2,0,2,0,3000 Somervale Court SW; 6000 Somervale Court SW,132V,10000,10000,-0.9620,-0.9620
+200,stack:33|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,2,0,2,0,3000 Somervale Court SW; 6000 Somervale Court SW,133V,10000,10000,-0.9620,-0.9620
+201,stack:34|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,2,0,2,0,3000 Somervale Court SW; 6000 Somervale Court SW,134V,10000,10000,-0.9620,-0.9620
+202,stack:35|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,2,0,2,0,3000 Somervale Court SW; 6000 Somervale Court SW,135V,10000,10000,-0.9620,-0.9620
+203,stack:36|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,2,0,2,0,3000 Somervale Court SW; 6000 Somervale Court SW,136V,10000,10000,-0.9620,-0.9620
+204,stack:37|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,2,0,2,0,3000 Somervale Court SW; 6000 Somervale Court SW,137V,10000,10000,-0.9620,-0.9620
+205,stack:38|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,2,0,2,0,3000 Somervale Court SW; 6000 Somervale Court SW,138V,10000,10000,-0.9620,-0.9620
+206,stack:39|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,2,0,2,0,3000 Somervale Court SW; 6000 Somervale Court SW,139V,10000,10000,-0.9620,-0.9620
+207,stack:42|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,2,0,2,0,5500 Somervale Court SW; 6000 Somervale Court SW,142V; 42V,10000,10000,-0.9620,-0.9620
+208,stack:43|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,2,0,1,1,5000 Somervale Court SW; 5500 Somervale Court SW,143V; 43V,10000,10000,-0.9620,-0.9620
+209,stack:44|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,2,0,1,1,5000 Somervale Court SW; 5500 Somervale Court SW,144V; 44V,10000,10000,-0.9620,-0.9620
+210,stack:45|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,2,0,1,1,5000 Somervale Court SW; 5500 Somervale Court SW,145V; 45V,10000,10000,-0.9620,-0.9620
+211,stack:46|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,2,0,1,1,5000 Somervale Court SW; 5500 Somervale Court SW,146V; 46V,10000,10000,-0.9620,-0.9620
+212,stack:47|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,2,0,1,1,5000 Somervale Court SW; 5500 Somervale Court SW,147V; 47V,10000,10000,-0.9620,-0.9620
+213,stack:48|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,2,0,1,1,5000 Somervale Court SW; 5500 Somervale Court SW,148V; 48V,10000,10000,-0.9620,-0.9620
+214,stack:49|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,2,0,1,1,5000 Somervale Court SW; 5500 Somervale Court SW,149V; 49V,10000,10000,-0.9620,-0.9620
+215,stack:50|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,2,0,1,1,5000 Somervale Court SW; 5500 Somervale Court SW,150V; 50V,10000,10000,-0.9620,-0.9620
+216,stack:51|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,2,0,1,1,5000 Somervale Court SW; 5500 Somervale Court SW,151V; 51V,10000,10000,-0.9620,-0.9620
+217,stack:52|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,2,0,1,1,5000 Somervale Court SW; 5500 Somervale Court SW,152V; 52V,10000,10000,-0.9620,-0.9620
+218,stack:53|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,2,0,1,1,5000 Somervale Court SW; 5500 Somervale Court SW,153V; 53V,10000,10000,-0.9620,-0.9620
+219,stack:54|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,2,0,1,1,5000 Somervale Court SW; 5500 Somervale Court SW,154V; 54V,10000,10000,-0.9620,-0.9620
+220,stack:55|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,2,0,1,1,5000 Somervale Court SW; 5500 Somervale Court SW,155V; 55V,10000,10000,-0.9620,-0.9620
+221,stack:56|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,2,0,1,1,5000 Somervale Court SW; 5500 Somervale Court SW,156V; 56V,10000,10000,-0.9620,-0.9620
+222,stack:57|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,2,0,1,1,5000 Somervale Court SW; 5500 Somervale Court SW,157V; 57V,10000,10000,-0.9620,-0.9620
+223,stack:58|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,2,0,1,1,5000 Somervale Court SW; 5500 Somervale Court SW,158V; 58V,10000,10000,-0.9620,-0.9620
+224,stack:59|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,2,0,1,1,5000 Somervale Court SW; 5500 Somervale Court SW,159V; 59V,10000,10000,-0.9620,-0.9620
+225,stack:60|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,2,0,1,1,5000 Somervale Court SW; 5500 Somervale Court SW,160V; 60V,10000,10000,-0.9620,-0.9620
+226,stack:61|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,2,0,1,1,5000 Somervale Court SW; 5500 Somervale Court SW,161V; 61V,10000,10000,-0.9620,-0.9620
+227,stack:62|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,2,0,1,1,5000 Somervale Court SW; 5500 Somervale Court SW,162V; 62V,10000,10000,-0.9620,-0.9620
+228,stack:63|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,2,0,1,1,5000 Somervale Court SW; 5500 Somervale Court SW,163V; 63V,10000,10000,-0.9620,-0.9620
+229,stack:64|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,2,0,1,1,5000 Somervale Court SW; 5500 Somervale Court SW,164V; 64V,10000,10000,-0.9620,-0.9620
+230,stack:65|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,2,0,1,1,5000 Somervale Court SW; 5500 Somervale Court SW,165V; 65V,10000,10000,-0.9620,-0.9620
+231,stack:66|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,2,0,1,1,5000 Somervale Court SW; 5500 Somervale Court SW,166V; 66V,10000,10000,-0.9620,-0.9620
+232,stack:67|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,2,0,1,1,5000 Somervale Court SW; 5500 Somervale Court SW,167V; 67V,10000,10000,-0.9620,-0.9620
+233,stack:68|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,2,0,1,1,5000 Somervale Court SW; 5500 Somervale Court SW,168V; 68V,10000,10000,-0.9620,-0.9620
+234,stack:69|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,2,0,1,1,5000 Somervale Court SW; 5500 Somervale Court SW,169V; 69V,10000,10000,-0.9620,-0.9620
+235,stack:70|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,2,0,1,1,5000 Somervale Court SW; 5500 Somervale Court SW,170V; 70V,10000,10000,-0.9620,-0.9620
+236,stack:71|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,2,0,1,1,5000 Somervale Court SW; 5500 Somervale Court SW,171V; 71V,10000,10000,-0.9620,-0.9620
+237,stack:72|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,2,0,1,1,5000 Somervale Court SW; 5500 Somervale Court SW,172V; 72V,10000,10000,-0.9620,-0.9620
+238,stack:01|sub_property_use:R201|land_use:M-C2|assessed_bucket:272500,1,0,1,0,5000 Somervale Court SW,101,272000,272000,0.0342,0.0342
+239,stack:01|sub_property_use:R201|land_use:M-C2|assessed_bucket:280000,1,0,1,0,5000 Somervale Court SW,201,279000,279000,0.0608,0.0608
+240,stack:01|sub_property_use:R201|land_use:M-C2|assessed_bucket:287500,1,0,1,0,5000 Somervale Court SW,401,288500,288500,0.0970,0.0970
+241,stack:01|sub_property_use:R201|land_use:M-C2|assessed_bucket:302500,1,0,1,0,1000 Somervale Court SW,301,302000,302000,0.1483,0.1483
+242,stack:02|sub_property_use:R201|land_use:M-C2|assessed_bucket:195000,1,0,1,0,5000 Somervale Court SW,102,194000,194000,-0.2624,-0.2624
+243,stack:02|sub_property_use:R201|land_use:M-C2|assessed_bucket:197500,1,0,1,0,5000 Somervale Court SW,202,197000,197000,-0.2510,-0.2510
+244,stack:02|sub_property_use:R201|land_use:M-C2|assessed_bucket:200000,1,0,1,0,5000 Somervale Court SW,302,199500,199500,-0.2414,-0.2414
+245,stack:02|sub_property_use:R201|land_use:M-C2|assessed_bucket:202500,1,0,1,0,5000 Somervale Court SW,402,202500,202500,-0.2300,-0.2300
+246,stack:02|sub_property_use:R201|land_use:M-C2|assessed_bucket:287500,1,0,1,0,3000 Somervale Court SW,402,288500,288500,0.0970,0.0970
+247,stack:02|sub_property_use:R201|land_use:M-C2|assessed_bucket:295000,1,0,1,0,5500 Somervale Court SW,202,295000,295000,0.1217,0.1217
+248,stack:02|sub_property_use:R201|land_use:M-C2|assessed_bucket:300000,1,0,1,0,5500 Somervale Court SW,302,300000,300000,0.1407,0.1407
+249,stack:02|sub_property_use:R201|land_use:M-C2|assessed_bucket:302500,1,0,1,0,1000 Somervale Court SW,102,303000,303000,0.1521,0.1521
+250,stack:02|sub_property_use:R201|land_use:M-C2|assessed_bucket:307500,1,0,1,0,5500 Somervale Court SW,402,307500,307500,0.1692,0.1692
+251,stack:03|sub_property_use:R201|land_use:M-C2|assessed_bucket:195000,1,0,1,0,5000 Somervale Court SW,103,194000,194000,-0.2624,-0.2624
+252,stack:03|sub_property_use:R201|land_use:M-C2|assessed_bucket:197500,1,0,1,0,5000 Somervale Court SW,203,197000,197000,-0.2510,-0.2510
+253,stack:03|sub_property_use:R201|land_use:M-C2|assessed_bucket:200000,1,0,1,0,5000 Somervale Court SW,303,199500,199500,-0.2414,-0.2414
+254,stack:03|sub_property_use:R201|land_use:M-C2|assessed_bucket:202500,1,0,1,0,5000 Somervale Court SW,403,202500,202500,-0.2300,-0.2300
+255,stack:03|sub_property_use:R201|land_use:M-C2|assessed_bucket:275000,1,0,1,0,1000 Somervale Court SW,103,275500,275500,0.0475,0.0475
+256,stack:03|sub_property_use:R201|land_use:M-C2|assessed_bucket:285000,1,0,1,0,5500 Somervale Court SW,203,286000,286000,0.0875,0.0875
+257,stack:03|sub_property_use:R201|land_use:M-C2|assessed_bucket:287500,1,0,1,0,5500 Somervale Court SW,303,288500,288500,0.0970,0.0970
+258,stack:03|sub_property_use:R201|land_use:M-C2|assessed_bucket:292500,1,0,1,0,5500 Somervale Court SW,403,293500,293500,0.1160,0.1160
+259,stack:03|sub_property_use:R201|land_use:M-C2|assessed_bucket:300000,1,0,1,0,4000 Somervale Court SW,403,299500,299500,0.1388,0.1388
+260,stack:04|sub_property_use:R201|land_use:M-C2|assessed_bucket:257500,1,0,1,0,3000 Somervale Court SW,104,258500,258500,-0.0171,-0.0171
+261,stack:04|sub_property_use:R201|land_use:M-C2|assessed_bucket:317500,1,0,1,0,5000 Somervale Court SW,104,316500,316500,0.2034,0.2034
+262,stack:04|sub_property_use:R201|land_use:M-C2|assessed_bucket:322500,1,0,1,0,5000 Somervale Court SW,204,322500,322500,0.2262,0.2262
+263,stack:04|sub_property_use:R201|land_use:M-C2|assessed_bucket:350000,1,0,1,0,5000 Somervale Court SW,304,350000,350000,0.3308,0.3308
+264,stack:05|sub_property_use:R201|land_use:M-C2|assessed_bucket:240000,1,0,1,0,5000 Somervale Court SW,105,241000,241000,-0.0837,-0.0837
+265,stack:05|sub_property_use:R201|land_use:M-C2|assessed_bucket:245000,1,0,1,0,5000 Somervale Court SW,205,245000,245000,-0.0684,-0.0684
+266,stack:05|sub_property_use:R201|land_use:M-C2|assessed_bucket:247500,1,0,1,0,5000 Somervale Court SW,305,248500,248500,-0.0551,-0.0551
+267,stack:05|sub_property_use:R201|land_use:M-C2|assessed_bucket:252500,1,0,1,0,5000 Somervale Court SW,405,252500,252500,-0.0399,-0.0399
+268,stack:05|sub_property_use:R201|land_use:M-C2|assessed_bucket:257500,1,0,1,0,3000 Somervale Court SW,105,258500,258500,-0.0171,-0.0171
+269,stack:05|sub_property_use:R201|land_use:M-C2|assessed_bucket:262500,1,0,1,0,3000 Somervale Court SW,205,263000,263000,0.0000,0.0000
+270,stack:05|sub_property_use:R201|land_use:M-C2|assessed_bucket:272500,1,0,1,0,3000 Somervale Court SW,405,272000,272000,0.0342,0.0342
+271,stack:05|sub_property_use:R201|land_use:M-C2|assessed_bucket:325000,1,0,1,0,5500 Somervale Court SW,205,324500,324500,0.2338,0.2338
+272,stack:05|sub_property_use:R201|land_use:M-C2|assessed_bucket:332500,1,0,1,0,5500 Somervale Court SW,305,333000,333000,0.2662,0.2662
+273,stack:05|sub_property_use:R201|land_use:M-C2|assessed_bucket:340000,1,0,1,0,5500 Somervale Court SW,405,339000,339000,0.2890,0.2890
+274,stack:06|sub_property_use:R201|land_use:M-C2|assessed_bucket:257500,1,0,1,0,1000 Somervale Court SW,106,258500,258500,-0.0171,-0.0171
+275,stack:06|sub_property_use:R201|land_use:M-C2|assessed_bucket:262500,1,0,1,0,1000 Somervale Court SW,206,263000,263000,0.0000,0.0000
+276,stack:06|sub_property_use:R201|land_use:M-C2|assessed_bucket:265000,1,0,1,0,2000 Somervale Court SW,206,265500,265500,0.0095,0.0095
+277,stack:06|sub_property_use:R201|land_use:M-C2|assessed_bucket:270000,1,0,1,0,2000 Somervale Court SW,306,270000,270000,0.0266,0.0266
+278,stack:06|sub_property_use:R201|land_use:M-C2|assessed_bucket:310000,1,0,1,0,5500 Somervale Court SW,406,310000,310000,0.1787,0.1787
+279,stack:06|sub_property_use:R201|land_use:M-C2|assessed_bucket:312500,1,0,1,0,6000 Somervale Court SW,206,312000,312000,0.1863,0.1863
+280,stack:07|sub_property_use:R201|land_use:M-C2|assessed_bucket:170000,1,0,1,0,5000 Somervale Court SW,207,169500,169500,-0.3555,-0.3555
+281,stack:07|sub_property_use:R201|land_use:M-C2|assessed_bucket:257500,1,0,1,0,3000 Somervale Court SW,107,258500,258500,-0.0171,-0.0171
+282,stack:07|sub_property_use:R201|land_use:M-C2|assessed_bucket:262500,1,0,1,0,3000 Somervale Court SW,207,263000,263000,0.0000,0.0000
+283,stack:07|sub_property_use:R201|land_use:M-C2|assessed_bucket:272500,1,0,1,0,3000 Somervale Court SW,407,272000,272000,0.0342,0.0342
+284,stack:07|sub_property_use:R201|land_use:M-C2|assessed_bucket:292500,1,0,1,0,5500 Somervale Court SW,407,293500,293500,0.1160,0.1160
+285,stack:08|sub_property_use:R201|land_use:M-C2|assessed_bucket:260000,1,0,1,0,5500 Somervale Court SW,108,261000,261000,-0.0076,-0.0076
+286,stack:08|sub_property_use:R201|land_use:M-C2|assessed_bucket:270000,1,0,1,0,5000 Somervale Court SW,208,270000,270000,0.0266,0.0266
+287,stack:08|sub_property_use:R201|land_use:M-C2|assessed_bucket:272500,1,0,1,0,5000 Somervale Court SW,308,272000,272000,0.0342,0.0342
+288,stack:08|sub_property_use:R201|land_use:M-C2|assessed_bucket:275000,1,0,1,0,5500 Somervale Court SW,408,274000,274000,0.0418,0.0418
+289,stack:08|sub_property_use:R201|land_use:M-C2|assessed_bucket:277500,1,0,1,0,5000 Somervale Court SW,408,276500,276500,0.0513,0.0513
+290,stack:08|sub_property_use:R201|land_use:M-C2|assessed_bucket:285000,1,0,1,0,5500 Somervale Court SW,308,284000,284000,0.0798,0.0798
+291,stack:08|sub_property_use:R201|land_use:M-C2|assessed_bucket:335000,1,0,1,0,2000 Somervale Court SW,208,334500,334500,0.2719,0.2719
+292,stack:08|sub_property_use:R201|land_use:M-C2|assessed_bucket:337500,1,0,1,0,3000 Somervale Court SW,208,338500,338500,0.2871,0.2871
+293,stack:08|sub_property_use:R201|land_use:M-C2|assessed_bucket:340000,1,0,1,0,1000 Somervale Court SW,208,340500,340500,0.2947,0.2947
+294,stack:08|sub_property_use:R201|land_use:M-C2|assessed_bucket:345000,1,0,1,0,3000 Somervale Court SW,308,344500,344500,0.3099,0.3099
+295,stack:08|sub_property_use:R201|land_use:M-C2|assessed_bucket:370000,1,0,1,0,3000 Somervale Court SW,408,371000,371000,0.4106,0.4106
+296,stack:10|sub_property_use:R201|land_use:M-C2|assessed_bucket:230000,1,0,1,0,4000 Somervale Court SW,210,231000,231000,-0.1217,-0.1217
+297,stack:10|sub_property_use:R201|land_use:M-C2|assessed_bucket:242500,1,0,1,0,6000 Somervale Court SW,210,243000,243000,-0.0760,-0.0760
+298,stack:10|sub_property_use:R201|land_use:M-C2|assessed_bucket:265000,1,0,1,0,5000 Somervale Court SW,310,265000,265000,0.0076,0.0076
+299,stack:10|sub_property_use:R201|land_use:M-C2|assessed_bucket:270000,1,0,1,0,5000 Somervale Court SW,410,269500,269500,0.0247,0.0247
+300,stack:10|sub_property_use:R201|land_use:M-C2|assessed_bucket:290000,1,0,1,0,5500 Somervale Court SW,110,290000,290000,0.1027,0.1027
+301,stack:10|sub_property_use:R201|land_use:M-C2|assessed_bucket:300000,1,0,1,0,5500 Somervale Court SW,310,300000,300000,0.1407,0.1407
+302,stack:10|sub_property_use:R201|land_use:M-C2|assessed_bucket:307500,1,0,1,0,5500 Somervale Court SW,410,307500,307500,0.1692,0.1692
+303,stack:10|sub_property_use:R201|land_use:M-C2|assessed_bucket:312500,1,0,1,0,5500 Somervale Court SW,210,312000,312000,0.1863,0.1863
+304,stack:11|sub_property_use:R201|land_use:M-C2|assessed_bucket:187500,1,0,1,0,5000 Somervale Court SW,411,188000,188000,-0.2852,-0.2852
+305,stack:11|sub_property_use:R201|land_use:M-C2|assessed_bucket:257500,1,0,1,0,3000 Somervale Court SW,111,258500,258500,-0.0171,-0.0171
+306,stack:11|sub_property_use:R201|land_use:M-C2|assessed_bucket:262500,1,0,1,0,3000 Somervale Court SW,211,263000,263000,0.0000,0.0000
+307,stack:11|sub_property_use:R201|land_use:M-C2|assessed_bucket:267500,1,0,1,0,3000 Somervale Court SW,311,267500,267500,0.0171,0.0171
+308,stack:11|sub_property_use:R201|land_use:M-C2|assessed_bucket:272500,1,0,1,0,3000 Somervale Court SW,411,272000,272000,0.0342,0.0342
+309,stack:11|sub_property_use:R201|land_use:M-C2|assessed_bucket:277500,1,0,1,0,4000 Somervale Court SW,411,278000,278000,0.0570,0.0570
+310,stack:12|sub_property_use:R201|land_use:M-C2|assessed_bucket:240000,1,0,1,0,5000 Somervale Court SW,112,241000,241000,-0.0837,-0.0837
+311,stack:12|sub_property_use:R201|land_use:M-C2|assessed_bucket:247500,1,0,1,0,5000 Somervale Court SW,212,247000,247000,-0.0608,-0.0608
+312,stack:12|sub_property_use:R201|land_use:M-C2|assessed_bucket:250000,1,0,1,0,5000 Somervale Court SW,312,251000,251000,-0.0456,-0.0456
+313,stack:12|sub_property_use:R201|land_use:M-C2|assessed_bucket:255000,1,0,1,0,5000 Somervale Court SW,412,255000,255000,-0.0304,-0.0304
+314,stack:12|sub_property_use:R201|land_use:M-C2|assessed_bucket:260000,1,0,1,0,2000 Somervale Court SW,112,261000,261000,-0.0076,-0.0076
+315,stack:12|sub_property_use:R201|land_use:M-C2|assessed_bucket:265000,1,0,1,0,2000 Somervale Court SW,212,265500,265500,0.0095,0.0095
+316,stack:12|sub_property_use:R201|land_use:M-C2|assessed_bucket:270000,1,0,1,0,2000 Somervale Court SW,312,270000,270000,0.0266,0.0266
+317,stack:12|sub_property_use:R201|land_use:M-C2|assessed_bucket:322500,1,0,1,0,6000 Somervale Court SW,412,322000,322000,0.2243,0.2243
+318,stack:13|sub_property_use:R201|land_use:M-C2|assessed_bucket:240000,1,0,1,0,5000 Somervale Court SW,113,241000,241000,-0.0837,-0.0837
+319,stack:13|sub_property_use:R201|land_use:M-C2|assessed_bucket:245000,1,0,1,0,5000 Somervale Court SW,213,245000,245000,-0.0684,-0.0684
+320,stack:13|sub_property_use:R201|land_use:M-C2|assessed_bucket:247500,1,0,1,0,5000 Somervale Court SW,313,248500,248500,-0.0551,-0.0551
+321,stack:13|sub_property_use:R201|land_use:M-C2|assessed_bucket:255000,1,0,1,0,5000 Somervale Court SW,413,255000,255000,-0.0304,-0.0304
+322,stack:13|sub_property_use:R201|land_use:M-C2|assessed_bucket:257500,1,0,1,0,3000 Somervale Court SW,113,258500,258500,-0.0171,-0.0171
+323,stack:13|sub_property_use:R201|land_use:M-C2|assessed_bucket:262500,1,0,1,0,3000 Somervale Court SW,213,263000,263000,0.0000,0.0000
+324,stack:13|sub_property_use:R201|land_use:M-C2|assessed_bucket:267500,1,0,1,0,3000 Somervale Court SW,313,267500,267500,0.0171,0.0171
+325,stack:13|sub_property_use:R201|land_use:M-C2|assessed_bucket:272500,1,0,1,0,3000 Somervale Court SW,413,272000,272000,0.0342,0.0342
+326,stack:14|sub_property_use:R201|land_use:M-C2|assessed_bucket:240000,1,0,1,0,5000 Somervale Court SW,114,241000,241000,-0.0837,-0.0837
+327,stack:14|sub_property_use:R201|land_use:M-C2|assessed_bucket:247500,1,0,1,0,5000 Somervale Court SW,214,247000,247000,-0.0608,-0.0608
+328,stack:14|sub_property_use:R201|land_use:M-C2|assessed_bucket:250000,1,0,1,0,5000 Somervale Court SW,314,251000,251000,-0.0456,-0.0456
+329,stack:14|sub_property_use:R201|land_use:M-C2|assessed_bucket:252500,1,0,1,0,5000 Somervale Court SW,414,252500,252500,-0.0399,-0.0399
+330,stack:14|sub_property_use:R201|land_use:M-C2|assessed_bucket:257500,1,0,1,0,1000 Somervale Court SW,114,258500,258500,-0.0171,-0.0171
+331,stack:14|sub_property_use:R201|land_use:M-C2|assessed_bucket:260000,1,0,1,0,2000 Somervale Court SW,114,261000,261000,-0.0076,-0.0076
+332,stack:14|sub_property_use:R201|land_use:M-C2|assessed_bucket:265000,1,0,1,0,2000 Somervale Court SW,214,265500,265500,0.0095,0.0095
+333,stack:14|sub_property_use:R201|land_use:M-C2|assessed_bucket:275000,1,0,1,0,2000 Somervale Court SW,414,274000,274000,0.0418,0.0418
+334,stack:14|sub_property_use:R201|land_use:M-C2|assessed_bucket:285000,1,0,1,0,2000 Somervale Court SW,314,284000,284000,0.0798,0.0798
+335,stack:15|sub_property_use:R201|land_use:M-C2|assessed_bucket:240000,1,0,1,0,5000 Somervale Court SW,115,241000,241000,-0.0837,-0.0837
+336,stack:15|sub_property_use:R201|land_use:M-C2|assessed_bucket:252500,1,0,1,0,5000 Somervale Court SW,415,252500,252500,-0.0399,-0.0399
+337,stack:15|sub_property_use:R201|land_use:M-C2|assessed_bucket:257500,1,0,1,0,3000 Somervale Court SW,115,258500,258500,-0.0171,-0.0171
+338,stack:15|sub_property_use:R201|land_use:M-C2|assessed_bucket:262500,1,0,1,0,3000 Somervale Court SW,215,263000,263000,0.0000,0.0000
+339,stack:15|sub_property_use:R201|land_use:M-C2|assessed_bucket:267500,1,0,1,0,3000 Somervale Court SW,315,267500,267500,0.0171,0.0171
+340,stack:15|sub_property_use:R201|land_use:M-C2|assessed_bucket:272500,1,0,1,0,3000 Somervale Court SW,415,272000,272000,0.0342,0.0342
+341,stack:16|sub_property_use:R201|land_use:M-C2|assessed_bucket:265000,1,0,1,0,4000 Somervale Court SW,216,265500,265500,0.0095,0.0095
+342,stack:16|sub_property_use:R201|land_use:M-C2|assessed_bucket:270000,1,0,1,0,4000 Somervale Court SW,316,270000,270000,0.0266,0.0266
+343,stack:16|sub_property_use:R201|land_use:M-C2|assessed_bucket:280000,1,0,1,0,6000 Somervale Court SW,216,280000,280000,0.0646,0.0646
+344,stack:16|sub_property_use:R201|land_use:M-C2|assessed_bucket:282500,1,0,1,0,1000 Somervale Court SW,216,282000,282000,0.0722,0.0722
+345,stack:16|sub_property_use:R201|land_use:M-C2|assessed_bucket:285000,1,0,1,0,6000 Somervale Court SW,316,284000,284000,0.0798,0.0798
+346,stack:17|sub_property_use:R201|land_use:M-C2|assessed_bucket:262500,1,0,1,0,4000 Somervale Court SW,317,263000,263000,0.0000,0.0000
+347,stack:17|sub_property_use:R201|land_use:M-C2|assessed_bucket:280000,1,0,1,0,6000 Somervale Court SW,417,281000,281000,0.0684,0.0684
+348,stack:18|sub_property_use:R201|land_use:M-C2|assessed_bucket:270000,1,0,1,0,4000 Somervale Court SW,318,270000,270000,0.0266,0.0266
+349,stack:18|sub_property_use:R201|land_use:M-C2|assessed_bucket:272500,1,0,1,0,5000 Somervale Court SW,118,272000,272000,0.0342,0.0342
+350,stack:18|sub_property_use:R201|land_use:M-C2|assessed_bucket:302500,1,0,1,0,5000 Somervale Court SW,418,301500,301500,0.1464,0.1464
+351,stack:19|sub_property_use:R201|land_use:M-C2|assessed_bucket:200000,1,0,1,0,5000 Somervale Court SW,319,199500,199500,-0.2414,-0.2414
+352,stack:19|sub_property_use:R201|land_use:M-C2|assessed_bucket:202500,1,0,1,0,5000 Somervale Court SW,419,202500,202500,-0.2300,-0.2300
+353,stack:19|sub_property_use:R201|land_use:M-C2|assessed_bucket:280000,1,0,1,0,3000 Somervale Court SW,219,279000,279000,0.0608,0.0608
+354,stack:19|sub_property_use:R201|land_use:M-C2|assessed_bucket:315000,1,0,1,0,2000 Somervale Court SW,419,315500,315500,0.1996,0.1996
+355,stack:20|sub_property_use:R201|land_use:M-C2|assessed_bucket:310000,1,0,1,0,5000 Somervale Court SW,220,311000,311000,0.1825,0.1825
+356,stack:20|sub_property_use:R201|land_use:M-C2|assessed_bucket:317500,1,0,1,0,5000 Somervale Court SW,320,316500,316500,0.2034,0.2034
+357,stack:20|sub_property_use:R201|land_use:M-C2|assessed_bucket:322500,1,0,1,0,5000 Somervale Court SW,420,322000,322000,0.2243,0.2243
+358,stack:21|sub_property_use:R201|land_use:M-C2|assessed_bucket:205000,1,0,1,0,5000 Somervale Court SW,221,206000,206000,-0.2167,-0.2167
+359,stack:21|sub_property_use:R201|land_use:M-C2|assessed_bucket:247500,1,0,1,0,5000 Somervale Court SW,321,248500,248500,-0.0551,-0.0551
+360,stack:21|sub_property_use:R201|land_use:M-C2|assessed_bucket:252500,1,0,1,0,5000 Somervale Court SW,421,252500,252500,-0.0399,-0.0399
+361,stack:23|sub_property_use:R201|land_use:M-C2|assessed_bucket:255000,1,0,1,0,5000 Somervale Court SW,423,255000,255000,-0.0304,-0.0304
+362,stack:24|sub_property_use:R201|land_use:M-C2|assessed_bucket:312500,1,0,1,0,5000 Somervale Court SW,224,313500,313500,0.1920,0.1920
+363,stack:24|sub_property_use:R201|land_use:M-C2|assessed_bucket:320000,1,0,1,0,5000 Somervale Court SW,324,319000,319000,0.2129,0.2129
+364,stack:24|sub_property_use:R201|land_use:M-C2|assessed_bucket:325000,1,0,1,0,5000 Somervale Court SW,424,324500,324500,0.2338,0.2338
+365,stack:25|sub_property_use:R201|land_use:M-C2|assessed_bucket:160000,1,0,1,0,5000 Somervale Court SW,225,160500,160500,-0.3897,-0.3897
+366,stack:25|sub_property_use:R201|land_use:M-C2|assessed_bucket:162500,1,0,1,0,5000 Somervale Court SW,325,162000,162000,-0.3840,-0.3840
+367,stack:25|sub_property_use:R201|land_use:M-C2|assessed_bucket:170000,1,0,1,0,5000 Somervale Court SW,125,169500,169500,-0.3555,-0.3555
+368,stack:25|sub_property_use:R201|land_use:M-C2|assessed_bucket:212500,1,0,1,0,5000 Somervale Court SW,425,212000,212000,-0.1939,-0.1939
+369,stack:26|sub_property_use:R201|land_use:M-C2|assessed_bucket:262500,1,0,1,0,5000 Somervale Court SW,126,263000,263000,0.0000,0.0000
+370,stack:26|sub_property_use:R201|land_use:M-C2|assessed_bucket:270000,1,0,1,0,5000 Somervale Court SW,226,270000,270000,0.0266,0.0266
+371,stack:26|sub_property_use:R201|land_use:M-C2|assessed_bucket:277500,1,0,1,0,5000 Somervale Court SW,326,277000,277000,0.0532,0.0532
+372,stack:26|sub_property_use:R201|land_use:M-C2|assessed_bucket:295000,1,0,1,0,5000 Somervale Court SW,426,294000,294000,0.1179,0.1179
+373,stack:27|sub_property_use:R201|land_use:M-C2|assessed_bucket:240000,1,0,1,0,5000 Somervale Court SW,127,241000,241000,-0.0837,-0.0837
+374,stack:27|sub_property_use:R201|land_use:M-C2|assessed_bucket:245000,1,0,1,0,5000 Somervale Court SW,227,245000,245000,-0.0684,-0.0684
+375,stack:27|sub_property_use:R201|land_use:M-C2|assessed_bucket:247500,1,0,1,0,5000 Somervale Court SW,327,248500,248500,-0.0551,-0.0551
+376,stack:27|sub_property_use:R201|land_use:M-C2|assessed_bucket:252500,1,0,1,0,5000 Somervale Court SW,427,252500,252500,-0.0399,-0.0399
+377,stack:28|sub_property_use:R201|land_use:M-C2|assessed_bucket:240000,1,0,1,0,5000 Somervale Court SW,128,241000,241000,-0.0837,-0.0837
+378,stack:28|sub_property_use:R201|land_use:M-C2|assessed_bucket:245000,1,0,1,0,5000 Somervale Court SW,228,245000,245000,-0.0684,-0.0684
+379,stack:28|sub_property_use:R201|land_use:M-C2|assessed_bucket:247500,1,0,1,0,5000 Somervale Court SW,328,248500,248500,-0.0551,-0.0551
+380,stack:28|sub_property_use:R201|land_use:M-C2|assessed_bucket:252500,1,0,1,0,5000 Somervale Court SW,428,252500,252500,-0.0399,-0.0399
+381,stack:29|sub_property_use:R201|land_use:M-C2|assessed_bucket:240000,1,0,1,0,5000 Somervale Court SW,129,241000,241000,-0.0837,-0.0837
+382,stack:29|sub_property_use:R201|land_use:M-C2|assessed_bucket:242500,1,0,1,0,5000 Somervale Court SW,229,242500,242500,-0.0779,-0.0779
+383,stack:29|sub_property_use:R201|land_use:M-C2|assessed_bucket:250000,1,0,1,0,5000 Somervale Court SW,429,250500,250500,-0.0475,-0.0475
+384,stack:30|sub_property_use:R201|land_use:M-C2|assessed_bucket:240000,1,0,1,0,5000 Somervale Court SW,130,241000,241000,-0.0837,-0.0837
+385,stack:30|sub_property_use:R201|land_use:M-C2|assessed_bucket:245000,1,0,1,0,5000 Somervale Court SW,230,245000,245000,-0.0684,-0.0684
+386,stack:30|sub_property_use:R201|land_use:M-C2|assessed_bucket:247500,1,0,1,0,5000 Somervale Court SW,330,248500,248500,-0.0551,-0.0551
+387,stack:30|sub_property_use:R201|land_use:M-C2|assessed_bucket:252500,1,0,1,0,5000 Somervale Court SW,430,252500,252500,-0.0399,-0.0399
+388,stack:31|sub_property_use:R201|land_use:M-C2|assessed_bucket:230000,1,0,1,0,5000 Somervale Court SW,231,231000,231000,-0.1217,-0.1217
+389,stack:31|sub_property_use:R201|land_use:M-C2|assessed_bucket:235000,1,0,1,0,5000 Somervale Court SW,331,234500,234500,-0.1084,-0.1084
+390,stack:32|sub_property_use:R201|land_use:M-C2|assessed_bucket:225000,1,0,1,0,5000 Somervale Court SW,132,225500,225500,-0.1426,-0.1426
+391,stack:32|sub_property_use:R201|land_use:M-C2|assessed_bucket:230000,1,0,1,0,5000 Somervale Court SW,232,231000,231000,-0.1217,-0.1217
+392,stack:32|sub_property_use:R201|land_use:M-C2|assessed_bucket:235000,1,0,1,0,5000 Somervale Court SW,332,234500,234500,-0.1084,-0.1084
+393,stack:32|sub_property_use:R201|land_use:M-C2|assessed_bucket:237500,1,0,1,0,5000 Somervale Court SW,432,238500,238500,-0.0932,-0.0932
+394,stack:33|sub_property_use:R201|land_use:M-C2|assessed_bucket:272500,1,0,1,0,5000 Somervale Court SW,133,272000,272000,0.0342,0.0342
+395,stack:33|sub_property_use:R201|land_use:M-C2|assessed_bucket:280000,1,0,1,0,5000 Somervale Court SW,233,279000,279000,0.0608,0.0608
+396,stack:33|sub_property_use:R201|land_use:M-C2|assessed_bucket:285000,1,0,1,0,5000 Somervale Court SW,333,284000,284000,0.0798,0.0798
+397,stack:33|sub_property_use:R201|land_use:M-C2|assessed_bucket:287500,1,0,1,0,5000 Somervale Court SW,433,288500,288500,0.0970,0.0970
+398,stack:34|sub_property_use:R201|land_use:M-C2|assessed_bucket:255000,1,0,1,0,5000 Somervale Court SW,134,254000,254000,-0.0342,-0.0342
+399,stack:34|sub_property_use:R201|land_use:M-C2|assessed_bucket:267500,1,0,1,0,5000 Somervale Court SW,234,267500,267500,0.0171,0.0171
+400,stack:34|sub_property_use:R201|land_use:M-C2|assessed_bucket:275000,1,0,1,0,5000 Somervale Court SW,334,274500,274500,0.0437,0.0437
+401,stack:34|sub_property_use:R201|land_use:M-C2|assessed_bucket:277500,1,0,1,0,5000 Somervale Court SW,434,276500,276500,0.0513,0.0513
+402,stack:35|sub_property_use:R201|land_use:M-C2|assessed_bucket:160000,1,0,1,0,5000 Somervale Court SW,235,160500,160500,-0.3897,-0.3897
+403,stack:35|sub_property_use:R201|land_use:M-C2|assessed_bucket:162500,1,0,1,0,5000 Somervale Court SW,335,162000,162000,-0.3840,-0.3840
+404,stack:35|sub_property_use:R201|land_use:M-C2|assessed_bucket:170000,1,0,1,0,5000 Somervale Court SW,135,169500,169500,-0.3555,-0.3555
+405,stack:35|sub_property_use:R201|land_use:M-C2|assessed_bucket:212500,1,0,1,0,5000 Somervale Court SW,435,212000,212000,-0.1939,-0.1939
+406,stack:36|sub_property_use:R201|land_use:M-C2|assessed_bucket:240000,1,0,1,0,5000 Somervale Court SW,136,241000,241000,-0.0837,-0.0837
+407,stack:36|sub_property_use:R201|land_use:M-C2|assessed_bucket:245000,1,0,1,0,5000 Somervale Court SW,236,245000,245000,-0.0684,-0.0684
+408,stack:36|sub_property_use:R201|land_use:M-C2|assessed_bucket:247500,1,0,1,0,5000 Somervale Court SW,336,248500,248500,-0.0551,-0.0551
+409,stack:36|sub_property_use:R201|land_use:M-C2|assessed_bucket:252500,1,0,1,0,5000 Somervale Court SW,436,252500,252500,-0.0399,-0.0399
+410,stack:37|sub_property_use:R201|land_use:M-C2|assessed_bucket:240000,1,0,1,0,5000 Somervale Court SW,137,241000,241000,-0.0837,-0.0837
+411,stack:37|sub_property_use:R201|land_use:M-C2|assessed_bucket:245000,1,0,1,0,5000 Somervale Court SW,237,245000,245000,-0.0684,-0.0684
+412,stack:37|sub_property_use:R201|land_use:M-C2|assessed_bucket:247500,1,0,1,0,5000 Somervale Court SW,337,248500,248500,-0.0551,-0.0551
+413,stack:37|sub_property_use:R201|land_use:M-C2|assessed_bucket:252500,1,0,1,0,5000 Somervale Court SW,437,252500,252500,-0.0399,-0.0399
+414,stack:38|sub_property_use:R201|land_use:M-C2|assessed_bucket:240000,1,0,1,0,5000 Somervale Court SW,138,241000,241000,-0.0837,-0.0837
+415,stack:38|sub_property_use:R201|land_use:M-C2|assessed_bucket:245000,1,0,1,0,5000 Somervale Court SW,238,245000,245000,-0.0684,-0.0684
+416,stack:38|sub_property_use:R201|land_use:M-C2|assessed_bucket:247500,1,0,1,0,5000 Somervale Court SW,338,248500,248500,-0.0551,-0.0551
+417,stack:38|sub_property_use:R201|land_use:M-C2|assessed_bucket:252500,1,0,1,0,5000 Somervale Court SW,438,252500,252500,-0.0399,-0.0399
+418,stack:39|sub_property_use:R201|land_use:M-C2|assessed_bucket:237500,1,0,1,0,5000 Somervale Court SW,139,238500,238500,-0.0932,-0.0932
+419,stack:39|sub_property_use:R201|land_use:M-C2|assessed_bucket:242500,1,0,1,0,5000 Somervale Court SW,239,242500,242500,-0.0779,-0.0779
+420,stack:39|sub_property_use:R201|land_use:M-C2|assessed_bucket:247500,1,0,1,0,5000 Somervale Court SW,339,246500,246500,-0.0627,-0.0627
+421,stack:39|sub_property_use:R201|land_use:M-C2|assessed_bucket:250000,1,0,1,0,5000 Somervale Court SW,439,250500,250500,-0.0475,-0.0475
+422,stack:40|sub_property_use:R201|land_use:M-C2|assessed_bucket:227500,1,0,1,0,5000 Somervale Court SW,140,227500,227500,-0.1350,-0.1350
+423,stack:40|sub_property_use:R201|land_use:M-C2|assessed_bucket:230000,1,0,1,0,5000 Somervale Court SW,240,231000,231000,-0.1217,-0.1217
+424,stack:40|sub_property_use:R201|land_use:M-C2|assessed_bucket:235000,1,0,1,0,5000 Somervale Court SW,340,234500,234500,-0.1084,-0.1084
+425,stack:40|sub_property_use:R201|land_use:M-C2|assessed_bucket:237500,1,0,1,0,5000 Somervale Court SW,440,238500,238500,-0.0932,-0.0932
+426,stack:41|sub_property_use:R201|land_use:M-C2|assessed_bucket:227500,1,0,1,0,5000 Somervale Court SW,141,227500,227500,-0.1350,-0.1350
+427,stack:41|sub_property_use:R201|land_use:M-C2|assessed_bucket:230000,1,0,1,0,5000 Somervale Court SW,241,231000,231000,-0.1217,-0.1217
+428,stack:41|sub_property_use:R201|land_use:M-C2|assessed_bucket:235000,1,0,1,0,5000 Somervale Court SW,341,234500,234500,-0.1084,-0.1084
+429,stack:41|sub_property_use:R201|land_use:M-C2|assessed_bucket:237500,1,0,1,0,5000 Somervale Court SW,441,238500,238500,-0.0932,-0.0932
+430,stack:42|sub_property_use:A005|land_use:M-C2|assessed_bucket:2500,1,0,1,0,3000 Somervale Court SW,142S,2500,2500,-0.9905,-0.9905
+431,stack:42|sub_property_use:R201|land_use:M-C2|assessed_bucket:272500,1,0,1,0,5000 Somervale Court SW,142,272000,272000,0.0342,0.0342
+432,stack:42|sub_property_use:R201|land_use:M-C2|assessed_bucket:280000,1,0,1,0,5000 Somervale Court SW,242,279000,279000,0.0608,0.0608
+433,stack:42|sub_property_use:R201|land_use:M-C2|assessed_bucket:285000,1,0,1,0,5000 Somervale Court SW,342,284000,284000,0.0798,0.0798
+434,stack:42|sub_property_use:R201|land_use:M-C2|assessed_bucket:287500,1,0,1,0,5000 Somervale Court SW,442,288500,288500,0.0970,0.0970
+435,stack:43|sub_property_use:A005|land_use:M-C2|assessed_bucket:2500,1,0,1,0,3000 Somervale Court SW,143S,2500,2500,-0.9905,-0.9905
+436,stack:44|sub_property_use:A005|land_use:M-C2|assessed_bucket:2500,1,0,1,0,3000 Somervale Court SW,144S,2500,2500,-0.9905,-0.9905
+437,stack:45|sub_property_use:A005|land_use:M-C2|assessed_bucket:2500,1,0,1,0,3000 Somervale Court SW,145S,2500,2500,-0.9905,-0.9905
+438,stack:46|sub_property_use:A005|land_use:M-C2|assessed_bucket:2500,1,0,1,0,3000 Somervale Court SW,146S,2500,2500,-0.9905,-0.9905
+439,stack:47|sub_property_use:A005|land_use:M-C2|assessed_bucket:2500,1,0,1,0,3000 Somervale Court SW,147S,2500,2500,-0.9905,-0.9905
+440,stack:48|sub_property_use:A005|land_use:M-C2|assessed_bucket:2500,1,0,1,0,3000 Somervale Court SW,148S,2500,2500,-0.9905,-0.9905
+441,stack:49|sub_property_use:A005|land_use:M-C2|assessed_bucket:2500,1,0,1,0,3000 Somervale Court SW,149S,2500,2500,-0.9905,-0.9905
+442,stack:50|sub_property_use:A005|land_use:M-C2|assessed_bucket:2500,1,0,1,0,3000 Somervale Court SW,150S,2500,2500,-0.9905,-0.9905
+443,stack:51|sub_property_use:A005|land_use:M-C2|assessed_bucket:2500,1,0,1,0,3000 Somervale Court SW,151S,2500,2500,-0.9905,-0.9905
+444,stack:52|sub_property_use:A005|land_use:M-C2|assessed_bucket:2500,1,0,1,0,3000 Somervale Court SW,152S,2500,2500,-0.9905,-0.9905
+445,stack:53|sub_property_use:A005|land_use:M-C2|assessed_bucket:2500,1,0,1,0,3000 Somervale Court SW,153S,2500,2500,-0.9905,-0.9905
+446,stack:54|sub_property_use:A005|land_use:M-C2|assessed_bucket:2500,1,0,1,0,3000 Somervale Court SW,154S,2500,2500,-0.9905,-0.9905
+447,stack:55|sub_property_use:A005|land_use:M-C2|assessed_bucket:2500,1,0,1,0,3000 Somervale Court SW,155S,2500,2500,-0.9905,-0.9905
+448,stack:56|sub_property_use:A005|land_use:M-C2|assessed_bucket:2500,1,0,1,0,3000 Somervale Court SW,156S,2500,2500,-0.9905,-0.9905
+449,stack:57|sub_property_use:A005|land_use:M-C2|assessed_bucket:2500,1,0,1,0,3000 Somervale Court SW,157S,2500,2500,-0.9905,-0.9905
+450,stack:58|sub_property_use:A005|land_use:M-C2|assessed_bucket:2500,1,0,1,0,3000 Somervale Court SW,158S,2500,2500,-0.9905,-0.9905
+451,stack:59|sub_property_use:A005|land_use:M-C2|assessed_bucket:2500,1,0,1,0,3000 Somervale Court SW,159S,2500,2500,-0.9905,-0.9905
+452,stack:60|sub_property_use:A005|land_use:M-C2|assessed_bucket:2500,1,0,1,0,3000 Somervale Court SW,160S,2500,2500,-0.9905,-0.9905
+453,stack:61|sub_property_use:A005|land_use:M-C2|assessed_bucket:2500,1,0,1,0,3000 Somervale Court SW,161S,2500,2500,-0.9905,-0.9905
+454,stack:62|sub_property_use:A005|land_use:M-C2|assessed_bucket:2500,1,0,1,0,3000 Somervale Court SW,162S,2500,2500,-0.9905,-0.9905
+455,stack:63|sub_property_use:A005|land_use:M-C2|assessed_bucket:2500,1,0,1,0,3000 Somervale Court SW,163S,2500,2500,-0.9905,-0.9905
+456,stack:73|sub_property_use:A005|land_use:M-C2|assessed_bucket:2500,1,0,1,0,5500 Somervale Court SW,73S,2500,2500,-0.9905,-0.9905
+457,stack:74|sub_property_use:A005|land_use:M-C2|assessed_bucket:2500,1,0,1,0,5500 Somervale Court SW,74S,2500,2500,-0.9905,-0.9905
+458,stack:75|sub_property_use:A005|land_use:M-C2|assessed_bucket:2500,1,0,1,0,5500 Somervale Court SW,75S,2500,2500,-0.9905,-0.9905
+459,stack:76|sub_property_use:A005|land_use:M-C2|assessed_bucket:2500,1,0,1,0,5500 Somervale Court SW,76S,2500,2500,-0.9905,-0.9905
+460,stack:77|sub_property_use:A005|land_use:M-C2|assessed_bucket:2500,1,0,1,0,5500 Somervale Court SW,77S,2500,2500,-0.9905,-0.9905
+461,stack:78|sub_property_use:A005|land_use:M-C2|assessed_bucket:2500,1,0,1,0,5500 Somervale Court SW,78S,2500,2500,-0.9905,-0.9905
+462,stack:79|sub_property_use:A005|land_use:M-C2|assessed_bucket:2500,1,0,1,0,5500 Somervale Court SW,79S,2500,2500,-0.9905,-0.9905
+463,stack:80|sub_property_use:A005|land_use:M-C2|assessed_bucket:2500,1,0,1,0,5500 Somervale Court SW,80S,2500,2500,-0.9905,-0.9905
+464,stack:81|sub_property_use:A005|land_use:M-C2|assessed_bucket:2500,1,0,1,0,5500 Somervale Court SW,81S,2500,2500,-0.9905,-0.9905
+465,stack:82|sub_property_use:A005|land_use:M-C2|assessed_bucket:2500,1,0,1,0,5500 Somervale Court SW,82S,2500,2500,-0.9905,-0.9905
+466,stack:83|sub_property_use:A005|land_use:M-C2|assessed_bucket:2500,1,0,1,0,5500 Somervale Court SW,83S,2500,2500,-0.9905,-0.9905
+467,stack:84|sub_property_use:A005|land_use:M-C2|assessed_bucket:2500,1,0,1,0,5500 Somervale Court SW,84S,2500,2500,-0.9905,-0.9905
+468,stack:85|sub_property_use:A005|land_use:M-C2|assessed_bucket:2500,1,0,1,0,5500 Somervale Court SW,85S,2500,2500,-0.9905,-0.9905
+469,stack:86|sub_property_use:A005|land_use:M-C2|assessed_bucket:2500,1,0,1,0,5500 Somervale Court SW,86S,2500,2500,-0.9905,-0.9905
+470,stack:NA|sub_property_use:R201|land_use:M-C2|assessed_bucket:247500,1,0,1,0,5000 Somervale Court SW,,246500,246500,-0.0627,-0.0627
+471,stack:NA|sub_property_use:R201|land_use:M-C2|assessed_bucket:337500,1,0,1,0,5000 Somervale Court SW,,336500,336500,0.2795,0.2795
+472,stack:NA|sub_property_use:X057|land_use:M-C2|assessed_bucket:21720000,1,0,1,0,7000 Somervale Court SW,,21720000,21720000,81.5856,81.5856
+473,stack:73|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,1,0,0,1,5000 Somervale Court SW,173V,10000,10000,-0.9620,-0.9620
+474,stack:74|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,1,0,0,1,5000 Somervale Court SW,174V,10000,10000,-0.9620,-0.9620
+475,stack:75|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,1,0,0,1,5000 Somervale Court SW,175V,10000,10000,-0.9620,-0.9620
+476,stack:NA|sub_property_use:A004|land_use:M-C2|assessed_bucket:10000,1,0,0,1,5000 Somervale Court SW,,10000,10000,-0.9620,-0.9620
+477,stack:NA|sub_property_use:A006|land_use:M-C2|assessed_bucket:1570000,1,0,0,1,8000 Somervale Court SW,,1570000,1570000,4.9696,4.9696
+478,stack:NA|sub_property_use:A006|land_use:S-SPR|assessed_bucket:445000,1,0,0,1,4500 Somervale Court SW,,446000,446000,0.6958,0.6958
+479,stack:NA|sub_property_use:A006|land_use:S-UN|assessed_bucket:50000,1,0,0,1,4500 Somervale Court SW,,50000,50000,-0.8099,-0.8099

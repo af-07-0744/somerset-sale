@@ -1,0 +1,160 @@
+{
+  "run_id": "20260225T085105Z",
+  "dataset_id": "4bsw-nn7w",
+  "subject_address": "3000 Somervale Court SW # 209, Calgary AB T2Y 4J2",
+  "subject_unit": "209",
+  "subject_row": {
+    "roll_year": "2026",
+    "roll_number": "757506928",
+    "address": "209 3000 SOMERVALE CO SW",
+    "assessed_value": "263000.0",
+    "assessment_class": "RE",
+    "assessment_class_description": "Residential",
+    "re_assessed_value": "263000.0",
+    "nr_assessed_value": "0.0",
+    "fl_assessed_value": "0.0",
+    "comm_code": "SOM",
+    "comm_name": "SOMERSET",
+    "year_of_construction": "2001.0",
+    "land_use_designation": "M-C2",
+    "property_type": "LI",
+    "land_size_sm": "6010.0",
+    "land_size_sf": "64691.0",
+    "land_size_ac": "1.49",
+    "mod_date": "2026-01-14T00:00:00.000Z",
+    "sub_property_use": "R201",
+    "multipolygon": {
+      "type": "MultiPolygon",
+      "coordinates": [
+        [
+          [
+            [
+              -114.0675225,
+              50.8962687
+            ],
+            [
+              -114.0677742,
+              50.8967147
+            ],
+            [
+              -114.0679564,
+              50.8966872
+            ],
+            [
+              -114.0679636,
+              50.8966861
+            ],
+            [
+              -114.0688175,
+              50.8965574
+            ],
+            [
+              -114.0691677,
+              50.8965427
+            ],
+            [
+              -114.0691527,
+              50.8964703
+            ],
+            [
+              -114.0691397,
+              50.8963978
+            ],
+            [
+              -114.0691287,
+              50.8963252
+            ],
+            [
+              -114.0691197,
+              50.8962525
+            ],
+            [
+              -114.0691126,
+              50.8961797
+            ],
+            [
+              -114.0691075,
+              50.8961068
+            ],
+            [
+              -114.0691045,
+              50.8960339
+            ],
+            [
+              -114.0691034,
+              50.8959609
+            ],
+            [
+              -114.0691035,
+              50.8959413
+            ],
+            [
+              -114.0691035,
+              50.8959323
+            ],
+            [
+              -114.0685203,
+              50.8959571
+            ],
+            [
+              -114.0685213,
+              50.8959657
+            ],
+            [
+              -114.0685456,
+              50.8961946
+            ],
+            [
+              -114.0677069,
+              50.8962297
+            ],
+            [
+              -114.0676984,
+              50.8962301
+            ],
+            [
+              -114.0676778,
+              50.8962309
+            ],
+            [
+              -114.0675225,
+              50.8962687
+            ]
+          ]
+        ]
+      ]
+    },
+    "cpid": "96075149",
+    "unique_key": "202675750692896075149"
+  },
+  "target_buildings": [
+    "3000 Somervale Court SW",
+    "1000 Somervale Court SW",
+    "2000 Somervale Court SW"
+  ],
+  "detected_fields": {
+    "address": "address",
+    "unit": "",
+    "community": "comm_name",
+    "assessed_value": "assessed_value",
+    "assessment_year": "roll_year",
+    "property_type": "property_type",
+    "sqft": "",
+    "roll_number": "roll_number"
+  },
+  "query_urls": [
+    "https://data.calgary.ca/resource/4bsw-nn7w.json?%24where=upper%28address%29+like+%27%251000%25%27+and+upper%28address%29+like+%27%25SOMERVALE%25%27&%24limit=1000&%24offset=0",
+    "https://data.calgary.ca/resource/4bsw-nn7w.json?%24where=upper%28address%29+like+%27%252000%25%27+and+upper%28address%29+like+%27%25SOMERVALE%25%27&%24limit=1000&%24offset=0",
+    "https://data.calgary.ca/resource/4bsw-nn7w.json?%24where=upper%28address%29+like+%27%253000%25%27+and+upper%28address%29+like+%27%25SOMERVALE%25%27&%24limit=1000&%24offset=0"
+  ],
+  "drop_reasons": {
+    "min_assessed_value": 88,
+    "subject_row": 1
+  },
+  "relation_counts": {
+    "same_floor_plan": 11,
+    "similar_floor_plan": 69
+  },
+  "rows_written": 80,
+  "captured_at": "2026-02-25T08:51:05.300802+00:00"
+}

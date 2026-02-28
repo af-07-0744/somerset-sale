@@ -1,0 +1,6 @@
+Value,Count,%,% Present,Meaning,How Resolved*
+A004,242,28.88,28.88,Ancillary V-suffix record; typically parking-related (inference).,known_map
+A005,36,4.30,4.30,Ancillary S-suffix record; typically storage-related (inference).,known_map
+A006,3,0.36,0.36,Auxiliary parcel/common-property record (inference).,known_map
+R201,556,66.35,66.35,Primary residential condo-unit record.,known_map
+X057,1,0.12,0.12,Exceptional/special record code (inference).,known_map

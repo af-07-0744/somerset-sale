@@ -12,6 +12,7 @@ dependencies = [
     "sphinx-design>=0.6.1,<0.7.0",
     "rst2pdf>=0.103.1,<0.104.0",
     "pyyaml>=6.0.2,<7.0.0",
+    "playwright>=1.53.0,<2.0.0",
 ]
 
 [tool.poetry]
@@ -26,6 +27,15 @@ clean = "codex_sale_docs.build:clean"
 check-provenance = "codex_sale_docs.provenance:main"
 fetch-open-calgary = "codex_sale_docs.open_calgary:main"
 prepare-renter-comps = "codex_sale_docs.renter_comps:main"
+infer-open-calgary-units = "codex_sale_docs.unit_inference:main"
+fetch_city_data = "codex_sale_docs.city_data_fetch:main"
+city_data_to_rst = "codex_sale_docs.city_data_rst:main"
+get_city_data = "codex_sale_docs.get_city_data:main"
+city_data_enums = "codex_sale_docs.city_data_enums:main"
+audit-realtor-accuracy = "codex_sale_docs.realtor_audit:main"
+extract-realtor-listing = "codex_sale_docs.realtor_single_listing:main"
+osm-address-lookup = "codex_sale_docs.osm_address_lookup:main"
+find-realtor-listings-browser = "codex_sale_docs.realtor_browser_search:main"
 
 [build-system]
 requires = ["poetry-core"]

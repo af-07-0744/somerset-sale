@@ -1,0 +1,18 @@
+Metric,Value
+Enum Report Generated At,2026-02-28 00:40 UTC
+Input CSV,data/open_calgary_somervale_raw_rows_flat.csv
+Output Dictionary CSV,data/open_calgary_street_requested_field_dictionary.csv
+Input Rows,838
+Fields Included,7
+Fetch Metadata JSON,data/open_calgary_somervale_raw_rows_meta.json
+Fetch Run ID,20260227T195437Z
+Fetch Captured At,2026-02-27T19:54:37.682595+00:00
+Dataset ID,4bsw-nn7w
+Subject Address,"3000 Somervale Court SW # 209, Calgary AB T2Y 4J2"
+Street Portion,Somervale Court SW
+Address Field,address
+Rows Raw,838
+Rows Filtered,838
+Rows Deduped,838
+Dedupe Enabled,True
+Query URL Count,3

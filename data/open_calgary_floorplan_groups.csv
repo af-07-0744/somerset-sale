@@ -1,0 +1,2 @@
+group_rank,plan_signature,row_count,same_floor_plan_count,similar_floor_plan_count,other_count,buildings,units,assessed_value_min,assessed_value_max,value_delta_pct_min,value_delta_pct_max
+1,stack:09|sub_property_use:R201|land_use:M-C2|assessed_bucket:295000,1,1,0,0,5500 Somervale Court SW,209,295000,295000,0.1217,0.1217

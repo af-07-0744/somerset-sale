@@ -1,0 +1,5 @@
+Value,Count,%,% Present,Meaning,How Resolved*
+2001.0,530,63.25,63.47,Year built: 2001.,derived
+2002.0,1,0.12,0.12,Year built: 2002.,derived
+2003.0,304,36.28,36.41,Year built: 2003.,derived
+(blank),3,0.36,,Missing in source row.,missing

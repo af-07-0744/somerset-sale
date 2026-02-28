@@ -1,0 +1,22 @@
+/* Angled, compact headers for enum dictionary tables. */
+table.enum-table-angled thead th {
+  height: 6.5rem;
+  min-width: 3.2rem;
+  vertical-align: bottom;
+  white-space: nowrap;
+  padding: 0 0.2rem;
+}
+
+table.enum-table-angled thead th > p,
+table.enum-table-angled thead th > span {
+  display: inline-block;
+  transform: rotate(-52deg);
+  transform-origin: left bottom;
+  white-space: nowrap;
+  line-height: 1;
+  margin: 0;
+}
+
+table.enum-table-angled tbody td {
+  vertical-align: top;
+}

@@ -1,0 +1,16 @@
+File,Type,Rows,Fields,Download
+data/open_calgary_somervale_raw_rows_flat.csv,csv,838,22,:download:`Download <city_data/_downloads/enums/data__open_calgary_somervale_raw_rows_flat.csv>`
+data/open_calgary_street_requested_field_dictionary.csv,csv,46,11,:download:`Download <city_data/_downloads/enums/data__open_calgary_street_requested_field_dictionary.csv>`
+source/city_data/_tables/enums/_meta/run_summary.csv,csv,17,2,:download:`Download <city_data/_downloads/enums/_meta__run_summary.csv>`
+source/city_data/_tables/enums/_meta/url_field_coverage.csv,csv,3,2,:download:`Download <city_data/_downloads/enums/_meta__url_field_coverage.csv>`
+source/city_data/_tables/enums/_meta/field_url_coverage.csv,csv,22,3,:download:`Download <city_data/_downloads/enums/_meta__field_url_coverage.csv>`
+source/city_data/_tables/enums/_meta/data_file_field_provenance.csv,csv,111,3,:download:`Download <city_data/_downloads/enums/_meta__data_file_field_provenance.csv>`
+data/open_calgary_somervale_raw_rows_meta.json,json,1,14,:download:`Download <city_data/_downloads/enums/data__open_calgary_somervale_raw_rows_meta.json>`
+data/open_calgary_somervale_raw_rows.json,json,838,22,:download:`Download <city_data/_downloads/enums/data__open_calgary_somervale_raw_rows.json>`
+source/city_data/_tables/enums/comm_code.csv,csv,1,6,:download:`Download <city_data/_downloads/enums/enums__comm_code.csv>`
+source/city_data/_tables/enums/land_size_ac.csv,csv,11,6,:download:`Download <city_data/_downloads/enums/enums__land_size_ac.csv>`
+source/city_data/_tables/enums/land_size_sf.csv,csv,11,6,:download:`Download <city_data/_downloads/enums/enums__land_size_sf.csv>`
+source/city_data/_tables/enums/land_size_sm.csv,csv,11,6,:download:`Download <city_data/_downloads/enums/enums__land_size_sm.csv>`
+source/city_data/_tables/enums/land_use_designation.csv,csv,3,6,:download:`Download <city_data/_downloads/enums/enums__land_use_designation.csv>`
+source/city_data/_tables/enums/sub_property_use.csv,csv,5,6,:download:`Download <city_data/_downloads/enums/enums__sub_property_use.csv>`
+source/city_data/_tables/enums/year_of_construction.csv,csv,4,6,:download:`Download <city_data/_downloads/enums/enums__year_of_construction.csv>`

@@ -19,6 +19,7 @@ html_theme_options = {
     "navigation_with_keys": True,
 }
 html_static_path = ["_static"]
+html_css_files = ["custom.css"]
 
 pdf_documents = [
     ("index", "SomervalePricingMemo", "Somervale Pricing Memo", "Joseph Surmava"),

@@ -1,4 +1,5 @@
 import argparse
+from collections import Counter
 import csv
 import datetime as dt
 import getpass
@@ -73,6 +74,11 @@ ASSESSMENT_COMPS_FIELDNAMES = [
 ]
 
 
+def _parse_csv_set(raw_value: str) -> set[str]:
+    parts = [item.strip().upper() for item in raw_value.split(",")]
+    return {item for item in parts if item}
+
+
 def _to_float(value: Any) -> float | None:
     if value is None:
         return None
@@ -139,6 +145,30 @@ def _build_subject_queries(address: str) -> list[str]:
         if normalized and normalized not in queries:
             queries.append(normalized)
     return queries
+
+
+def _extract_subject_unit(address: str) -> str:
+    hash_match = re.search(r"#\s*([A-Za-z0-9\-]+)", address)
+    if hash_match:
+        return re.sub(r"[^A-Za-z0-9]", "", hash_match.group(1)).upper()
+    leading_unit_match = re.match(r"^\s*([A-Za-z0-9\-]+)\s+\d{3,5}\b", address)
+    if leading_unit_match:
+        return re.sub(r"[^A-Za-z0-9]", "", leading_unit_match.group(1)).upper()
+    return ""
+
+
+def _extract_suite_token_from_address(address_text: str) -> str:
+    tokens = [token for token in re.findall(r"[A-Za-z0-9]+", address_text.upper()) if token]
+    if not tokens:
+        return ""
+    for index, token in enumerate(tokens):
+        if token.isdigit() and index > 0:
+            return tokens[index - 1]
+    return ""
+
+
+def _normalize_unit_token(token: str) -> str:
+    return re.sub(r"[^A-Za-z0-9]", "", token).upper()
 
 
 def _subject_where_clauses(subject_address: str, address_field: str) -> list[str]:
@@ -291,13 +321,13 @@ def _detect_fields(field_names: list[str]) -> dict[str, str]:
         ),
         "unit": _pick_field(
             field_names,
-            ["unit", "unit_number", "suite_number"],
-            ["unit", "suite", "apt"],
+            ["unit", "unit_number", "suite_number", "suite_no", "condo_unit"],
+            ["unit", "suite", "apt", "condo"],
         ),
         "community": _pick_field(
             field_names,
-            ["community_name", "community"],
-            ["community", "neigh", "district"],
+            ["community_name", "community", "comm_name", "community_code"],
+            ["community", "comm", "neigh", "district"],
         ),
         "assessed_value": _pick_field(
             field_names,
@@ -316,8 +346,8 @@ def _detect_fields(field_names: list[str]) -> dict[str, str]:
         ),
         "sqft": _pick_field(
             field_names,
-            ["total_sqft", "building_area", "assessed_building_area"],
-            ["sqft", "square", "area"],
+            ["total_sqft", "building_area", "assessed_building_area", "net_area", "living_area"],
+            ["sqft", "square", "area", "living"],
         ),
         "roll_number": _pick_field(
             field_names,
@@ -331,6 +361,7 @@ def _score_subject_candidate(
     row: dict[str, Any],
     fields: dict[str, str],
     subject_address: str,
+    subject_unit: str,
 ) -> int:
     address_field = fields.get("address", "")
     unit_field = fields.get("unit", "")
@@ -347,6 +378,15 @@ def _score_subject_candidate(
     unit_match = re.search(r"#\s*([a-z0-9\-]+)", subject_address.lower())
     if unit_match and unit_match.group(1) in unit_text:
         score += 4
+    if subject_unit:
+        normalized_subject_unit = _normalize_unit_token(subject_unit)
+        normalized_unit_field = _normalize_unit_token(unit_text)
+        normalized_address_suite = _normalize_unit_token(_extract_suite_token_from_address(address_text))
+        candidate_units = {item for item in [normalized_unit_field, normalized_address_suite] if item}
+        if normalized_subject_unit in candidate_units:
+            score += 12
+        elif candidate_units:
+            score -= 6
     return score
 
 
@@ -354,15 +394,23 @@ def _select_subject_row(
     rows: list[dict[str, Any]],
     fields: dict[str, str],
     subject_address: str,
+    subject_unit: str,
 ) -> dict[str, Any]:
     if not rows:
         raise RuntimeError("No rows returned for subject search.")
     scored = sorted(
         rows,
-        key=lambda row: _score_subject_candidate(row, fields, subject_address),
+        key=lambda row: _score_subject_candidate(row, fields, subject_address, subject_unit),
         reverse=True,
     )
     return scored[0]
+
+
+def _is_virtual_suite_record(address_text: str) -> bool:
+    suite = _extract_suite_token_from_address(address_text)
+    if not suite:
+        return False
+    return _normalize_unit_token(suite).endswith("V")
 
 
 def _soql_quote(value: str) -> str:
@@ -385,6 +433,32 @@ def _same_row(a: dict[str, Any], b: dict[str, Any], fields: dict[str, str]) -> b
     if not left_address and not right_address:
         return json.dumps(a, sort_keys=True) == json.dumps(b, sort_keys=True)
     return bool(left_address and left_address == right_address and left_unit == right_unit)
+
+
+def _row_identity_key(row: dict[str, Any], fields: dict[str, str]) -> str:
+    roll_field = fields.get("roll_number", "")
+    roll_value = str(row.get(roll_field, "")).strip() if roll_field else ""
+    if roll_value:
+        return f"roll:{roll_value}"
+    address_field = fields.get("address", "")
+    unit_field = fields.get("unit", "")
+    address_value = _normalize_space(str(row.get(address_field, "")).lower())
+    unit_value = _normalize_space(str(row.get(unit_field, "")).lower())
+    if address_value:
+        return f"addr:{address_value}|unit:{unit_value}"
+    return f"raw:{json.dumps(row, sort_keys=True)}"
+
+
+def _dedupe_rows(rows: list[dict[str, Any]], fields: dict[str, str]) -> list[dict[str, Any]]:
+    unique_rows: list[dict[str, Any]] = []
+    seen_keys: set[str] = set()
+    for row in rows:
+        key = _row_identity_key(row, fields)
+        if key in seen_keys:
+            continue
+        seen_keys.add(key)
+        unique_rows.append(row)
+    return unique_rows
 
 
 def _write_csv(path: Path, fieldnames: list[str], rows: list[dict[str, Any]]) -> None:
@@ -477,6 +551,42 @@ def _build_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="Print query attempts and detected fields during execution.",
     )
+    parser.add_argument(
+        "--subject-search-mode",
+        choices=("where_only", "where_then_q", "q_then_where"),
+        default="where_only",
+        help=(
+            "Subject row lookup strategy. "
+            "where_only (default) avoids Socrata $q and uses $where clauses only."
+        ),
+    )
+    parser.add_argument(
+        "--exclude-property-types",
+        default="",
+        help="Comma-delimited property_type values to exclude.",
+    )
+    parser.add_argument(
+        "--include-property-types",
+        default="",
+        help="Comma-delimited allow-list for property_type values.",
+    )
+    parser.add_argument(
+        "--min-assessed-value",
+        type=float,
+        default=50000.0,
+        help="Minimum assessed value to keep as comparable (default: 50000).",
+    )
+    parser.add_argument(
+        "--include-virtual-suites",
+        action="store_true",
+        help="Include records whose suite token ends with 'V'.",
+    )
+    parser.add_argument(
+        "--match-subject-property-type",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+        help="Keep comps with same property_type as subject (default: enabled).",
+    )
     return parser
 
 
@@ -486,7 +596,11 @@ def main() -> int:
 
     dataset_id = args.dataset_id
     subject_address = _normalize_space(args.subject_address)
-    app_token = args.app_token or os.environ.get("SOCRATA_APP_TOKEN", "BHLTQ74LfxD24y9dvGQq0ypBi")
+    subject_unit = _extract_subject_unit(subject_address)
+    app_token = args.app_token or os.environ.get("SOCRATA_APP_TOKEN", "")
+    exclude_property_types = _parse_csv_set(args.exclude_property_types)
+    include_property_types = _parse_csv_set(args.include_property_types)
+    include_virtual_suites = bool(args.include_virtual_suites)
 
     output_csv_path = Path(args.output_csv)
     evidence_dir = Path(args.evidence_dir)
@@ -498,9 +612,24 @@ def main() -> int:
     try:
         if args.dry_run:
             query_preview = _build_subject_queries(subject_address)
-            print("Dry run enabled. Planned subject queries:")
-            for item in query_preview:
-                print(f"- {item}")
+            where_preview = _subject_where_clauses(subject_address, "address")
+            print("Dry run enabled. Planned subject lookup attempts:")
+            if args.subject_search_mode == "where_only":
+                for item in where_preview:
+                    print(f"- $where: {item}")
+                if not where_preview:
+                    for item in query_preview:
+                        print(f"- $q: {item}")
+            elif args.subject_search_mode == "where_then_q":
+                for item in where_preview:
+                    print(f"- $where: {item}")
+                for item in query_preview:
+                    print(f"- $q: {item}")
+            else:
+                for item in query_preview:
+                    print(f"- $q: {item}")
+                for item in where_preview:
+                    print(f"- $where: {item}")
             return 0
 
         field_names = _load_field_names(dataset_id, app_token, args.timeout_seconds)
@@ -509,42 +638,41 @@ def main() -> int:
             raise RuntimeError("Could not identify assessed value field in dataset schema.")
         if args.debug:
             print(f"DEBUG: detected fields -> {fields}")
+            print(f"DEBUG: subject_unit -> {subject_unit or '(none)'}")
 
         subject_rows: list[dict[str, Any]] = []
         subject_query_urls: list[str] = []
         subject_queries = _build_subject_queries(subject_address)
-        for query in subject_queries:
+        where_clauses = _subject_where_clauses(subject_address, fields.get("address", ""))
+        lookup_attempts: list[tuple[str, str]] = []
+
+        if args.subject_search_mode == "where_only":
+            lookup_attempts.extend([("$where", where_clause) for where_clause in where_clauses])
+            if not lookup_attempts:
+                # Fallback when tokenized address cannot build a WHERE clause.
+                lookup_attempts.extend([("$q", query) for query in subject_queries])
+        elif args.subject_search_mode == "where_then_q":
+            lookup_attempts.extend([("$where", where_clause) for where_clause in where_clauses])
+            lookup_attempts.extend([("$q", query) for query in subject_queries])
+        else:  # q_then_where
+            lookup_attempts.extend([("$q", query) for query in subject_queries])
+            lookup_attempts.extend([("$where", where_clause) for where_clause in where_clauses])
+
+        for operator, value in lookup_attempts:
             rows, urls = _fetch_rows_paginated(
                 dataset_id=dataset_id,
-                base_params={"$q": query},
+                base_params={operator: value},
                 max_rows=args.search_limit,
                 page_size=args.page_size,
                 app_token=app_token,
                 timeout_seconds=args.timeout_seconds,
             )
             if args.debug:
-                print(f"DEBUG: $q='{query}' -> {len(rows)} row(s)")
+                print(f"DEBUG: subject {operator}='{value}' -> {len(rows)} row(s)")
             subject_rows.extend(rows)
             subject_query_urls.extend(urls)
             if rows:
                 break
-
-        where_clauses = _subject_where_clauses(subject_address, fields.get("address", ""))
-        for where_clause in where_clauses:
-            if subject_rows:
-                break
-            rows, urls = _fetch_rows_paginated(
-                dataset_id=dataset_id,
-                base_params={"$where": where_clause},
-                max_rows=args.search_limit,
-                page_size=args.page_size,
-                app_token=app_token,
-                timeout_seconds=args.timeout_seconds,
-            )
-            if args.debug:
-                print(f"DEBUG: $where='{where_clause}' -> {len(rows)} row(s)")
-            subject_rows.extend(rows)
-            subject_query_urls.extend(urls)
 
         if not subject_rows:
             debug_lines = [
@@ -552,6 +680,7 @@ def main() -> int:
                 f"Subject address: {subject_address}",
                 f"Dataset id: {dataset_id}",
                 f"Address field detected: {fields.get('address', '(none)')}",
+                f"Subject search mode: {args.subject_search_mode}",
                 f"Tried $q queries: {subject_queries}",
             ]
             if where_clauses:
@@ -561,18 +690,71 @@ def main() -> int:
             )
             raise RuntimeError(" ".join(debug_lines))
 
-        subject_row = _select_subject_row(subject_rows, fields, subject_address)
+        property_type_field = fields.get("property_type", "")
+        address_field_for_matching = fields.get("address", "")
+
+        subject_rows = _dedupe_rows(subject_rows, fields)
+        subject_filtered_rows: list[dict[str, Any]] = []
+        subject_drop_reasons: Counter[str] = Counter()
+        for row in subject_rows:
+            property_type = (
+                str(row.get(property_type_field, "")).strip().upper()
+                if property_type_field
+                else ""
+            )
+            assessed_value = _to_float(row.get(fields["assessed_value"]))
+            address_text = str(row.get(address_field_for_matching, "")).strip()
+
+            if include_property_types and property_type not in include_property_types:
+                subject_drop_reasons["include_property_types"] += 1
+                continue
+            if exclude_property_types and property_type in exclude_property_types:
+                subject_drop_reasons["exclude_property_types"] += 1
+                continue
+            if assessed_value is not None and assessed_value < args.min_assessed_value:
+                subject_drop_reasons["min_assessed_value"] += 1
+                continue
+            if (not include_virtual_suites) and _is_virtual_suite_record(address_text):
+                subject_drop_reasons["virtual_suite"] += 1
+                continue
+            subject_filtered_rows.append(row)
+
+        subject_rows_for_selection = subject_filtered_rows or subject_rows
+        if args.debug and subject_drop_reasons:
+            print(f"DEBUG: subject filter drop reasons -> {dict(subject_drop_reasons)}")
+
+        subject_row = _select_subject_row(
+            subject_rows_for_selection,
+            fields,
+            subject_address,
+            subject_unit,
+        )
 
         community_field = fields.get("community", "")
         community_value = str(subject_row.get(community_field, "")).strip() if community_field else ""
-        property_type_field = fields.get("property_type", "")
         subject_property_type = str(subject_row.get(property_type_field, "")).strip()
 
-        candidate_rows: list[dict[str, Any]]
-        candidate_query_urls: list[str]
-        if community_field and community_value:
-            where_clause = f"upper({community_field}) = {_soql_quote(community_value.upper())}"
-            candidate_rows, candidate_query_urls = _fetch_rows_paginated(
+        subject_property_type_upper = subject_property_type.upper()
+        effective_exclude_property_types = set(exclude_property_types)
+        if (
+            not include_property_types
+            and subject_property_type_upper
+            and subject_property_type_upper in effective_exclude_property_types
+        ):
+            effective_exclude_property_types.discard(subject_property_type_upper)
+            if args.debug:
+                print(
+                    "DEBUG: removed subject property_type from exclude list -> "
+                    f"{subject_property_type_upper}"
+                )
+
+        candidate_rows: list[dict[str, Any]] = []
+        candidate_query_urls: list[str] = []
+        candidate_scope = "address"
+        candidate_where_clauses = _subject_where_clauses(subject_address, address_field_for_matching)
+
+        for where_clause in candidate_where_clauses:
+            rows, urls = _fetch_rows_paginated(
                 dataset_id=dataset_id,
                 base_params={"$where": where_clause},
                 max_rows=args.community_limit,
@@ -580,23 +762,76 @@ def main() -> int:
                 app_token=app_token,
                 timeout_seconds=args.timeout_seconds,
             )
-        else:
-            candidate_rows = subject_rows[:]
-            candidate_query_urls = subject_query_urls[:]
+            if args.debug:
+                print(f"DEBUG: candidate $where='{where_clause}' -> {len(rows)} row(s)")
+            candidate_rows.extend(rows)
+            candidate_query_urls.extend(urls)
+        candidate_rows = _dedupe_rows(candidate_rows, fields)
 
-        if property_type_field and subject_property_type:
-            candidate_rows = [
-                row
-                for row in candidate_rows
-                if str(row.get(property_type_field, "")).strip().lower()
-                == subject_property_type.lower()
-            ]
+        if not candidate_rows:
+            if community_field and community_value:
+                candidate_scope = "community"
+                where_clause = f"upper({community_field}) = {_soql_quote(community_value.upper())}"
+                rows, urls = _fetch_rows_paginated(
+                    dataset_id=dataset_id,
+                    base_params={"$where": where_clause},
+                    max_rows=args.community_limit,
+                    page_size=args.page_size,
+                    app_token=app_token,
+                    timeout_seconds=args.timeout_seconds,
+                )
+                if args.debug:
+                    print(f"DEBUG: candidate community $where='{where_clause}' -> {len(rows)} row(s)")
+                candidate_rows = _dedupe_rows(rows, fields)
+                candidate_query_urls = urls
+            else:
+                candidate_scope = "subject_rows"
+                candidate_rows = subject_rows[:]
+                candidate_query_urls = subject_query_urls[:]
 
-        candidate_rows = [
-            row for row in candidate_rows if not _same_row(row, subject_row, fields)
-        ]
+        candidate_rows = [row for row in candidate_rows if not _same_row(row, subject_row, fields)]
 
+        addressed_field = fields.get("address", "")
         assessed_field = fields["assessed_value"]
+        filtered_rows: list[dict[str, Any]] = []
+        drop_reasons: Counter[str] = Counter()
+        match_subject_property_type = bool(args.match_subject_property_type and subject_property_type_upper)
+        for row in candidate_rows:
+            property_type = (
+                str(row.get(property_type_field, "")).strip().upper()
+                if property_type_field
+                else ""
+            )
+            assessed_value = _to_float(row.get(assessed_field))
+            address_text = str(row.get(addressed_field, "")).strip()
+
+            if (
+                match_subject_property_type
+                and property_type
+                and property_type != subject_property_type_upper
+            ):
+                drop_reasons["match_subject_property_type"] += 1
+                continue
+            if include_property_types and property_type not in include_property_types:
+                drop_reasons["include_property_types"] += 1
+                continue
+            if effective_exclude_property_types and property_type in effective_exclude_property_types:
+                drop_reasons["exclude_property_types"] += 1
+                continue
+            if assessed_value is not None and assessed_value < args.min_assessed_value:
+                drop_reasons["min_assessed_value"] += 1
+                continue
+            if (not include_virtual_suites) and _is_virtual_suite_record(address_text):
+                drop_reasons["virtual_suite"] += 1
+                continue
+            filtered_rows.append(row)
+        candidate_rows = filtered_rows
+
+        if args.debug:
+            if drop_reasons:
+                print(f"DEBUG: filter drop reasons -> {dict(drop_reasons)}")
+            print(f"DEBUG: candidate scope -> {candidate_scope}")
+
         subject_assessed_value = _to_float(subject_row.get(assessed_field))
         if subject_assessed_value:
             candidate_rows.sort(
@@ -607,8 +842,18 @@ def main() -> int:
         candidate_rows = candidate_rows[: args.max_comps]
 
         if not candidate_rows:
+            property_type_hist = Counter(
+                str(row.get(property_type_field, "")).strip().upper() if property_type_field else "(none)"
+                for row in subject_rows
+            )
             raise RuntimeError(
-                "No comparable rows found after filtering. Try a larger --community-limit or remove strict filters."
+                "No comparable rows found after filtering. "
+                f"subject_unit={subject_unit or '(none)'} "
+                f"subject_property_type={subject_property_type or '(none)'} "
+                f"match_subject_property_type={match_subject_property_type} "
+                f"effective_exclude_property_types={sorted(effective_exclude_property_types)} "
+                f"property_type_hist={dict(property_type_hist)} "
+                "Try --include-virtual-suites and/or --exclude-property-types \"\" and/or a lower --min-assessed-value."
             )
 
         normalized_rows: list[dict[str, Any]] = []
@@ -626,12 +871,20 @@ def main() -> int:
         evidence_path = evidence_dataset_dir / f"{run_id}_fetch.json"
 
         query_urls = sorted(set(subject_query_urls + candidate_query_urls))
+        primary_source_url = (
+            candidate_query_urls[0]
+            if candidate_query_urls
+            else (subject_query_urls[0] if subject_query_urls else "")
+        )
         evidence_payload = {
             "dataset_id": dataset_id,
             "run_id": run_id,
             "subject_address_input": subject_address,
             "detected_fields": fields,
             "query_urls": query_urls,
+            "candidate_scope": candidate_scope,
+            "match_subject_property_type": match_subject_property_type,
+            "effective_exclude_property_types": sorted(effective_exclude_property_types),
             "subject_row": subject_row,
             "candidate_count_raw": len(candidate_rows),
             "captured_at": run_timestamp.isoformat(),
@@ -665,7 +918,7 @@ def main() -> int:
                 "value_delta": f"{value_delta:.0f}" if value_delta is not None else "",
                 "value_delta_pct": f"{value_delta_pct:.4f}" if value_delta_pct is not None else "",
                 "dataset_id": dataset_id,
-                "source_url": query_urls[0] if query_urls else "",
+                "source_url": primary_source_url,
             }
             normalized_rows.append(normalized_row)
 
@@ -675,7 +928,7 @@ def main() -> int:
                     "comp_id": comp_id,
                     "source_type": "open_calgary_api",
                     "mls_number": "",
-                    "url": query_urls[0] if query_urls else "",
+                    "url": primary_source_url,
                     "publisher": "City of Calgary Open Data",
                     "captured_at": run_timestamp.isoformat(),
                     "captured_by": args.captured_by,
@@ -718,8 +971,10 @@ def main() -> int:
             _append_csv(comps_raw_path, COMPS_RAW_FIELDNAMES, comps_raw_rows)
 
         print(f"Subject address: {subject_address}")
+        print(f"Subject unit token: {subject_unit or '(none)'}")
         print(f"Dataset: {dataset_id}")
         print(f"Detected fields: {fields}")
+        print(f"Candidate scope: {candidate_scope}")
         print(f"Wrote {len(normalized_rows)} rows to {output_csv_path}")
         print(f"Wrote evidence artifact: {evidence_path}")
         if not args.no_source_registry:
