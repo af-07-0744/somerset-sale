@@ -13,6 +13,7 @@ DEFAULT_INPUT_CSV = Path("data/open_calgary_somervale_raw_rows_flat.csv")
 DEFAULT_OUTPUT_DIR = Path("source/city_data")
 DEFAULT_INDEX_RST = Path("source/91_city_data_index.rst")
 DEFAULT_RAW_JSON_PATH = Path("data/open_calgary_somervale_raw_rows.json")
+DEFAULT_FETCH_META_JSON = Path("data/open_calgary_somervale_raw_rows_meta.json")
 DEFAULT_INDEX_TITLE = "City Data: Somervale Court SW"
 DEFAULT_NON_RESIDENTIAL_TITLE = "Non-Residential / Exceptional Records (Somervale Court SW)"
 
@@ -86,6 +87,43 @@ def _address_sort_key(address: str) -> tuple[int, str]:
     return (0, address.upper())
 
 
+def _unit_number_components(unit_token: str) -> tuple[int | None, str]:
+    token = _normalize_space(unit_token).upper()
+    if not token:
+        return (None, "")
+    match = re.match(r"^(\d+)([A-Z]*)$", token)
+    if match:
+        return (int(match.group(1)), match.group(2))
+    digits = re.sub(r"[^0-9]", "", token)
+    suffix = re.sub(r"[0-9]", "", token)
+    if digits:
+        return (int(digits), suffix)
+    return (None, suffix)
+
+
+def _unit_floor_number(unit_token: str) -> int | None:
+    number, _ = _unit_number_components(unit_token)
+    if number is None:
+        return None
+    if number >= 100:
+        return number // 100
+    return None
+
+
+def _floor_bucket(unit_token: str) -> tuple[int, int, str]:
+    floor_number = _unit_floor_number(unit_token)
+    if floor_number is not None:
+        return (0, floor_number, f"Floor {floor_number:02d}")
+    return (1, 10**9, "Floor Unknown")
+
+
+def _unit_sort_key(unit_token: str, address: str) -> tuple[int, int, str, str]:
+    number, suffix = _unit_number_components(unit_token)
+    if number is not None:
+        return (0, number, suffix, address.upper())
+    return (1, 10**9, unit_token.upper(), address.upper())
+
+
 def _to_float(value: Any) -> float | None:
     try:
         if value is None:
@@ -96,6 +134,58 @@ def _to_float(value: Any) -> float | None:
         return float(raw)
     except ValueError:
         return None
+
+
+def _read_json(path: Path) -> Any:
+    with path.open("r", encoding="utf-8") as handle:
+        return json.load(handle)
+
+
+def _address_label_slug(address: str) -> str:
+    return _slugify(address)
+
+
+def _floor_anchor_label(building_slug: str, floor_label: str) -> str:
+    match = re.match(r"^FLOOR\s+(\d+)$", floor_label.strip().upper())
+    if match:
+        token = match.group(1).zfill(2)
+    elif floor_label.strip().upper() == "FLOOR UNKNOWN":
+        token = "unknown"
+    else:
+        token = _slugify(floor_label)
+    return f"city-data-{building_slug}-floor-{token}"
+
+
+def _unit_anchor_label(building_slug: str, address: str) -> str:
+    return f"city-data-{building_slug}-unit-{_address_label_slug(address)}"
+
+
+def _subject_navigation_from_meta(fetch_meta_json: Path) -> dict[str, str]:
+    if not fetch_meta_json.exists():
+        return {}
+    try:
+        payload = _read_json(fetch_meta_json)
+    except Exception:
+        return {}
+    if not isinstance(payload, dict):
+        return {}
+
+    subject_address = _normalize_space(str(payload.get("subject_address_matched", "")).upper())
+    if not subject_address:
+        return {}
+    building_key = _building_key_from_address(subject_address)
+    building_slug = _slugify(building_key)
+    unit_token = _unit_token_from_address(subject_address)
+    floor_label = _floor_bucket(unit_token)[2]
+    return {
+        "subject_address": subject_address,
+        "building_key": building_key,
+        "building_slug": building_slug,
+        "unit_token": unit_token,
+        "floor_label": floor_label,
+        "floor_anchor": _floor_anchor_label(building_slug, floor_label),
+        "unit_anchor": _unit_anchor_label(building_slug, subject_address),
+    }
 
 
 def _is_non_residential_bucket(row: dict[str, str]) -> bool:
@@ -262,8 +352,11 @@ def _render_building_page(
     building_table_dir.mkdir(parents=True, exist_ok=True)
 
     by_address: dict[str, list[dict[str, str]]] = defaultdict(list)
+    by_floor: dict[tuple[int, int, str], dict[str, list[dict[str, str]]]] = defaultdict(lambda: defaultdict(list))
     for row in rows:
         by_address[row["address"]].append(row)
+        floor_key = _floor_bucket(str(row.get("unit_token", "")))
+        by_floor[floor_key][row["address"]].append(row)
 
     duplicate_addresses = {address: len(items) for address, items in by_address.items() if len(items) > 1}
     entry_note_counts = Counter(
@@ -300,51 +393,74 @@ def _render_building_page(
             lines.append(f"- ``{note}``: ``{count}``")
         lines.append("")
 
-    lines.append("Address Index")
-    lines.append("-------------")
+    lines.append("Floor / Unit Index")
+    lines.append("------------------")
     lines.append("")
     lines.append(".. contents::")
     lines.append("   :local:")
-    lines.append("   :depth: 1")
+    lines.append("   :depth: 2")
     lines.append("")
 
     address_name_counts: dict[str, int] = defaultdict(int)
-    for address in sorted(by_address, key=_address_sort_key):
-        address_rows = sorted(by_address[address], key=lambda row: row.get("roll_number", ""))
-        address_name_counts[address] += 1
-        address_slug = _slugify(address)
-        suffix = f"_{address_name_counts[address]}" if address_name_counts[address] > 1 else ""
-        csv_name = f"{address_slug}{suffix}.csv"
-        csv_path = building_table_dir / csv_name
-        _write_csv(csv_path, fieldnames, address_rows)
+    for floor_key in sorted(by_floor):
+        _, _, floor_label = floor_key
+        floor_addresses = by_floor[floor_key]
+        floor_row_count = sum(len(items) for items in floor_addresses.values())
+        floor_anchor = _floor_anchor_label(building_slug, floor_label)
+        lines.append(f".. _{floor_anchor}:")
+        lines.append("")
+        lines.append(floor_label)
+        lines.append("^" * len(floor_label))
+        lines.append("")
+        lines.append(f"- Total rows on this floor: ``{floor_row_count}``")
+        lines.append(f"- Distinct unit/address entries on this floor: ``{len(floor_addresses)}``")
+        lines.append("")
 
-        lines.append(address)
-        lines.append("^" * len(address))
-        lines.append("")
-        lines.append(f"- Row count for this address: ``{len(address_rows)}``")
-        distinct_rolls = {row.get("roll_number", "") for row in address_rows if row.get("roll_number", "")}
-        lines.append(f"- Distinct roll numbers: ``{len(distinct_rolls)}``")
-        if len(address_rows) > 1:
+        for address in sorted(
+            floor_addresses,
+            key=lambda item: _unit_sort_key(_unit_token_from_address(item), item),
+        ):
+            address_rows = sorted(floor_addresses[address], key=lambda row: row.get("roll_number", ""))
+            address_name_counts[address] += 1
+            address_slug = _slugify(address)
+            suffix = f"_{address_name_counts[address]}" if address_name_counts[address] > 1 else ""
+            csv_name = f"{address_slug}{suffix}.csv"
+            csv_path = building_table_dir / csv_name
+            _write_csv(csv_path, fieldnames, address_rows)
+
+            unit_token = _unit_token_from_address(address) or "(blank)"
+            unit_heading = f"Unit {unit_token}"
+            unit_anchor = _unit_anchor_label(building_slug, address)
+            lines.append(f".. _{unit_anchor}:")
             lines.append("")
-            lines.append(".. warning::")
-            lines.append("   This address has multiple rows in the source data.")
-        lines.append("")
-        note_counts = Counter(
-            note
-            for row in address_rows
-            for note in [part.strip() for part in row.get("entry_notes", "").split(";") if part.strip()]
-        )
-        if note_counts:
-            lines.append(".. note::")
-            lines.append("   Flags in this address block:")
-            for note, count in sorted(note_counts.items(), key=lambda item: (-item[1], item[0])):
-                lines.append(f"   - ``{note}`` (``{count}`` row(s))")
+            lines.append(unit_heading)
+            lines.append("~" * len(unit_heading))
             lines.append("")
-        lines.append(f".. csv-table:: Records for {address}")
-        lines.append(f"   :file: _tables/{building_slug}/{csv_name}")
-        lines.append("   :header-rows: 1")
-        lines.append("   :widths: auto")
-        lines.append("")
+            lines.append(f"- Address: ``{address}``")
+            lines.append(f"- Row count for this unit/address: ``{len(address_rows)}``")
+            distinct_rolls = {row.get("roll_number", "") for row in address_rows if row.get("roll_number", "")}
+            lines.append(f"- Distinct roll numbers: ``{len(distinct_rolls)}``")
+            if len(address_rows) > 1:
+                lines.append("")
+                lines.append(".. warning::")
+                lines.append("   This address has multiple rows in the source data.")
+            lines.append("")
+            note_counts = Counter(
+                note
+                for row in address_rows
+                for note in [part.strip() for part in row.get("entry_notes", "").split(";") if part.strip()]
+            )
+            if note_counts:
+                lines.append(".. note::")
+                lines.append("   Flags in this address block:")
+                for note, count in sorted(note_counts.items(), key=lambda item: (-item[1], item[0])):
+                    lines.append(f"   - ``{note}`` (``{count}`` row(s))")
+                lines.append("")
+            lines.append(f".. csv-table:: Records for {address}")
+            lines.append(f"   :file: _tables/{building_slug}/{csv_name}")
+            lines.append("   :header-rows: 1")
+            lines.append("   :widths: auto")
+            lines.append("")
 
     page_path.write_text("\n".join(lines), encoding="utf-8")
     return page_path
@@ -400,6 +516,7 @@ def render_city_data_rst(
     output_dir: Path,
     index_rst: Path,
     raw_json_path: Path,
+    fetch_meta_json: Path,
     include_multipolygon: bool,
     index_title: str,
     non_residential_title: str,
@@ -457,6 +574,25 @@ def render_city_data_rst(
     index_lines.append(f"- Residential rows: ``{len(residential_rows)}``")
     index_lines.append(f"- Non-residential / exceptional rows: ``{len(non_residential_rows)}``")
     index_lines.append("")
+
+    subject_nav = _subject_navigation_from_meta(fetch_meta_json)
+    if subject_nav:
+        building_page = output_dir / f"building_{subject_nav['building_slug']}.rst"
+        index_lines.append("Subject Unit Quick Navigation")
+        index_lines.append("-----------------------------")
+        index_lines.append("")
+        index_lines.append(f"- Subject address matched: ``{subject_nav['subject_address']}``")
+        if building_page.exists():
+            building_doc = _safe_toctree_path(index_rst.parent, building_page)
+            index_lines.append(f"- Building page: :doc:`{building_doc}`")
+            floor_link_text = subject_nav["floor_label"]
+            unit_link_text = f"Unit {subject_nav['unit_token']}" if subject_nav["unit_token"] else "Unit"
+            index_lines.append(f"- Jump to sold floor: :ref:`{floor_link_text} <{subject_nav['floor_anchor']}>`")
+            index_lines.append(f"- Jump to sold unit: :ref:`{unit_link_text} <{subject_nav['unit_anchor']}>`")
+        else:
+            index_lines.append("- Building page: not found in residential building pages.")
+        index_lines.append("")
+
     index_lines.append(".. toctree::")
     index_lines.append("   :maxdepth: 1")
     index_lines.append("   :caption: City Data Pages")
@@ -495,6 +631,11 @@ def _build_parser() -> argparse.ArgumentParser:
         help="Raw JSON source path for provenance note.",
     )
     parser.add_argument(
+        "--fetch-meta-json",
+        default=str(DEFAULT_FETCH_META_JSON),
+        help="Fetch metadata JSON path used for subject quick links.",
+    )
+    parser.add_argument(
         "--include-multipolygon",
         action="store_true",
         help="Include the full multipolygon geometry field in generated tables.",
@@ -516,6 +657,7 @@ def main() -> int:
             output_dir=Path(args.output_dir),
             index_rst=Path(args.index_rst),
             raw_json_path=Path(args.raw_json_path),
+            fetch_meta_json=Path(args.fetch_meta_json),
             include_multipolygon=bool(args.include_multipolygon),
             index_title=args.index_title,
             non_residential_title=args.non_residential_title,

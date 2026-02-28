@@ -8,13 +8,15 @@ This project now uses a Sphinx-first workflow with reStructuredText (`.rst`) as 
 - `evidence/` — saved artifacts (MLS exports, screenshots, web captures).
 - `comms/` — renter-facing text/email drafts.
 - `codex_sale_docs/` — Poetry script entry points (`build`, `auto`, `clean`, provenance check).
+- `pyproject.toml` — includes sale defaults under `[tool.sale]` (`subject_address`).
 
 ## Quick Start
 1. Install dependencies: `poetry install`
-2. Generate local VS Code settings: `poetry run settings`
-3. Validate provenance links: `poetry run check-provenance`
-4. Build docs: `poetry run build`
-5. Open `build/html/index.html` and use browser **Save as PDF**
+2. Install PlantUML CLI (plus Java) if you plan to render UML diagrams.
+3. Generate local VS Code settings: `poetry run settings`
+4. Validate provenance links: `poetry run check-provenance`
+5. Build docs: `poetry run build`
+6. Open `build/html/index.html` and use browser **Save as PDF**
 
 ## Script Commands
 - `poetry run settings` - writes `.vscode/settings.json` from `.devcontainer/devcontainer.json` placeholders.
@@ -28,9 +30,11 @@ This project now uses a Sphinx-first workflow with reStructuredText (`.rst`) as 
 - `poetry run clean -- build/esbonio` - removes a specific build path.
 - `poetry run audit-realtor-accuracy --truth-csv data/truth.csv --urls-csv data/audit_urls.csv` - runs an authorized QA crawl+diff and writes outputs under `data/realtor_accuracy_audit/`.
 - `poetry run osm-address-lookup "somervale ct sw, calgary" --mode suggest --countrycodes ca --street-expansion on --email "you@example.com"` - keyless OSM lookup with optional street house-number expansion.
-- `poetry run fetch_city_data` - fetches full street-level city rows for Somervale Court SW into raw JSON + flat CSV artifacts.
+- `poetry run fetch_city_data` - resolves the subject row first, derives its street text (for example `SOMERVALE CO SW`), then fetches all rows on that street into raw JSON + flat CSV artifacts.
 - `poetry run city_data_to_rst` - converts fetched flat CSV into per-building rST pages + non-residential page + city-data index.
-- `poetry run get_city_data` - runs both steps with sensible defaults for `3000 Somervale Court SW #209` (all args overridable).
+- `poetry run city_data_inventory` - builds sale-property profile plus condo/parking/storage/other inventory outputs.
+- `poetry run city_data_metadata_rst` - builds dedicated last-fetch metadata page (`source/93_city_data_fetch_metadata.rst`).
+- `poetry run get_city_data` - runs fetch + inventory + rST pages + metadata page + enum dictionary in one command (all args overridable).
 - `poetry run city_data_enums` - builds an enumeration dictionary CSV and a formatted rST report (wired into docs toctree) using default explain-fields.
 
 ## REALTOR.ca Accuracy Audit Template
@@ -109,8 +113,14 @@ This project now uses a Sphinx-first workflow with reStructuredText (`.rst`) as 
 ## City Data Pages (Per Building)
 - One-command default flow:
   `poetry run get_city_data`
-- Fetch-only (keeps full raw rows; does not generate pages):
+- Fetch-only (keeps full raw rows; does not generate pages/inventory):
   `poetry run fetch_city_data`
+- Inventory-only from existing fetched CSV:
+  `poetry run city_data_inventory --input-csv data/open_calgary_somervale_raw_rows_flat.csv`
+  Optional community filter:
+  `poetry run city_data_inventory --input-csv data/open_calgary_somervale_raw_rows_flat.csv --community-name SOMERSET`
+- Metadata-page-only from existing fetch/inventory JSON:
+  `poetry run city_data_metadata_rst`
 - Convert existing fetched CSV to rST pages:
   `poetry run city_data_to_rst --input-csv data/open_calgary_somervale_raw_rows_flat.csv`
 - Generate enumeration/value dictionary from fetched CSV (default explain-fields):
@@ -132,6 +142,15 @@ This project now uses a Sphinx-first workflow with reStructuredText (`.rst`) as 
   - `source/91_city_data_index.rst`
   - `source/city_data/building_*.rst` (one per building)
   - `source/city_data/non_residential_somervale.rst`
+  - `source/93_city_data_fetch_metadata.rst`
+- Generated inventory:
+  - `data/open_calgary_somervale_sale_subject_profile.json`
+  - `data/open_calgary_somervale_all_properties.csv`
+  - `data/open_calgary_somervale_condo_units.csv`
+  - `data/open_calgary_somervale_parking_units.csv`
+  - `data/open_calgary_somervale_storage_units.csv`
+  - `data/open_calgary_somervale_other_properties.csv`
+  - `data/open_calgary_somervale_unit_link_index.csv`
 - Generated dictionary:
   - `data/open_calgary_street_requested_field_dictionary.csv`
   - `source/92_city_data_enum_dictionary.rst`

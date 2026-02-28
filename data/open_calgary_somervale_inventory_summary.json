@@ -1,0 +1,21 @@
+{
+  "generated_at": "2026-02-28T07:52:31.346324+00:00",
+  "input_csv": "data/open_calgary_somervale_raw_rows_flat.csv",
+  "community_name_filter": "",
+  "rows_total": 838,
+  "rows_condo": 556,
+  "rows_parking": 242,
+  "rows_storage": 36,
+  "rows_other": 4,
+  "distinct_buildings": 11,
+  "subject_profile_json": "data/open_calgary_somervale_sale_subject_profile.json",
+  "subject_profile_csv": "data/open_calgary_somervale_sale_subject_profile.csv",
+  "all_properties_csv": "data/open_calgary_somervale_all_properties.csv",
+  "condo_units_csv": "data/open_calgary_somervale_condo_units.csv",
+  "parking_units_csv": "data/open_calgary_somervale_parking_units.csv",
+  "storage_units_csv": "data/open_calgary_somervale_storage_units.csv",
+  "other_properties_csv": "data/open_calgary_somervale_other_properties.csv",
+  "unit_link_index_csv": "data/open_calgary_somervale_unit_link_index.csv",
+  "building_summary_csv": "data/open_calgary_somervale_building_summary.csv",
+  "sub_property_use_counts_csv": "data/open_calgary_somervale_building_sub_property_use_counts.csv"
+}

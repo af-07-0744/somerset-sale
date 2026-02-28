@@ -175,6 +175,7 @@ def _subject_where_clauses(subject_address: str, address_field: str) -> list[str
     if not address_field:
         return []
 
+    subject_unit = _extract_subject_unit(subject_address)
     stripped = _strip_unit_tokens(subject_address).split(",")[0].upper()
     tokens = re.findall(r"[A-Z0-9]+", stripped)
     if not tokens:
@@ -209,9 +210,16 @@ def _subject_where_clauses(subject_address: str, address_field: str) -> list[str
 
     civic = number_tokens[0]
     primary = significant[0]
-    clauses = [
-        f"upper({address_field}) like '%{civic}%' and upper({address_field}) like '%{primary}%'",
-    ]
+    clauses: list[str] = []
+    if subject_unit:
+        clauses.append(
+            (
+                f"upper({address_field}) like '%{subject_unit}%' and "
+                f"upper({address_field}) like '%{civic}%' and "
+                f"upper({address_field}) like '%{primary}%'"
+            )
+        )
+    clauses.append(f"upper({address_field}) like '%{civic}%' and upper({address_field}) like '%{primary}%'")
     if len(significant) >= 2:
         secondary = significant[1]
         clauses.append(

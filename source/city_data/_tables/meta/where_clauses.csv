@@ -1,0 +1,4 @@
+stage,index,where_clause
+subject_lookup,1,upper(address) like '%209%' and upper(address) like '%3000%' and upper(address) like '%SOMERVALE%'
+subject_lookup,2,upper(address) like '%3000%' and upper(address) like '%SOMERVALE%'
+street_fetch,1,upper(address) like '%SOMERVALE CO SW%'

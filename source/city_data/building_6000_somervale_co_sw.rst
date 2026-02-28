@@ -17,17 +17,28 @@ Flag Summary
 - ``a004_base_missing_r201``: ``49``
 - ``a004_base_matches_r201``: ``18``
 
-Address Index
--------------
+Floor / Unit Index
+------------------
 
 .. contents::
    :local:
-   :depth: 1
+   :depth: 2
 
-100V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-floor-01:
 
-- Row count for this address: ``1``
+Floor 01
+^^^^^^^^
+
+- Total rows on this floor: ``61``
+- Distinct unit/address entries on this floor: ``61``
+
+.. _city-data-6000_somervale_co_sw-unit-100v_6000_somervale_co_sw:
+
+Unit 100V
+~~~~~~~~~
+
+- Address: ``100V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -40,10 +51,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-101 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-101_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 101
+~~~~~~~~
+
+- Address: ``101 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 101 6000 SOMERVALE CO SW
@@ -51,10 +65,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-101V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-101v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 101V
+~~~~~~~~~
+
+- Address: ``101V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -67,10 +84,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-102 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-102_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 102
+~~~~~~~~
+
+- Address: ``102 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 102 6000 SOMERVALE CO SW
@@ -78,10 +98,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-102V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-102v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 102V
+~~~~~~~~~
+
+- Address: ``102V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -94,10 +117,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-103 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-103_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 103
+~~~~~~~~
+
+- Address: ``103 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 103 6000 SOMERVALE CO SW
@@ -105,10 +131,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-103V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-103v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 103V
+~~~~~~~~~
+
+- Address: ``103V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -121,10 +150,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-104 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-104_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 104
+~~~~~~~~
+
+- Address: ``104 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 104 6000 SOMERVALE CO SW
@@ -132,10 +164,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-104V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-104v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 104V
+~~~~~~~~~
+
+- Address: ``104V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -148,10 +183,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-105 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-105_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 105
+~~~~~~~~
+
+- Address: ``105 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 105 6000 SOMERVALE CO SW
@@ -159,10 +197,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-105V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-105v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 105V
+~~~~~~~~~
+
+- Address: ``105V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -175,10 +216,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-106 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-106_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 106
+~~~~~~~~
+
+- Address: ``106 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 106 6000 SOMERVALE CO SW
@@ -186,10 +230,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-106V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-106v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 106V
+~~~~~~~~~
+
+- Address: ``106V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -202,10 +249,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-107 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-107_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 107
+~~~~~~~~
+
+- Address: ``107 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 107 6000 SOMERVALE CO SW
@@ -213,10 +263,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-107V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-107v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 107V
+~~~~~~~~~
+
+- Address: ``107V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -229,10 +282,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-108 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-108_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 108
+~~~~~~~~
+
+- Address: ``108 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 108 6000 SOMERVALE CO SW
@@ -240,10 +296,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-108V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-108v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 108V
+~~~~~~~~~
+
+- Address: ``108V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -256,10 +315,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-109 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-109_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 109
+~~~~~~~~
+
+- Address: ``109 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 109 6000 SOMERVALE CO SW
@@ -267,10 +329,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-109V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-109v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 109V
+~~~~~~~~~
+
+- Address: ``109V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -283,10 +348,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-110V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-110v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 110V
+~~~~~~~~~
+
+- Address: ``110V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -299,10 +367,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-111 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-111_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 111
+~~~~~~~~
+
+- Address: ``111 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 111 6000 SOMERVALE CO SW
@@ -310,10 +381,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-111V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-111v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 111V
+~~~~~~~~~
+
+- Address: ``111V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -326,10 +400,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-112 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-112_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 112
+~~~~~~~~
+
+- Address: ``112 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 112 6000 SOMERVALE CO SW
@@ -337,10 +414,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-112V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-112v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 112V
+~~~~~~~~~
+
+- Address: ``112V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -353,10 +433,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-113 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-113_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 113
+~~~~~~~~
+
+- Address: ``113 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 113 6000 SOMERVALE CO SW
@@ -364,10 +447,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-113V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-113v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 113V
+~~~~~~~~~
+
+- Address: ``113V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -380,10 +466,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-114 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-114_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 114
+~~~~~~~~
+
+- Address: ``114 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 114 6000 SOMERVALE CO SW
@@ -391,10 +480,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-114V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-114v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 114V
+~~~~~~~~~
+
+- Address: ``114V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -407,10 +499,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-115 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-115_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 115
+~~~~~~~~
+
+- Address: ``115 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 115 6000 SOMERVALE CO SW
@@ -418,10 +513,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-115V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-115v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 115V
+~~~~~~~~~
+
+- Address: ``115V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -434,10 +532,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-116 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-116_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 116
+~~~~~~~~
+
+- Address: ``116 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 116 6000 SOMERVALE CO SW
@@ -445,10 +546,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-116V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-116v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 116V
+~~~~~~~~~
+
+- Address: ``116V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -461,10 +565,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-117 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-117_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 117
+~~~~~~~~
+
+- Address: ``117 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 117 6000 SOMERVALE CO SW
@@ -472,10 +579,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-117V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-117v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 117V
+~~~~~~~~~
+
+- Address: ``117V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -488,10 +598,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-118 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-118_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 118
+~~~~~~~~
+
+- Address: ``118 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 118 6000 SOMERVALE CO SW
@@ -499,10 +612,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-118V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-118v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 118V
+~~~~~~~~~
+
+- Address: ``118V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -515,10 +631,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-119 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-119_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 119
+~~~~~~~~
+
+- Address: ``119 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 119 6000 SOMERVALE CO SW
@@ -526,10 +645,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-119V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-119v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 119V
+~~~~~~~~~
+
+- Address: ``119V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -542,10 +664,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-120V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-120v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 120V
+~~~~~~~~~
+
+- Address: ``120V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -558,10 +683,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-121V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-121v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 121V
+~~~~~~~~~
+
+- Address: ``121V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -574,10 +702,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-122V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-122v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 122V
+~~~~~~~~~
+
+- Address: ``122V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -590,10 +721,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-123V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-123v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 123V
+~~~~~~~~~
+
+- Address: ``123V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -606,10 +740,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-124V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-124v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 124V
+~~~~~~~~~
+
+- Address: ``124V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -622,10 +759,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-125V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-125v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 125V
+~~~~~~~~~
+
+- Address: ``125V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -638,10 +778,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-126V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-126v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 126V
+~~~~~~~~~
+
+- Address: ``126V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -654,10 +797,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-127V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-127v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 127V
+~~~~~~~~~
+
+- Address: ``127V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -670,10 +816,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-128V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-128v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 128V
+~~~~~~~~~
+
+- Address: ``128V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -686,10 +835,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-129V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-129v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 129V
+~~~~~~~~~
+
+- Address: ``129V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -702,10 +854,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-130V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-130v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 130V
+~~~~~~~~~
+
+- Address: ``130V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -718,10 +873,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-131V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-131v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 131V
+~~~~~~~~~
+
+- Address: ``131V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -734,10 +892,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-132V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-132v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 132V
+~~~~~~~~~
+
+- Address: ``132V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -750,10 +911,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-133V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-133v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 133V
+~~~~~~~~~
+
+- Address: ``133V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -766,10 +930,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-134V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-134v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 134V
+~~~~~~~~~
+
+- Address: ``134V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -782,10 +949,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-135V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-135v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 135V
+~~~~~~~~~
+
+- Address: ``135V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -798,10 +968,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-136V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-136v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 136V
+~~~~~~~~~
+
+- Address: ``136V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -814,10 +987,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-137V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-137v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 137V
+~~~~~~~~~
+
+- Address: ``137V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -830,10 +1006,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-138V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-138v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 138V
+~~~~~~~~~
+
+- Address: ``138V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -846,10 +1025,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-139V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-139v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 139V
+~~~~~~~~~
+
+- Address: ``139V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -862,10 +1044,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-140V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-140v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 140V
+~~~~~~~~~
+
+- Address: ``140V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -878,10 +1063,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-141V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-141v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 141V
+~~~~~~~~~
+
+- Address: ``141V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -894,10 +1082,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-142V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-142v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 142V
+~~~~~~~~~
+
+- Address: ``142V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -910,10 +1101,21 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-201 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-floor-02:
 
-- Row count for this address: ``1``
+Floor 02
+^^^^^^^^
+
+- Total rows on this floor: ``19``
+- Distinct unit/address entries on this floor: ``19``
+
+.. _city-data-6000_somervale_co_sw-unit-201_6000_somervale_co_sw:
+
+Unit 201
+~~~~~~~~
+
+- Address: ``201 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 201 6000 SOMERVALE CO SW
@@ -921,10 +1123,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-202 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-202_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 202
+~~~~~~~~
+
+- Address: ``202 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 202 6000 SOMERVALE CO SW
@@ -932,10 +1137,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-203 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-203_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 203
+~~~~~~~~
+
+- Address: ``203 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 203 6000 SOMERVALE CO SW
@@ -943,10 +1151,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-204 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-204_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 204
+~~~~~~~~
+
+- Address: ``204 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 204 6000 SOMERVALE CO SW
@@ -954,10 +1165,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-205 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-205_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 205
+~~~~~~~~
+
+- Address: ``205 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 205 6000 SOMERVALE CO SW
@@ -965,10 +1179,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-206 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-206_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 206
+~~~~~~~~
+
+- Address: ``206 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 206 6000 SOMERVALE CO SW
@@ -976,10 +1193,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-207 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-207_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 207
+~~~~~~~~
+
+- Address: ``207 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 207 6000 SOMERVALE CO SW
@@ -987,10 +1207,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-208 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-208_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 208
+~~~~~~~~
+
+- Address: ``208 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 208 6000 SOMERVALE CO SW
@@ -998,10 +1221,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-209 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-209_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 209
+~~~~~~~~
+
+- Address: ``209 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 209 6000 SOMERVALE CO SW
@@ -1009,10 +1235,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-210 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-210_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 210
+~~~~~~~~
+
+- Address: ``210 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 210 6000 SOMERVALE CO SW
@@ -1020,10 +1249,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-211 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-211_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 211
+~~~~~~~~
+
+- Address: ``211 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 211 6000 SOMERVALE CO SW
@@ -1031,10 +1263,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-212 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-212_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 212
+~~~~~~~~
+
+- Address: ``212 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 212 6000 SOMERVALE CO SW
@@ -1042,10 +1277,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-213 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-213_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 213
+~~~~~~~~
+
+- Address: ``213 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 213 6000 SOMERVALE CO SW
@@ -1053,10 +1291,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-214 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-214_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 214
+~~~~~~~~
+
+- Address: ``214 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 214 6000 SOMERVALE CO SW
@@ -1064,10 +1305,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-215 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-215_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 215
+~~~~~~~~
+
+- Address: ``215 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 215 6000 SOMERVALE CO SW
@@ -1075,10 +1319,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-216 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-216_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 216
+~~~~~~~~
+
+- Address: ``216 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 216 6000 SOMERVALE CO SW
@@ -1086,10 +1333,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-217 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-217_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 217
+~~~~~~~~
+
+- Address: ``217 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 217 6000 SOMERVALE CO SW
@@ -1097,10 +1347,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-218 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-218_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 218
+~~~~~~~~
+
+- Address: ``218 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 218 6000 SOMERVALE CO SW
@@ -1108,10 +1361,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-219 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-219_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 219
+~~~~~~~~
+
+- Address: ``219 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 219 6000 SOMERVALE CO SW
@@ -1119,10 +1375,21 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-301 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-floor-03:
 
-- Row count for this address: ``1``
+Floor 03
+^^^^^^^^
+
+- Total rows on this floor: ``19``
+- Distinct unit/address entries on this floor: ``19``
+
+.. _city-data-6000_somervale_co_sw-unit-301_6000_somervale_co_sw:
+
+Unit 301
+~~~~~~~~
+
+- Address: ``301 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 301 6000 SOMERVALE CO SW
@@ -1130,10 +1397,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-302 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-302_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 302
+~~~~~~~~
+
+- Address: ``302 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 302 6000 SOMERVALE CO SW
@@ -1141,10 +1411,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-303 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-303_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 303
+~~~~~~~~
+
+- Address: ``303 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 303 6000 SOMERVALE CO SW
@@ -1152,10 +1425,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-304 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-304_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 304
+~~~~~~~~
+
+- Address: ``304 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 304 6000 SOMERVALE CO SW
@@ -1163,10 +1439,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-305 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-305_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 305
+~~~~~~~~
+
+- Address: ``305 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 305 6000 SOMERVALE CO SW
@@ -1174,10 +1453,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-306 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-306_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 306
+~~~~~~~~
+
+- Address: ``306 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 306 6000 SOMERVALE CO SW
@@ -1185,10 +1467,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-307 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-307_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 307
+~~~~~~~~
+
+- Address: ``307 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 307 6000 SOMERVALE CO SW
@@ -1196,10 +1481,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-308 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-308_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 308
+~~~~~~~~
+
+- Address: ``308 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 308 6000 SOMERVALE CO SW
@@ -1207,10 +1495,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-309 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-309_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 309
+~~~~~~~~
+
+- Address: ``309 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 309 6000 SOMERVALE CO SW
@@ -1218,10 +1509,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-310 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-310_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 310
+~~~~~~~~
+
+- Address: ``310 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 310 6000 SOMERVALE CO SW
@@ -1229,10 +1523,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-311 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-311_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 311
+~~~~~~~~
+
+- Address: ``311 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 311 6000 SOMERVALE CO SW
@@ -1240,10 +1537,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-312 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-312_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 312
+~~~~~~~~
+
+- Address: ``312 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 312 6000 SOMERVALE CO SW
@@ -1251,10 +1551,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-313 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-313_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 313
+~~~~~~~~
+
+- Address: ``313 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 313 6000 SOMERVALE CO SW
@@ -1262,10 +1565,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-314 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-314_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 314
+~~~~~~~~
+
+- Address: ``314 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 314 6000 SOMERVALE CO SW
@@ -1273,10 +1579,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-315 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-315_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 315
+~~~~~~~~
+
+- Address: ``315 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 315 6000 SOMERVALE CO SW
@@ -1284,10 +1593,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-316 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-316_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 316
+~~~~~~~~
+
+- Address: ``316 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 316 6000 SOMERVALE CO SW
@@ -1295,10 +1607,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-317 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-317_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 317
+~~~~~~~~
+
+- Address: ``317 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 317 6000 SOMERVALE CO SW
@@ -1306,10 +1621,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-318 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-318_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 318
+~~~~~~~~
+
+- Address: ``318 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 318 6000 SOMERVALE CO SW
@@ -1317,10 +1635,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-319 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-319_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 319
+~~~~~~~~
+
+- Address: ``319 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 319 6000 SOMERVALE CO SW
@@ -1328,10 +1649,21 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-401 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-floor-04:
 
-- Row count for this address: ``1``
+Floor 04
+^^^^^^^^
+
+- Total rows on this floor: ``19``
+- Distinct unit/address entries on this floor: ``19``
+
+.. _city-data-6000_somervale_co_sw-unit-401_6000_somervale_co_sw:
+
+Unit 401
+~~~~~~~~
+
+- Address: ``401 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 401 6000 SOMERVALE CO SW
@@ -1339,10 +1671,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-402 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-402_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 402
+~~~~~~~~
+
+- Address: ``402 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 402 6000 SOMERVALE CO SW
@@ -1350,10 +1685,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-403 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-403_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 403
+~~~~~~~~
+
+- Address: ``403 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 403 6000 SOMERVALE CO SW
@@ -1361,10 +1699,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-404 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-404_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 404
+~~~~~~~~
+
+- Address: ``404 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 404 6000 SOMERVALE CO SW
@@ -1372,10 +1713,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-405 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-405_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 405
+~~~~~~~~
+
+- Address: ``405 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 405 6000 SOMERVALE CO SW
@@ -1383,10 +1727,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-406 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-406_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 406
+~~~~~~~~
+
+- Address: ``406 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 406 6000 SOMERVALE CO SW
@@ -1394,10 +1741,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-407 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-407_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 407
+~~~~~~~~
+
+- Address: ``407 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 407 6000 SOMERVALE CO SW
@@ -1405,10 +1755,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-408 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-408_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 408
+~~~~~~~~
+
+- Address: ``408 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 408 6000 SOMERVALE CO SW
@@ -1416,10 +1769,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-409 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-409_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 409
+~~~~~~~~
+
+- Address: ``409 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 409 6000 SOMERVALE CO SW
@@ -1427,10 +1783,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-410 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-410_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 410
+~~~~~~~~
+
+- Address: ``410 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 410 6000 SOMERVALE CO SW
@@ -1438,10 +1797,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-411 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-411_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 411
+~~~~~~~~
+
+- Address: ``411 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 411 6000 SOMERVALE CO SW
@@ -1449,10 +1811,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-412 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-412_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 412
+~~~~~~~~
+
+- Address: ``412 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 412 6000 SOMERVALE CO SW
@@ -1460,10 +1825,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-413 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-413_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 413
+~~~~~~~~
+
+- Address: ``413 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 413 6000 SOMERVALE CO SW
@@ -1471,10 +1839,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-414 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-414_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 414
+~~~~~~~~
+
+- Address: ``414 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 414 6000 SOMERVALE CO SW
@@ -1482,10 +1853,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-415 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-415_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 415
+~~~~~~~~
+
+- Address: ``415 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 415 6000 SOMERVALE CO SW
@@ -1493,10 +1867,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-416 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-416_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 416
+~~~~~~~~
+
+- Address: ``416 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 416 6000 SOMERVALE CO SW
@@ -1504,10 +1881,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-417 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-417_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 417
+~~~~~~~~
+
+- Address: ``417 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 417 6000 SOMERVALE CO SW
@@ -1515,10 +1895,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-418 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-418_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 418
+~~~~~~~~
+
+- Address: ``418 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 418 6000 SOMERVALE CO SW
@@ -1526,10 +1909,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-419 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-419_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 419
+~~~~~~~~
+
+- Address: ``419 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. csv-table:: Records for 419 6000 SOMERVALE CO SW
@@ -1537,10 +1923,21 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-76V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-floor-unknown:
 
-- Row count for this address: ``1``
+Floor Unknown
+^^^^^^^^^^^^^
+
+- Total rows on this floor: ``24``
+- Distinct unit/address entries on this floor: ``24``
+
+.. _city-data-6000_somervale_co_sw-unit-76v_6000_somervale_co_sw:
+
+Unit 76V
+~~~~~~~~
+
+- Address: ``76V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -1553,10 +1950,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-77V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-77v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 77V
+~~~~~~~~
+
+- Address: ``77V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -1569,10 +1969,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-78V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-78v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 78V
+~~~~~~~~
+
+- Address: ``78V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -1585,10 +1988,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-79V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-79v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 79V
+~~~~~~~~
+
+- Address: ``79V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -1601,10 +2007,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-80V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-80v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 80V
+~~~~~~~~
+
+- Address: ``80V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -1617,10 +2026,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-81V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-81v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 81V
+~~~~~~~~
+
+- Address: ``81V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -1633,10 +2045,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-82V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-82v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 82V
+~~~~~~~~
+
+- Address: ``82V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -1649,10 +2064,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-83V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-83v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 83V
+~~~~~~~~
+
+- Address: ``83V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -1665,10 +2083,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-84V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-84v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 84V
+~~~~~~~~
+
+- Address: ``84V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -1681,10 +2102,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-85V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-85v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 85V
+~~~~~~~~
+
+- Address: ``85V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -1697,10 +2121,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-86V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-86v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 86V
+~~~~~~~~
+
+- Address: ``86V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -1713,10 +2140,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-87V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-87v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 87V
+~~~~~~~~
+
+- Address: ``87V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -1729,10 +2159,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-88V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-88v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 88V
+~~~~~~~~
+
+- Address: ``88V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -1745,10 +2178,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-89V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-89v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 89V
+~~~~~~~~
+
+- Address: ``89V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -1761,10 +2197,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-90V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-90v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 90V
+~~~~~~~~
+
+- Address: ``90V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -1777,10 +2216,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-91V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-91v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 91V
+~~~~~~~~
+
+- Address: ``91V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -1793,10 +2235,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-92V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-92v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 92V
+~~~~~~~~
+
+- Address: ``92V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -1809,10 +2254,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-93V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-93v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 93V
+~~~~~~~~
+
+- Address: ``93V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -1825,10 +2273,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-94V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-94v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 94V
+~~~~~~~~
+
+- Address: ``94V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -1841,10 +2292,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-95V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-95v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 95V
+~~~~~~~~
+
+- Address: ``95V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -1857,10 +2311,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-96V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-96v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 96V
+~~~~~~~~
+
+- Address: ``96V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -1873,10 +2330,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-97V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-97v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 97V
+~~~~~~~~
+
+- Address: ``97V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -1889,10 +2349,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-98V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-98v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 98V
+~~~~~~~~
+
+- Address: ``98V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::
@@ -1905,10 +2368,13 @@ Address Index
    :header-rows: 1
    :widths: auto
 
-99V 6000 SOMERVALE CO SW
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _city-data-6000_somervale_co_sw-unit-99v_6000_somervale_co_sw:
 
-- Row count for this address: ``1``
+Unit 99V
+~~~~~~~~
+
+- Address: ``99V 6000 SOMERVALE CO SW``
+- Row count for this unit/address: ``1``
 - Distinct roll numbers: ``1``
 
 .. note::

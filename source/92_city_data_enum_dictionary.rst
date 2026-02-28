@@ -3,6 +3,11 @@ City Data Enumeration Dictionary
 
 Enumerations and code mappings derived from the fetched city-data CSV.
 
+- Generated at: ``2026-02-28 07:52 UTC``
+- Input rows: ``838``
+- Fields documented: ``7``
+- Last-run fetch/request metadata: :doc:`93_city_data_fetch_metadata`
+
 .. contents::
    :local:
    :depth: 2
@@ -100,25 +105,12 @@ Enumerations and code mappings derived from the fetched city-data CSV.
    :class: enum-table-angled
    :widths: auto
 
-Last Run Metadata
------------------
-
-.. csv-table:: Run Summary
-   :file: city_data/_tables/enums/_meta/run_summary.csv
-   :header-rows: 1
-   :widths: auto
-
-Data Files
-^^^^^^^^^^
+Downloads
+---------
 
 - Input Flat CSV: :download:`open_calgary_somervale_raw_rows_flat.csv <city_data/_downloads/enums/data__open_calgary_somervale_raw_rows_flat.csv>`
 - Enumeration Dictionary CSV: :download:`open_calgary_street_requested_field_dictionary.csv <city_data/_downloads/enums/data__open_calgary_street_requested_field_dictionary.csv>`
-- Run Summary CSV: :download:`run_summary.csv <city_data/_downloads/enums/_meta__run_summary.csv>`
-- URL->Field Coverage CSV: :download:`url_field_coverage.csv <city_data/_downloads/enums/_meta__url_field_coverage.csv>`
-- Field->URL Coverage CSV: :download:`field_url_coverage.csv <city_data/_downloads/enums/_meta__field_url_coverage.csv>`
-- Data File Field Provenance CSV: :download:`data_file_field_provenance.csv <city_data/_downloads/enums/_meta__data_file_field_provenance.csv>`
 - Fetch Run Metadata JSON: :download:`open_calgary_somervale_raw_rows_meta.json <city_data/_downloads/enums/data__open_calgary_somervale_raw_rows_meta.json>`
-- Raw Rows JSON: :download:`open_calgary_somervale_raw_rows.json <city_data/_downloads/enums/data__open_calgary_somervale_raw_rows.json>`
 - Enum Table CSV (comm_code): :download:`comm_code.csv <city_data/_downloads/enums/enums__comm_code.csv>`
 - Enum Table CSV (land_size_ac): :download:`land_size_ac.csv <city_data/_downloads/enums/enums__land_size_ac.csv>`
 - Enum Table CSV (land_size_sf): :download:`land_size_sf.csv <city_data/_downloads/enums/enums__land_size_sf.csv>`
@@ -126,32 +118,6 @@ Data Files
 - Enum Table CSV (land_use_designation): :download:`land_use_designation.csv <city_data/_downloads/enums/enums__land_use_designation.csv>`
 - Enum Table CSV (sub_property_use): :download:`sub_property_use.csv <city_data/_downloads/enums/enums__sub_property_use.csv>`
 - Enum Table CSV (year_of_construction): :download:`year_of_construction.csv <city_data/_downloads/enums/enums__year_of_construction.csv>`
-
-.. csv-table:: Data File Inventory
-   :file: city_data/_tables/enums/_meta/data_file_inventory.csv
-   :header-rows: 1
-   :widths: auto
-
-URLs Visited And Field Coverage
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. csv-table:: URLs Visited And Retrieved Fields
-   :file: city_data/_tables/enums/_meta/url_field_coverage.csv
-   :header-rows: 1
-   :widths: auto
-
-.. csv-table:: Field To URL Mapping
-   :file: city_data/_tables/enums/_meta/field_url_coverage.csv
-   :header-rows: 1
-   :widths: auto
-
-Data File Fields And Origins
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. csv-table:: Data File Field Provenance
-   :file: city_data/_tables/enums/_meta/data_file_field_provenance.csv
-   :header-rows: 1
-   :widths: auto
 
 Explanatory Data Dictionary
 ---------------------------

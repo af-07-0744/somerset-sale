@@ -7,6 +7,7 @@ release = "0.1.0"
 
 extensions = [
     "sphinx_design",
+    "sphinxcontrib.plantuml",
     "rst2pdf.pdfbuilder",
 ]
 
@@ -25,3 +26,5 @@ pdf_documents = [
     ("index", "SomervalePricingMemo", "Somervale Pricing Memo", "Joseph Surmava"),
 ]
 pdf_stylesheets = ["sphinx"]
+
+plantuml_output_format = "svg"

@@ -18,4 +18,5 @@ This document set is designed to support a high but defensible sale price for
    06_terms_and_deadline
    91_city_data_index
    92_city_data_enum_dictionary
+   93_city_data_fetch_metadata
    90_appendix_sources

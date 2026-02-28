@@ -20,3 +20,31 @@ table.enum-table-angled thead th > span {
 table.enum-table-angled tbody td {
   vertical-align: top;
 }
+
+/* Angled headers for wide matrix tables (request/file coverage). */
+table.matrix-table-angled thead th {
+  height: 9rem;
+  min-width: 2rem;
+  vertical-align: bottom;
+  white-space: nowrap;
+  padding: 0 0.1rem;
+}
+
+table.matrix-table-angled thead th > p,
+table.matrix-table-angled thead th > span {
+  display: inline-block;
+  transform: rotate(-60deg);
+  transform-origin: left bottom;
+  white-space: nowrap;
+  line-height: 1;
+  margin: 0;
+}
+
+table.matrix-table-angled tbody td {
+  vertical-align: top;
+  text-align: center;
+}
+
+table.matrix-table-angled tbody td:first-child {
+  text-align: left;
+}

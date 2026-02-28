@@ -1,9 +1,26 @@
 {
   "dataset_id": "4bsw-nn7w",
-  "run_id": "20260227T195437Z",
-  "captured_at": "2026-02-27T19:54:37.682595+00:00",
+  "run_id": "20260228T075231Z",
+  "captured_at": "2026-02-28T07:52:31.125730+00:00",
   "subject_address": "3000 Somervale Court SW # 209, Calgary AB T2Y 4J2",
-  "street_portion": "Somervale Court SW",
+  "fetch_scope": "subject_street",
+  "subject_address_matched": "209 3000 SOMERVALE CO SW",
+  "subject_lookup_where_clauses": [
+    "upper(address) like '%209%' and upper(address) like '%3000%' and upper(address) like '%SOMERVALE%'",
+    "upper(address) like '%3000%' and upper(address) like '%SOMERVALE%'"
+  ],
+  "subject_lookup_queries": [
+    "3000 Somervale Court SW # 209, Calgary AB T2Y 4J2",
+    "3000 Somervale Court SW , Calgary AB T2Y 4J2",
+    "3000 Somervale Court SW",
+    "3000 SOMERVALE CT SW",
+    "3000 Somervale Court",
+    "3000 SOMERVALE CT"
+  ],
+  "subject_lookup_query_urls": [
+    "https://data.calgary.ca/resource/4bsw-nn7w.json?%24where=upper%28address%29+like+%27%25209%25%27+and+upper%28address%29+like+%27%253000%25%27+and+upper%28address%29+like+%27%25SOMERVALE%25%27&%24limit=200&%24offset=0"
+  ],
+  "street_portion": "SOMERVALE CO SW",
   "address_field": "address",
   "detected_fields": {
     "address": "address",
@@ -16,14 +33,10 @@
     "roll_number": "roll_number"
   },
   "where_clauses": [
-    "upper(address) like '%SOMERVALE CO%'",
-    "upper(address) like '%SOMERVALE COURT%'",
-    "upper(address) like '%SOMERVALE CT%'"
+    "upper(address) like '%SOMERVALE CO SW%'"
   ],
   "query_urls": [
-    "https://data.calgary.ca/resource/4bsw-nn7w.json?%24where=upper%28address%29+like+%27%25SOMERVALE+CO%25%27&%24limit=1000&%24offset=0",
-    "https://data.calgary.ca/resource/4bsw-nn7w.json?%24where=upper%28address%29+like+%27%25SOMERVALE+COURT%25%27&%24limit=1000&%24offset=0",
-    "https://data.calgary.ca/resource/4bsw-nn7w.json?%24where=upper%28address%29+like+%27%25SOMERVALE+CT%25%27&%24limit=1000&%24offset=0"
+    "https://data.calgary.ca/resource/4bsw-nn7w.json?%24where=upper%28address%29+like+%27%25SOMERVALE+CO+SW%25%27&%24limit=1000&%24offset=0"
   ],
   "rows_raw": 838,
   "rows_filtered": 838,

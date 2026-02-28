@@ -8,21 +8,29 @@ from pathlib import Path
 from typing import Any
 
 from codex_sale_docs.open_calgary import (
+    _build_subject_queries,
     DEFAULT_DATASET_ID,
     _detect_fields,
+    _extract_subject_unit,
     _fetch_rows_paginated,
     _load_field_names,
     _normalize_space,
+    _select_subject_row,
     _strip_unit_tokens,
+    _subject_where_clauses,
 )
+from codex_sale_docs.sale_config import load_sale_settings
 
 
-DEFAULT_SUBJECT_ADDRESS = "3000 Somervale Court SW # 209, Calgary AB T2Y 4J2"
+_SALE_SETTINGS = load_sale_settings()
+
+DEFAULT_SUBJECT_ADDRESS = _SALE_SETTINGS["subject_address"]
+DEFAULT_STREET_PORTION = _SALE_SETTINGS["street_portion"]
 DEFAULT_OUTPUT_JSON = Path("data/open_calgary_somervale_raw_rows.json")
 DEFAULT_OUTPUT_FLAT_CSV = Path("data/open_calgary_somervale_raw_rows_flat.csv")
 DEFAULT_OUTPUT_META_JSON = Path("data/open_calgary_somervale_raw_rows_meta.json")
 DEFAULT_OUTPUT_FIELD_PROFILE_CSV = Path("data/open_calgary_somervale_raw_field_profile.csv")
-DEFAULT_STREET_TYPE_ALIASES = "CO,COURT,CT"
+DEFAULT_SUBJECT_SEARCH_LIMIT = 200
 
 
 def _subject_street_portion(subject_address: str) -> str:
@@ -33,70 +41,17 @@ def _subject_street_portion(subject_address: str) -> str:
     return _normalize_space(stripped)
 
 
-def _street_components(street_portion: str) -> tuple[str, str]:
-    tokens = [token for token in re.findall(r"[A-Z0-9]+", street_portion.upper()) if not token.isdigit()]
-    if not tokens:
-        return "", ""
-    direction_tokens = {"N", "S", "E", "W", "NE", "NW", "SE", "SW", "AB", "CALGARY"}
-    tokens = [token for token in tokens if token not in direction_tokens]
-    if not tokens:
-        return "", ""
-    street_name = tokens[0]
-    street_type = tokens[1] if len(tokens) >= 2 else ""
-    return street_name, street_type
-
-
-def _street_type_aliases(street_type: str, overrides_csv: str) -> list[str]:
-    if overrides_csv.strip():
-        aliases = [item.strip().upper() for item in overrides_csv.split(",") if item.strip()]
-        return aliases
-
-    default_aliases = {
-        "COURT": ["CO", "CT", "COURT"],
-        "CO": ["CO", "CT", "COURT"],
-        "CT": ["CO", "CT", "COURT"],
-        "STREET": ["ST", "STREET"],
-        "ST": ["ST", "STREET"],
-        "AVENUE": ["AV", "AVE", "AVENUE"],
-        "AV": ["AV", "AVE", "AVENUE"],
-        "AVE": ["AV", "AVE", "AVENUE"],
-        "ROAD": ["RD", "ROAD"],
-        "RD": ["RD", "ROAD"],
-        "DRIVE": ["DR", "DRIVE"],
-        "DR": ["DR", "DRIVE"],
-        "BOULEVARD": ["BLVD", "BV", "BOULEVARD"],
-        "BV": ["BLVD", "BV", "BOULEVARD"],
-        "BLVD": ["BLVD", "BV", "BOULEVARD"],
-    }
-    aliases = default_aliases.get(street_type.upper(), [street_type.upper()] if street_type else [])
-    seen: set[str] = set()
-    ordered: list[str] = []
-    for alias in aliases:
-        if alias and alias not in seen:
-            seen.add(alias)
-            ordered.append(alias)
-    return ordered
-
-
-def _street_where_clauses(
-    *,
-    street_portion: str,
-    address_field: str,
-    street_type_aliases_csv: str,
-    include_street_name_only: bool,
-) -> list[str]:
-    if not street_portion or not address_field:
-        return []
-    street_name, street_type = _street_components(street_portion)
-    if not street_name:
-        return []
-    aliases = _street_type_aliases(street_type, street_type_aliases_csv)
-    clauses: list[str] = []
-    for alias in aliases:
-        clauses.append(f"upper({address_field}) like '%{street_name} {alias}%'")
-    if include_street_name_only or not clauses:
-        clauses.append(f"upper({address_field}) like '%{street_name}%'")
-    return clauses
+def _street_portion_from_matched_address(address: str) -> str:
+    text = _normalize_space(address).upper()
+    if not text:
+        return ""
+    match = re.match(r"^\s*[A-Z0-9\-]+\s+(\d{3,6}[A-Z]?)\s+(.+)$", text)
+    if match:
+        return _normalize_space(match.group(2))
+    match = re.match(r"^\s*(\d{3,6}[A-Z]?)\s+(.+)$", text)
+    if match:
+        return _normalize_space(match.group(2))
+    return text
 
 
 def _row_dedupe_key(row: dict[str, Any]) -> str:
@@ -177,10 +132,9 @@ def fetch_city_data(
     app_token: str,
     timeout_seconds: int,
     page_size: int,
+    subject_search_limit: int,
     max_rows: int,
     street_portion: str,
-    street_type_aliases_csv: str,
-    include_street_name_only: bool,
     extra_where_clauses: list[str],
     address_field_override: str,
     dedupe: bool,
@@ -192,20 +146,57 @@ def fetch_city_data(
 ) -> dict[str, Any]:
     field_names = _load_field_names(dataset_id, app_token, timeout_seconds)
     detected_fields = _detect_fields(field_names)
+
     address_field = address_field_override.strip() or detected_fields.get("address", "")
     if not address_field:
         raise RuntimeError("Could not detect address field for the dataset.")
 
-    street_text = _normalize_space(street_portion) or _subject_street_portion(subject_address)
-    base_clauses = _street_where_clauses(
-        street_portion=street_text,
-        address_field=address_field,
-        street_type_aliases_csv=street_type_aliases_csv,
-        include_street_name_only=include_street_name_only,
+    subject_unit = _extract_subject_unit(subject_address)
+    subject_rows: list[dict[str, Any]] = []
+    subject_query_urls: list[str] = []
+    subject_where_clauses = _subject_where_clauses(subject_address, address_field)
+    subject_queries = _build_subject_queries(subject_address)
+
+    lookup_attempts: list[tuple[str, str]] = []
+    lookup_attempts.extend([("$where", clause) for clause in subject_where_clauses])
+    lookup_attempts.extend([("$q", query) for query in subject_queries])
+
+    for operator, value in lookup_attempts:
+        rows, urls = _fetch_rows_paginated(
+            dataset_id=dataset_id,
+            base_params={operator: value},
+            max_rows=max(1, subject_search_limit),
+            page_size=page_size,
+            app_token=app_token,
+            timeout_seconds=timeout_seconds,
+        )
+        if debug:
+            print(f"DEBUG: subject lookup {operator}='{value}' -> {len(rows)} row(s)")
+        subject_rows.extend(rows)
+        subject_query_urls.extend(urls)
+        if rows:
+            break
+
+    if not subject_rows:
+        raise RuntimeError("No rows returned for subject lookup; cannot derive target street.")
+
+    subject_rows = _dedupe_rows(subject_rows)
+    subject_row = _select_subject_row(subject_rows, detected_fields, subject_address, subject_unit)
+    matched_subject_address = _normalize_space(str(subject_row.get(address_field, "")).upper())
+
+    street_text = (
+        _normalize_space(street_portion).upper()
+        or _street_portion_from_matched_address(matched_subject_address)
+        or _subject_street_portion(subject_address).upper()
     )
+    if not street_text:
+        raise RuntimeError("Could not derive street text from subject row.")
+
+    base_clauses = [f"upper({address_field}) like '%{street_text}%'"]
+
     all_clauses = [*base_clauses, *[item.strip() for item in extra_where_clauses if item.strip()]]
     if not all_clauses:
-        raise RuntimeError("No WHERE clauses generated; provide --street-portion and/or --extra-where-clause.")
+        raise RuntimeError("No WHERE clauses generated for street fetch.")
 
     all_rows: list[dict[str, Any]] = []
     query_urls: list[str] = []
@@ -238,7 +229,12 @@ def fetch_city_data(
         "run_id": run_id,
         "captured_at": run_timestamp.isoformat(),
         "subject_address": subject_address,
-        "street_portion": street_text,
+        "fetch_scope": "subject_street",
+        "subject_address_matched": matched_subject_address,
+        "subject_lookup_where_clauses": subject_where_clauses,
+        "subject_lookup_queries": subject_queries,
+        "subject_lookup_query_urls": sorted(set(subject_query_urls)),
+        "street_portion": street_text.upper(),
         "address_field": address_field,
         "detected_fields": detected_fields,
         "where_clauses": all_clauses,
@@ -256,8 +252,9 @@ def fetch_city_data(
 def _build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         description=(
-            "Fetch City of Calgary open-data rows for all records on a target street and "
-            "write raw JSON + flat CSV artifacts for downstream analysis."
+            "Fetch City of Calgary open-data rows by first resolving the subject row, "
+            "then querying all records on that resolved street, and write raw JSON + flat CSV "
+            "artifacts for downstream analysis."
         )
     )
     parser.add_argument("--subject-address", default=DEFAULT_SUBJECT_ADDRESS, help="Subject address used for defaults.")
@@ -269,21 +266,17 @@ def _build_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument("--timeout-seconds", type=int, default=30, help="HTTP timeout seconds.")
     parser.add_argument("--page-size", type=int, default=1000, help="Pagination page size.")
+    parser.add_argument(
+        "--subject-search-limit",
+        type=int,
+        default=DEFAULT_SUBJECT_SEARCH_LIMIT,
+        help="Max rows while resolving the subject row before street expansion.",
+    )
     parser.add_argument("--max-rows", type=int, default=60000, help="Maximum rows per where-clause request.")
     parser.add_argument(
         "--street-portion",
-        default="",
-        help="Street portion override (for example: 'Somervale Court SW'). Defaults from subject address.",
-    )
-    parser.add_argument(
-        "--street-type-aliases",
-        default=DEFAULT_STREET_TYPE_ALIASES,
-        help="Comma-delimited street type aliases (default: CO,COURT,CT).",
-    )
-    parser.add_argument(
-        "--include-street-name-only",
-        action="store_true",
-        help="Also include a broad clause matching just the street name token.",
+        default=DEFAULT_STREET_PORTION,
+        help="Optional street-text override. Defaults from matched subject row.",
     )
     parser.add_argument(
         "--extra-where-clause",
@@ -314,10 +307,9 @@ def main() -> int:
             app_token=args.app_token,
             timeout_seconds=args.timeout_seconds,
             page_size=args.page_size,
+            subject_search_limit=args.subject_search_limit,
             max_rows=args.max_rows,
             street_portion=args.street_portion,
-            street_type_aliases_csv=args.street_type_aliases,
-            include_street_name_only=bool(args.include_street_name_only),
             extra_where_clauses=list(args.extra_where_clause),
             address_field_override=args.address_field,
             dedupe=not bool(args.no_dedupe),
@@ -332,6 +324,8 @@ def main() -> int:
         return 1
 
     print(f"Dataset: {result['dataset_id']}")
+    print(f"Fetch scope: {result['fetch_scope']}")
+    print(f"Subject address matched: {result['subject_address_matched']}")
     print(f"Street portion: {result['street_portion']}")
     print(f"Address field: {result['address_field']}")
     print(f"Rows raw: {result['rows_raw']}")
