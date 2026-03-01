@@ -66,26 +66,25 @@ Request-to-File Communication Diagram
    file "data/open_calgary_somervale_inventory_\nsummary.json" as inventory_summary
    file "data/open_calgary_street_requested_\nfield_dictionary.csv" as enum_dictionary
    file "source/92_city_data_enum_dictionary.rst" as enum_rst
-   file "source/91_city_data_index.rst\nsource/city_data/building_*.rst" as city_pages
+   file "source/91_city_data_index.rst\nsource/city_data/\nbuilding_*.rst" as city_pages
    file "source/93_city_data_fetch_metadata.rst" as metadata_rst
 
    query_1 --> query_2 : 1) street_portion
 
    query_2 --> raw_json
-   raw_json -down-> flat_csv : 3) flattened rows
-   flat_csv -down-> field_profile : 4) field profile
+   raw_json -down-> flat_csv : 2) flattened rows
+   raw_json -left-> field_profile : 3) field profile
 
-   flat_csv -down-> inventory_summary : 5) inventory output
-   flat_csv -right-> enum_dictionary : 6) enum dictionary
-   enum_dictionary -down-> enum_rst : 7) dictionary source
+   flat_csv -down-> inventory_summary : 4) inventory output
+   flat_csv -right-> city_pages : 5) page rows
+   raw_json -right-> city_pages : 6) provenance
 
-   flat_csv -right-> city_pages : 8) page rows
-   raw_json -right-> city_pages : 9) provenance
+   inventory_summary -down-> metadata_rst : 7) inventory input
+   flat_csv -right-> enum_dictionary : 8) enum dictionary
+   enum_dictionary -down-> enum_rst : 9) dictionary source
 
-   inventory_summary -down-> metadata_rst : 10) inventory input
-   field_profile -[hidden]right-> inventory_summary
-   inventory_summary -[hidden]right-> enum_dictionary
-   enum_dictionary -[hidden]right-> city_pages
+   field_profile -[hidden]down-> inventory_summary
+   enum_rst -[hidden]down-> city_pages
    @enduml
 
 Fetch Summary
