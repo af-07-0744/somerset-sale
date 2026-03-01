@@ -3,7 +3,7 @@ City Data: Somervale Court SW
 
 Generated city-data navigation pages grouped by building and address.
 
-- Generated at: ``2026-02-28 07:52 UTC``
+- Generated at: ``2026-03-01 06:39 UTC``
 - Source CSV: ``data/open_calgary_somervale_raw_rows_flat.csv``
 - Raw JSON: ``data/open_calgary_somervale_raw_rows.json``
 - Residential rows: ``834``

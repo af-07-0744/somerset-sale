@@ -3,7 +3,7 @@ City Data Enumeration Dictionary
 
 Enumerations and code mappings derived from the fetched city-data CSV.
 
-- Generated at: ``2026-02-28 07:52 UTC``
+- Generated at: ``2026-03-01 06:39 UTC``
 - Input rows: ``838``
 - Fields documented: ``7``
 - Last-run fetch/request metadata: :doc:`93_city_data_fetch_metadata`

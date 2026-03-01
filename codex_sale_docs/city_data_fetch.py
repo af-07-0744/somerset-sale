@@ -79,6 +79,52 @@ def _dedupe_rows(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return deduped
 
 
+def _assessment_year(value: Any) -> int | None:
+    text = str(value).strip()
+    if not text:
+        return None
+    if re.fullmatch(r"\d{4}", text):
+        return int(text)
+    if re.fullmatch(r"\d{4}\.0+", text):
+        return int(text.split(".", 1)[0])
+    try:
+        year = int(float(text))
+    except ValueError:
+        return None
+    if 1900 <= year <= 3000:
+        return year
+    return None
+
+
+def _latest_roll_year_rows(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    latest_year_by_roll: dict[str, int] = {}
+    for row in rows:
+        roll = str(row.get("roll_number", "")).strip()
+        if not roll:
+            continue
+        year = _assessment_year(row.get("roll_year", ""))
+        if year is None:
+            continue
+        previous = latest_year_by_roll.get(roll)
+        if previous is None or year > previous:
+            latest_year_by_roll[roll] = year
+
+    filtered: list[dict[str, Any]] = []
+    for row in rows:
+        roll = str(row.get("roll_number", "")).strip()
+        if not roll:
+            filtered.append(row)
+            continue
+        latest_year = latest_year_by_roll.get(roll)
+        if latest_year is None:
+            filtered.append(row)
+            continue
+        year = _assessment_year(row.get("roll_year", ""))
+        if year == latest_year:
+            filtered.append(row)
+    return filtered
+
+
 def _write_json(path: Path, payload: Any) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
@@ -215,7 +261,7 @@ def fetch_city_data(
             print(f"DEBUG: $where='{clause}' -> {len(rows)} row(s)")
 
     rows_raw_count = len(all_rows)
-    rows_filtered = all_rows
+    rows_filtered = _latest_roll_year_rows(all_rows)
     rows_deduped = _dedupe_rows(rows_filtered) if dedupe else rows_filtered
 
     run_timestamp = dt.datetime.now(dt.timezone.utc)
