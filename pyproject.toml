@@ -17,28 +17,40 @@ dependencies = [
 ]
 
 [tool.poetry]
-packages = [{ include = "codex_sale_docs" }]
+packages = [
+    { include = "city", from = "source" },
+    { include = "assessment_comps", from = "source" },
+    { include = "mls_enrichment", from = "source" },
+    { include = "fair_market_value", from = "source" },
+]
+include = ["pyproject.py"]
 
 [tool.poetry.scripts]
-settings = "codex_sale_docs.build:settings"
-build = "codex_sale_docs.build:build"
-esbonio = "codex_sale_docs.build:esbonio"
-auto = "codex_sale_docs.build:auto"
-clean = "codex_sale_docs.build:clean"
-check-provenance = "codex_sale_docs.provenance:main"
-fetch-open-calgary = "codex_sale_docs.open_calgary:main"
-prepare-renter-comps = "codex_sale_docs.renter_comps:main"
-infer-open-calgary-units = "codex_sale_docs.unit_inference:main"
-fetch_city_data = "codex_sale_docs.city_data_fetch:main"
-city_data_to_rst = "codex_sale_docs.city_data_rst:main"
-get_city_data = "codex_sale_docs.get_city_data:main"
-city_data_enums = "codex_sale_docs.city_data_enums:main"
-city_data_inventory = "codex_sale_docs.city_data_inventory:main"
-city_data_metadata_rst = "codex_sale_docs.city_data_metadata_rst:main"
-audit-realtor-accuracy = "codex_sale_docs.realtor_audit:main"
-extract-realtor-listing = "codex_sale_docs.realtor_single_listing:main"
-osm-address-lookup = "codex_sale_docs.osm_address_lookup:main"
-find-realtor-listings-browser = "codex_sale_docs.realtor_browser_search:main"
+settings = "pyproject:settings"
+generate-workflow-diagram = "pyproject:generate_workflow_diagram"
+workspace-settings = "pyproject:workspace_settings"
+build = "pyproject:build"
+esbonio = "pyproject:esbonio"
+auto = "pyproject:auto"
+clean = "pyproject:clean"
+check-provenance = "pyproject:check_provenance"
+fetch-open-calgary = "pyproject:fetch_open_calgary"
+prepare-renter-comps = "pyproject:prepare_renter_comps"
+infer-open-calgary-units = "pyproject:infer_open_calgary_units"
+fetch_city_data = "pyproject:fetch_city_data"
+city_data_to_rst = "pyproject:city_data_to_rst"
+get_city_data = "pyproject:get_city_data"
+city_data_enums = "pyproject:city_data_enums"
+city_data_inventory = "pyproject:city_data_inventory"
+city_data_metadata_rst = "pyproject:city_data_metadata_rst"
+audit-realtor-accuracy = "pyproject:audit_realtor_accuracy"
+extract-realtor-listing = "pyproject:extract_realtor_listing"
+osm-address-lookup = "pyproject:osm_address_lookup"
+osm-geocode = "pyproject:osm_geocode"
+osm-suggest-addresses = "pyproject:osm_suggest_addresses"
+google-maps-geocode = "pyproject:google_maps_geocode"
+google-maps-suggest-addresses = "pyproject:google_maps_suggest_addresses"
+find-realtor-listings-browser = "pyproject:find_realtor_listings_browser"
 
 [tool.sale]
 subject_address = "3000 Somervale Court SW # 209, Calgary AB T2Y 4J2"

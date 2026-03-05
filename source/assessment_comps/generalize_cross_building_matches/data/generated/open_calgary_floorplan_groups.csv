@@ -1,0 +1,12 @@
+group_rank,plan_signature,row_count,same_floor_plan_count,similar_floor_plan_count,other_count,buildings,units,assessed_value_min,assessed_value_max,value_delta_pct_min,value_delta_pct_max
+1,stack:09|sub_property_use:R201|land_use:M-C2|assessed_bucket:257500,3,3,0,0,1000 Somervale Court SW; 2000 Somervale Court SW; 3000 Somervale Court SW,109,258500,258500,-0.0171,-0.0171
+2,stack:09|sub_property_use:R201|land_use:M-C2|assessed_bucket:267500,3,3,0,0,1000 Somervale Court SW; 2000 Somervale Court SW; 3000 Somervale Court SW,309,267500,267500,0.0171,0.0171
+3,stack:09|sub_property_use:R201|land_use:M-C2|assessed_bucket:272500,3,3,0,0,1000 Somervale Court SW; 2000 Somervale Court SW; 3000 Somervale Court SW,409,272000,272000,0.0342,0.0342
+4,stack:09|sub_property_use:R201|land_use:M-C2|assessed_bucket:262500,2,2,0,0,1000 Somervale Court SW; 2000 Somervale Court SW,209,263000,263000,0.0000,0.0000
+5,stack:10|sub_property_use:R201|land_use:M-C2|assessed_bucket:240000,3,0,3,0,1000 Somervale Court SW; 2000 Somervale Court SW; 3000 Somervale Court SW,210,240000,240000,-0.0875,-0.0875
+6,stack:07|sub_property_use:R201|land_use:M-C2|assessed_bucket:262500,1,0,1,0,3000 Somervale Court SW,207,263000,263000,0.0000,0.0000
+7,stack:07|sub_property_use:R201|land_use:M-C2|assessed_bucket:265000,1,0,1,0,1000 Somervale Court SW,207,265500,265500,0.0095,0.0095
+8,stack:08|sub_property_use:R201|land_use:M-C2|assessed_bucket:335000,1,0,1,0,2000 Somervale Court SW,208,334500,334500,0.2719,0.2719
+9,stack:08|sub_property_use:R201|land_use:M-C2|assessed_bucket:337500,1,0,1,0,3000 Somervale Court SW,208,338500,338500,0.2871,0.2871
+10,stack:08|sub_property_use:R201|land_use:M-C2|assessed_bucket:340000,1,0,1,0,1000 Somervale Court SW,208,340500,340500,0.2947,0.2947
+11,stack:11|sub_property_use:R201|land_use:M-C2|assessed_bucket:262500,1,0,1,0,3000 Somervale Court SW,211,263000,263000,0.0000,0.0000

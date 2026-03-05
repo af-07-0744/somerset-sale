@@ -4,23 +4,28 @@ This project now uses a Sphinx-first workflow with reStructuredText (`.rst`) as 
 
 ## Canonical Structure
 - `source/` — Sphinx pages for the pricing memo and evidence appendix.
-- `data/` — structured inputs (`property.yml`, comps CSVs, assumptions, source registry).
-- `evidence/` — saved artifacts (MLS exports, screenshots, web captures).
-- `comms/` — renter-facing text/email drafts.
-- `codex_sale_docs/` — Poetry script entry points (`build`, `auto`, `clean`, provenance check).
+- `source/<workflow>/<step>/` — workflow step folders with colocated `.rst` + `.py` modules.
+- `source/<workflow>/<step>/data/{primary,generated}` — step-scoped inputs/outputs (no root `data/` directory).
+- `source/workflow_flow_control.yml` — workflow dependency graph metadata (workflows, activity groups, finish-to-start edges, optional `title_overrides`, optional `layout`; step structure is inferred from each `index.rst` TOC).
+- `source/.../data/evidence/...` — saved evidence artifacts colocated with the workflow step that produced them.
+- `source/fair_market_value/write_fmv_justification/` — renter-facing text/email drafts (`renter_email.rst`, `renter_text.rst`).
+- `pyproject.py` — centralized Poetry command dispatcher (adds `source/` to `sys.path`).
+- `source/mls_enrichment/normalize/` — geocoding/suggestion utility CLIs (Google + OSM).
 - `pyproject.toml` — includes sale defaults under `[tool.sale]` (`subject_address`).
 
 ## Quick Start
 1. Install dependencies: `poetry install`
 2. Install PlantUML CLI (plus Java) if you plan to render UML diagrams.
-3. Generate local VS Code settings: `poetry run settings`
+3. Generate local VS Code settings: `poetry run workspace-settings`
 4. Validate provenance links: `poetry run check-provenance`
 5. Build docs: `poetry run build`
 6. Open `build/html/index.html` and use browser **Save as PDF**
 
 ## Script Commands
-- `poetry run settings` - writes `.vscode/settings.json` from `.devcontainer/devcontainer.json` placeholders.
-- `poetry run check-provenance` - validates `data/comps_clean.csv` and `data/source_registry.csv`.
+- `poetry run settings` - workflow dispatcher alias for `get_city_data` (transitional wiring).
+- `poetry run workspace-settings` - writes `.vscode/settings.json` from `.devcontainer/devcontainer.json` placeholders.
+- `poetry run check-provenance` - validates `source/fair_market_value/write_fmv_justification/data/primary/comps_clean.csv` and `source/fair_market_value/write_fmv_justification/data/primary/source_registry.csv`.
+- `poetry run generate-workflow-diagram` - regenerates `source/_generated/workflow_overview_diagram.uml` from `source/workflow_flow_control.yml`.
 - `poetry run build` - builds Sphinx HTML into `build/html`.
 - `poetry run esbonio` - builds Sphinx HTML into `build/esbonio/html` for language server previews.
 - `poetry run auto` - starts `sphinx-autobuild` with live reload on `127.0.0.1` and an auto-selected port.
@@ -28,12 +33,12 @@ This project now uses a Sphinx-first workflow with reStructuredText (`.rst`) as 
 - `SPHINX_AUTOBUILD_REQUIRE_SERVER=1 poetry run auto` - fail instead of fallback if live server bind is unavailable.
 - `poetry run clean` - removes `build/` and `dist/` directories.
 - `poetry run clean -- build/esbonio` - removes a specific build path.
-- `poetry run audit-realtor-accuracy --truth-csv data/truth.csv --urls-csv data/audit_urls.csv` - runs an authorized QA crawl+diff and writes outputs under `data/realtor_accuracy_audit/`.
+- `poetry run audit-realtor-accuracy --truth-csv source/mls_enrichment/cross_validate/data/primary/truth.csv --urls-csv source/mls_enrichment/cross_validate/data/primary/audit_urls.csv` - runs an authorized QA crawl+diff and writes outputs under `source/mls_enrichment/cross_validate/data/generated/realtor_accuracy_audit/`.
 - `poetry run osm-address-lookup "somervale ct sw, calgary" --mode suggest --countrycodes ca --street-expansion on --email "you@example.com"` - keyless OSM lookup with optional street house-number expansion.
 - `poetry run fetch_city_data` - resolves the subject row first, derives its street text (for example `SOMERVALE CO SW`), then fetches all rows on that street into raw JSON + flat CSV artifacts.
 - `poetry run city_data_to_rst` - converts fetched flat CSV into per-building rST pages + non-residential page + city-data index.
 - `poetry run city_data_inventory` - builds sale-property profile plus condo/parking/storage/other inventory outputs.
-- `poetry run city_data_metadata_rst` - builds dedicated last-fetch metadata page (`source/93_city_data_fetch_metadata.rst`).
+- `poetry run city_data_metadata_rst` - builds dedicated last-fetch metadata page (`source/city/build_building_unit_inventory/city_data_fetch_metadata.rst`).
 - `poetry run get_city_data` - runs fetch + inventory + rST pages + metadata page + enum dictionary in one command (all args overridable).
 - `poetry run city_data_enums` - builds an enumeration dictionary CSV and a formatted rST report (wired into docs toctree) using default explain-fields.
 
@@ -42,11 +47,11 @@ This project now uses a Sphinx-first workflow with reStructuredText (`.rst`) as 
 - Input 1 (`--truth-csv`): source-of-truth listing rows (must include an id column such as `listing_id` or `mls_number`).
 - Input 2 (`--urls-csv`): URL sample to audit (must include `url`; can optionally include `listing_id` and `complaint_flag`).
 - Default outputs:
-  - `data/realtor_accuracy_audit/scraped_snapshot.csv`
-  - `data/realtor_accuracy_audit/field_diff.csv`
-  - `data/realtor_accuracy_audit/summary_metrics.json`
+  - `source/mls_enrichment/cross_validate/data/generated/realtor_accuracy_audit/scraped_snapshot.csv`
+  - `source/mls_enrichment/cross_validate/data/generated/realtor_accuracy_audit/field_diff.csv`
+  - `source/mls_enrichment/cross_validate/data/generated/realtor_accuracy_audit/summary_metrics.json`
 - Example run:
-  `poetry run audit-realtor-accuracy --truth-csv data/truth.csv --urls-csv data/audit_urls.csv --delay-seconds 1 --stale-threshold-hours 24`
+  `poetry run audit-realtor-accuracy --truth-csv source/mls_enrichment/cross_validate/data/primary/truth.csv --urls-csv source/mls_enrichment/cross_validate/data/primary/audit_urls.csv --delay-seconds 1 --stale-threshold-hours 24`
 - The tool computes field mismatch rates (`price`, `beds`, `baths`, `address`, `status`, `geo`), stale listing rate (from `last_updated` lag), and complaint reproduction rate (when `complaint_flag` is supplied).
 
 ## REALTOR.ca Single-Listing Extract
@@ -70,13 +75,13 @@ This project now uses a Sphinx-first workflow with reStructuredText (`.rst`) as 
   `poetry run extract-realtor-listing --url "https://www.realtor.ca/real-estate/12345678/example" --pretty`
 - Fields extracted: `sqft`, `bathrooms`, `bedrooms`, `parking_spots`, `storage_units`, `address_realtor`, `maintenance_fee`, `recurring_fees`, `price_per_sqft`.
 - Optional outputs:
-  - `--output-json data/realtor_single/listing.json`
-  - `--output-csv data/realtor_single/listings.csv`
+  - `--output-json source/mls_enrichment/fetch_realtor/data/generated/realtor_single/listing.json`
+  - `--output-csv source/mls_enrichment/fetch_realtor/data/generated/realtor_single/listings.csv`
 
 ## Open Calgary Comparables
-- `poetry run fetch-open-calgary --subject-address "3000 Somervale Court SW # 209, Calgary AB T2Y 4J2"` - pulls assessment-based comparables into `data/open_calgary_assessment_comps.csv` and writes evidence artifacts.
+- `poetry run fetch-open-calgary --subject-address "3000 Somervale Court SW # 209, Calgary AB T2Y 4J2"` - pulls assessment-based comparables into `source/assessment_comps/match_same_unit_across_buildings/data/generated/open_calgary_assessment_comps.csv` and writes evidence artifacts under `source/assessment_comps/match_same_unit_across_buildings/data/evidence/open_calgary/`.
 - Optional app token: `SOCRATA_APP_TOKEN=... poetry run fetch-open-calgary --subject-address "..."`
-- Add rows to `data/comps_raw.csv`: `poetry run fetch-open-calgary --subject-address "..." --append-comps-raw`
+- Add rows to `source/assessment_comps/match_same_unit_across_buildings/data/primary/comps_raw.csv`: `poetry run fetch-open-calgary --subject-address "..." --append-comps-raw`
 - Dry run query preview: `poetry run fetch-open-calgary --subject-address "..." --dry-run`
 - Include unit in the subject address whenever possible (`# 209`) so subject matching avoids parking/ancillary records.
 - Default filters exclude virtual suite tokens ending in `V`, enforce `--match-subject-property-type`, and keep assessments at/above `50000`.
@@ -85,8 +90,8 @@ This project now uses a Sphinx-first workflow with reStructuredText (`.rst`) as 
 - Generate renter-facing table page and CSV: `poetry run prepare-renter-comps`
 - Prefer stronger high-end rows in renter output: `poetry run prepare-renter-comps --prefer-high-end`
 - Build a seller-leaning shortlist from inferred unit comps:
-  `poetry run prepare-renter-comps --input-csv data/open_calgary_inferred_unit_comps.csv --prefer-high-end --exclude-negative-deltas --min-unit-score 100 --allow-unit-match "same_unit,same_stack+adjacent_floor,same_stack+near_floor" --top-n 12`
-- A stretch appendix page is generated by default at `source/03c_renter_comps_stretch_generated.rst` using same-floor positive-delta defaults.
+  `poetry run prepare-renter-comps --input-csv source/assessment_comps/generalize_cross_building_matches/data/generated/open_calgary_inferred_unit_comps.csv --prefer-high-end --exclude-negative-deltas --min-unit-score 100 --allow-unit-match "same_unit,same_stack+adjacent_floor,same_stack+near_floor" --top-n 12`
+- A stretch appendix page is generated by default at `source/assessment_comps/find_same_floor_value_peers/renter_comps_stretch_generated.rst` using same-floor positive-delta defaults.
 - Tune stretch defaults with `--stretch-top-n`, `--stretch-min-value-delta-pct`, `--stretch-max-value-delta-pct`, `--stretch-min-unit-score`, and `--stretch-allow-unit-match`.
 - Additional shortlist controls: `--min-value-delta-pct`, `--max-value-delta-pct`, `--exclude-negative-deltas`, `--min-unit-score`, `--allow-unit-match`.
 - Infer unit-level comps across related buildings (defaults include `1000/2000/3000/5500/7000 Somervale Court SW` and `720 Stoney Trail SW`):
@@ -99,9 +104,9 @@ This project now uses a Sphinx-first workflow with reStructuredText (`.rst`) as 
   `poetry run infer-open-calgary-units --subject-address "3000 Somervale Court SW # 209, Calgary AB T2Y 4J2" --subject-search-mode where_only --all-street-buildings --no-include-default-extra-buildings --min-assessed-value 150000 --max-per-stack 3 --max-comps 80 --debug`
 - The unit inference export now includes additional floor-plan metrics (assessment class, land-use, sub-property-use, assessed components, metric match counts, and plan signatures).
 - Floor-plan lists are generated automatically:
-  - `data/open_calgary_same_floorplan_units.csv`
-  - `data/open_calgary_similar_floorplan_units.csv`
-  - `data/open_calgary_floorplan_groups.csv`
+  - `source/assessment_comps/generalize_cross_building_matches/data/generated/open_calgary_same_floorplan_units.csv`
+  - `source/assessment_comps/generalize_cross_building_matches/data/generated/open_calgary_similar_floorplan_units.csv`
+  - `source/assessment_comps/generalize_cross_building_matches/data/generated/open_calgary_floorplan_groups.csv`
 - Use `--max-comps 0` to keep all qualifying units (default), or set `--max-comps N` to cap output.
 - Use `--max-per-stack N` to diversify the shortlist by capping rows from any one stack (`stack:xx`) after ranking.
 - Example diversified shortlist:
@@ -116,13 +121,13 @@ This project now uses a Sphinx-first workflow with reStructuredText (`.rst`) as 
 - Fetch-only (keeps full raw rows; does not generate pages/inventory):
   `poetry run fetch_city_data`
 - Inventory-only from existing fetched CSV:
-  `poetry run city_data_inventory --input-csv data/open_calgary_somervale_raw_rows_flat.csv`
+  `poetry run city_data_inventory --input-csv source/city/fetch_subject_street_assessments/data/generated/open_calgary_somervale_raw_rows_flat.csv`
   Optional community filter:
-  `poetry run city_data_inventory --input-csv data/open_calgary_somervale_raw_rows_flat.csv --community-name SOMERSET`
+  `poetry run city_data_inventory --input-csv source/city/fetch_subject_street_assessments/data/generated/open_calgary_somervale_raw_rows_flat.csv --community-name SOMERSET`
 - Metadata-page-only from existing fetch/inventory JSON:
   `poetry run city_data_metadata_rst`
 - Convert existing fetched CSV to rST pages:
-  `poetry run city_data_to_rst --input-csv data/open_calgary_somervale_raw_rows_flat.csv`
+  `poetry run city_data_to_rst --input-csv source/city/fetch_subject_street_assessments/data/generated/open_calgary_somervale_raw_rows_flat.csv`
 - Generate enumeration/value dictionary from fetched CSV (default explain-fields):
   `poetry run city_data_enums --include-blank`
 - Defaults target:
@@ -137,24 +142,24 @@ This project now uses a Sphinx-first workflow with reStructuredText (`.rst`) as 
 - Override with explicit fields:
   `poetry run city_data_enums --field assessment_class --field property_type --include-blank`
 - If fetch metadata JSON is in a non-default location:
-  `poetry run city_data_enums --run-meta-json data/open_calgary_somervale_raw_rows_meta.json --include-blank`
+  `poetry run city_data_enums --run-meta-json source/city/fetch_subject_street_assessments/data/generated/open_calgary_somervale_raw_rows_meta.json --include-blank`
 - Generated docs:
-  - `source/91_city_data_index.rst`
-  - `source/city_data/building_*.rst` (one per building)
-  - `source/city_data/non_residential_somervale.rst`
-  - `source/93_city_data_fetch_metadata.rst`
+  - `source/city/build_building_unit_inventory/city_data_index.rst`
+  - `source/city/build_building_unit_inventory/city_data/building_*.rst` (one per building)
+  - `source/city/build_building_unit_inventory/city_data/non_residential_somervale.rst`
+  - `source/city/build_building_unit_inventory/city_data_fetch_metadata.rst`
 - Generated inventory:
-  - `data/open_calgary_somervale_sale_subject_profile.json`
-  - `data/open_calgary_somervale_all_properties.csv`
-  - `data/open_calgary_somervale_condo_units.csv`
-  - `data/open_calgary_somervale_parking_units.csv`
-  - `data/open_calgary_somervale_storage_units.csv`
-  - `data/open_calgary_somervale_other_properties.csv`
-  - `data/open_calgary_somervale_unit_link_index.csv`
+  - `source/city/build_subject_unit_profile/data/generated/open_calgary_somervale_sale_subject_profile.json`
+  - `source/city/build_subject_unit_profile/data/generated/open_calgary_somervale_all_properties.csv`
+  - `source/city/build_subject_unit_profile/data/generated/open_calgary_somervale_condo_units.csv`
+  - `source/city/build_subject_unit_profile/data/generated/open_calgary_somervale_parking_units.csv`
+  - `source/city/build_subject_unit_profile/data/generated/open_calgary_somervale_storage_units.csv`
+  - `source/city/build_subject_unit_profile/data/generated/open_calgary_somervale_other_properties.csv`
+  - `source/city/build_subject_unit_profile/data/generated/open_calgary_somervale_unit_link_index.csv`
 - Generated dictionary:
-  - `data/open_calgary_street_requested_field_dictionary.csv`
-  - `source/92_city_data_enum_dictionary.rst`
-  - `source/city_data/_tables/enums/*.csv`
+  - `source/city/build_building_unit_inventory/data/generated/open_calgary_street_requested_field_dictionary.csv`
+  - `source/city/build_building_unit_inventory/city_data_enum_dictionary.rst`
+  - `source/city/build_building_unit_inventory/city_data/_tables/enums/*.csv`
 - Useful overrides for `get_city_data`:
   - `--subject-address "<address>"`
   - `--street-portion "<street text>"`
@@ -165,9 +170,9 @@ This project now uses a Sphinx-first workflow with reStructuredText (`.rst`) as 
   - `--rst-include-multipolygon`
 
 ## Evidence Rules
-- Every price, DOM, or feature claim in `source/` must cite one or more `source_id` values from `data/source_registry.csv`.
-- Every row in `data/comps_clean.csv` must include `source_ids` (semicolon-delimited).
+- Every price, DOM, or feature claim in `source/` must cite one or more `source_id` values from `source/fair_market_value/write_fmv_justification/data/primary/source_registry.csv`.
+- Every row in `source/fair_market_value/write_fmv_justification/data/primary/comps_clean.csv` must include `source_ids` (semicolon-delimited).
 - If a comp has no source artifacts, exclude it from the valuation conclusion.
 
 ## Notes
-- Existing folders from prior drafts are kept, but the Sphinx workflow above is now the source of truth.
+- Legacy root data/script/module folders were removed; the `source/` workflow structure is now canonical.

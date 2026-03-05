@@ -1,0 +1,63 @@
+@startuml
+' Auto-generated from source/workflow_flow_control.yml.
+top to bottom direction
+hide circle
+skinparam shadowing false
+skinparam linetype polyline
+skinparam nodesep 20
+skinparam ranksep 30
+
+package "City: Get City Data" as n_workflow_city {
+  rectangle "Fetch Full Subject-\nStreet Assessment Data" as n_step_city_fetch_subject_street_assessments
+  rectangle "Build the Subject Unit\nProfile" as n_step_city_build_subject_unit_profile
+  rectangle "Build Building/Unit\nInventory Outputs" as n_step_city_build_building_unit_inventory
+}
+rectangle "Assessment Comps:\nInfer Assessment-Based\nComparables" as n_workflow_assessment_comps
+rectangle "MLS Enrichment: Get\nMLS + Predictive Data\nfor Subject and\nComparables" as n_workflow_mls_enrichment
+package "Fair Market Value:\nDetermine Fair Market\nValue" as n_workflow_fair_market_value {
+  rectangle "Combine Assessment and\nMLS/Predictive Signals" as n_step_fair_market_value_fuse_assessment_and_mls_signals
+  rectangle "Compute FMV Range and\nPoint Estimate" as n_step_fair_market_value_estimate_fmv_range_and_point
+  rectangle "Select Final FMV" as n_step_fair_market_value_select_final_fmv
+  rectangle "Write an Evidence-\nBased FMV\nJustification" as n_step_fair_market_value_write_fmv_justification
+}
+
+package "Assessment Inference" as n_group_assessment_inference {
+  rectangle "Compare Same Unit\nNumber Across\nBuildings (When\nAvailable)" as n_step_assessment_comps_match_same_unit_across_buildings
+  rectangle "Measure Floor-Step\nEffects (109, 209,\n309, 409)" as n_step_assessment_comps_estimate_floor_step_effects
+  rectangle "Find Same-Floor Units\nWith Same/Similar\nAssessed Values" as n_step_assessment_comps_find_same_floor_value_peers
+  rectangle "Extend Matching Logic\nto Other Buildings" as n_step_assessment_comps_generalize_cross_building_matches
+  rectangle "Fit a Provisional\nAssessed-Value Formula\n(Weights/Multipliers)" as n_step_assessment_comps_fit_assessment_value_formula
+}
+package "MLS + Predictive\nEnrichment" as n_group_mls_predictive_enrichment {
+  rectangle "Realtor.ca" as n_step_mls_enrichment_fetch_realtor
+  rectangle "Zillow.com" as n_step_mls_enrichment_fetch_zillow
+  rectangle "Zolo.ca" as n_step_mls_enrichment_fetch_zolo
+  rectangle "Normalize and Dedupe\nRecords" as n_step_mls_enrichment_normalize
+  rectangle "Cross-Validate Fields\nAcross Sources" as n_step_mls_enrichment_cross_validate
+  rectangle "Calibrate Feature\nMultipliers" as n_step_mls_enrichment_calibrate_feature_multipliers
+  rectangle "Produce a Validated\nComparable Dataset" as n_step_mls_enrichment_validate
+}
+
+n_workflow_city --> n_workflow_assessment_comps
+n_workflow_assessment_comps --> n_workflow_mls_enrichment
+n_workflow_mls_enrichment --> n_workflow_fair_market_value
+n_workflow_city --> n_group_assessment_inference
+n_group_assessment_inference --> n_group_mls_predictive_enrichment
+n_group_mls_predictive_enrichment --> n_workflow_fair_market_value
+n_step_mls_enrichment_fetch_realtor --> n_step_mls_enrichment_normalize
+n_step_mls_enrichment_fetch_zillow --> n_step_mls_enrichment_normalize
+n_step_mls_enrichment_fetch_zolo --> n_step_mls_enrichment_normalize
+n_step_mls_enrichment_normalize --> n_step_mls_enrichment_cross_validate
+n_step_mls_enrichment_cross_validate --> n_step_mls_enrichment_calibrate_feature_multipliers
+n_step_mls_enrichment_calibrate_feature_multipliers --> n_step_mls_enrichment_validate
+n_step_assessment_comps_match_same_unit_across_buildings --> n_step_assessment_comps_estimate_floor_step_effects
+n_step_assessment_comps_estimate_floor_step_effects --> n_step_assessment_comps_find_same_floor_value_peers
+n_step_assessment_comps_find_same_floor_value_peers --> n_step_assessment_comps_generalize_cross_building_matches
+n_step_assessment_comps_generalize_cross_building_matches --> n_step_assessment_comps_fit_assessment_value_formula
+n_step_city_fetch_subject_street_assessments --> n_step_city_build_subject_unit_profile
+n_step_city_build_subject_unit_profile --> n_step_city_build_building_unit_inventory
+n_step_fair_market_value_fuse_assessment_and_mls_signals --> n_step_fair_market_value_estimate_fmv_range_and_point
+n_step_fair_market_value_estimate_fmv_range_and_point --> n_step_fair_market_value_select_final_fmv
+n_step_fair_market_value_select_final_fmv --> n_step_fair_market_value_write_fmv_justification
+
+@enduml

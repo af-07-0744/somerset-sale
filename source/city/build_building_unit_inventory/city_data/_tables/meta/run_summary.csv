@@ -1,0 +1,17 @@
+metric,value
+Generated At,2026-03-05T18:06:54.797610+00:00
+Dataset ID,4bsw-nn7w
+Run ID,20260305T180654Z
+Captured At,2026-03-05T18:06:54.552524+00:00
+Subject Address,"3000 Somervale Court SW # 209, Calgary AB T2Y 4J2"
+Subject Address Matched,209 3000 SOMERVALE CO SW
+Fetch Scope,subject_street
+Street Portion,SOMERVALE CO SW
+Address Field,address
+Rows Raw,534
+Rows Filtered,534
+Rows Deduped,534
+Dedupe Enabled,True
+Subject Lookup Query Count,1
+Street Fetch Query Count,1
+Request Count,2

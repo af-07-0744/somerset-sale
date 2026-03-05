@@ -1,0 +1,42 @@
+version: 1
+
+workflows:
+  - city
+  - assessment_comps
+  - mls_enrichment
+  - fair_market_value
+
+activity_groups:
+  - id: assessment_inference
+    workflow: assessment_comps
+  - id: mls_predictive_enrichment
+    workflow: mls_enrichment
+
+finish_to_start:
+  - from: city
+    to: assessment_comps
+  - from: assessment_comps
+    to: mls_enrichment
+  - from: mls_enrichment
+    to: fair_market_value
+  - from: city
+    to: assessment_inference
+  - from: assessment_inference
+    to: mls_predictive_enrichment
+  - from: mls_predictive_enrichment
+    to: fair_market_value
+  - from: fetch_realtor
+    to: normalize
+  - from: fetch_zillow
+    to: normalize
+  - from: fetch_zolo
+    to: normalize
+  - from: normalize
+    to: cross_validate
+  - from: cross_validate
+    to: calibrate_feature_multipliers
+  - from: calibrate_feature_multipliers
+    to: validate
+
+title_overrides:
+  mls_predictive_enrichment: "MLS + Predictive Enrichment"

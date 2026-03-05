@@ -1,0 +1,21 @@
+{
+  "generated_at": "2026-03-05T18:06:54.697375+00:00",
+  "input_csv": "source/city/fetch_subject_street_assessments/data/generated/open_calgary_somervale_raw_rows_flat.csv",
+  "community_name_filter": "",
+  "rows_total": 534,
+  "rows_condo": 375,
+  "rows_parking": 133,
+  "rows_storage": 22,
+  "rows_other": 4,
+  "distinct_buildings": 9,
+  "subject_profile_json": "source/city/build_subject_unit_profile/data/generated/open_calgary_somervale_sale_subject_profile.json",
+  "subject_profile_csv": "source/city/build_subject_unit_profile/data/generated/open_calgary_somervale_sale_subject_profile.csv",
+  "all_properties_csv": "source/city/build_subject_unit_profile/data/generated/open_calgary_somervale_all_properties.csv",
+  "condo_units_csv": "source/city/build_subject_unit_profile/data/generated/open_calgary_somervale_condo_units.csv",
+  "parking_units_csv": "source/city/build_subject_unit_profile/data/generated/open_calgary_somervale_parking_units.csv",
+  "storage_units_csv": "source/city/build_subject_unit_profile/data/generated/open_calgary_somervale_storage_units.csv",
+  "other_properties_csv": "source/city/build_subject_unit_profile/data/generated/open_calgary_somervale_other_properties.csv",
+  "unit_link_index_csv": "source/city/build_subject_unit_profile/data/generated/open_calgary_somervale_unit_link_index.csv",
+  "building_summary_csv": "source/city/build_subject_unit_profile/data/generated/open_calgary_somervale_building_summary.csv",
+  "sub_property_use_counts_csv": "source/city/build_subject_unit_profile/data/generated/open_calgary_somervale_building_sub_property_use_counts.csv"
+}
